@@ -4,5 +4,4 @@ export { CTAButtons } from "./CTAButtons";
 export { PortraitCard } from "./PortraitCard";
 export { AchievementCard } from "./AchievementCard";
 export { AchievementCards } from "./AchievementCards";
-export { HeroParticles } from "./HeroParticles";
 export { ScrollIndicator } from "./ScrollIndicator";

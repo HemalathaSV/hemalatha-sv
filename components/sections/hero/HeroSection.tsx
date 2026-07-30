@@ -1,12 +1,11 @@
 "use client";
 
-import React, { useCallback } from "react";
-import { motion, useMotionValue, useSpring, useTransform, Variants } from "framer-motion";
+import React from "react";
+import { motion, Variants } from "framer-motion";
 import { Container } from "@/components/layout/Container";
 import { HeroContent } from "./HeroContent";
 import { PortraitCard } from "./PortraitCard";
 import { AchievementCards } from "./AchievementCards";
-import { HeroParticles } from "./HeroParticles";
 import { ScrollIndicator } from "./ScrollIndicator";
 
 const leftColumnVariants: Variants = {
@@ -21,47 +20,24 @@ const leftColumnVariants: Variants = {
 };
 
 export function HeroSection() {
-  const rawMouseX = useMotionValue(0);
-  const rawMouseY = useMotionValue(0);
-
-  const springConfig = { damping: 25, stiffness: 150 };
-  const mouseX = useSpring(rawMouseX, springConfig);
-  const mouseY = useSpring(rawMouseY, springConfig);
-
-  const glowX = useTransform(mouseX, [-0.5, 0.5], [-30, 30]);
-  const glowY = useTransform(mouseY, [-0.5, 0.5], [-30, 30]);
-
-  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
-    const { clientX, clientY } = e;
-    const { innerWidth, innerHeight } = window;
-    rawMouseX.set(clientX / innerWidth - 0.5);
-    rawMouseY.set(clientY / innerHeight - 0.5);
-  }, [rawMouseX, rawMouseY]);
-
   return (
     <section
       id="home"
-      onMouseMove={handleMouseMove}
       className="relative min-h-screen w-full flex flex-col justify-center pt-24 sm:pt-28 pb-16 sm:pb-20 bg-[#050816] overflow-hidden"
     >
-      {/* 1. Floating Particles Layer */}
-      <HeroParticles />
-
-      {/* 2. Soft Ambient Radial Backlights */}
-      <motion.div
+      {/* Soft Ambient Radial Backlights */}
+      <div
         aria-hidden="true"
-        style={{ x: glowX, y: glowY }}
-        className="absolute top-1/4 right-5 sm:right-10 w-[450px] sm:w-[550px] h-[450px] sm:h-[550px] rounded-full bg-gradient-to-tr from-[#38BDF8]/10 to-[#8B5CF6]/08 blur-3xl pointer-events-none z-0"
+        className="absolute top-1/4 right-5 sm:right-10 w-[450px] sm:w-[550px] h-[450px] sm:h-[550px] rounded-full bg-gradient-to-tr from-[#38BDF8]/08 to-[#8B5CF6]/06 blur-3xl pointer-events-none z-0"
       />
-      <motion.div
+      <div
         aria-hidden="true"
-        style={{ x: useTransform(glowX, (v) => -v * 0.5), y: useTransform(glowY, (v) => -v * 0.5) }}
-        className="absolute bottom-10 left-5 sm:left-10 w-[350px] sm:w-[450px] h-[350px] sm:h-[450px] rounded-full bg-gradient-to-bl from-[#8B5CF6]/08 to-[#38BDF8]/05 blur-3xl pointer-events-none z-0"
+        className="absolute bottom-10 left-5 sm:left-10 w-[350px] sm:w-[450px] h-[350px] sm:h-[450px] rounded-full bg-gradient-to-bl from-[#8B5CF6]/06 to-[#38BDF8]/04 blur-3xl pointer-events-none z-0"
       />
 
       <Container>
         <div className="flex flex-col gap-10 sm:gap-14 lg:gap-16 relative z-10">
-          {/* 60% / 40% Two-Column Grid */}
+          {/* Two-Column Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-16 items-center min-h-[calc(100vh-16rem)]">
             {/* Left Column (60% Desktop) */}
             <motion.div
@@ -75,7 +51,7 @@ export function HeroSection() {
 
             {/* Right Column (40% Desktop) */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end w-full">
-              <PortraitCard mouseX={mouseX} mouseY={mouseY} />
+              <PortraitCard />
             </div>
           </div>
 
@@ -86,7 +62,7 @@ export function HeroSection() {
         </div>
       </Container>
 
-      {/* 3. Minimal Animated Scroll Indicator */}
+      {/* Minimal Scroll Indicator */}
       <ScrollIndicator />
     </section>
   );
