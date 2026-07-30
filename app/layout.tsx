@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk, Inter } from "next/font/google";
 import "./globals.css";
 import { SkipToContent, Navbar } from "@/components/navigation";
+import { Footer } from "@/components/layout";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -34,6 +35,7 @@ export default function RootLayout({
         <SkipToContent />
         <Navbar />
         <div className="flex-1 flex flex-col">{children}</div>
+        <Footer />
       </body>
     </html>
   );
