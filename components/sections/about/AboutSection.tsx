@@ -1,22 +1,86 @@
 "use client";
 
 import React from "react";
-import { SectionWrapper } from "@/components/layout";
+import { motion, Variants } from "framer-motion";
+import { Container } from "@/components/layout/Container";
+import { Timeline } from "./Timeline";
+
+const contentVariants: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
 
 export function AboutSection() {
+  const interests = [
+    "Agentic AI",
+    "Multi-Agent Systems",
+    "Machine Learning",
+    "Backend Engineering",
+    "AI Research",
+  ];
+
   return (
-    <SectionWrapper id="who-i-am" className="flex items-center justify-center">
-      <div className="flex flex-col items-start justify-center max-w-4xl py-12">
-        <span className="text-xs font-mono font-medium tracking-widest text-[#8B5CF6] uppercase mb-4">
-          01 / Overview
-        </span>
-        <h2 className="font-heading text-3xl sm:text-5xl font-bold tracking-tight text-[#F8FAFC] mb-6">
-          Who I Am
-        </h2>
-        <p className="text-base sm:text-lg text-[#94A3B8] max-w-2xl leading-relaxed">
-          AI Architect & Frontend Engineer driving production intelligent systems.
-        </p>
-      </div>
-    </SectionWrapper>
+    <section
+      id="who-i-am"
+      className="relative min-h-screen w-full flex flex-col justify-center py-24 sm:py-32 bg-[#050816] overflow-hidden border-t border-slate-900/60"
+    >
+      {/* Subtle Ambient Glow */}
+      <div
+        aria-hidden="true"
+        className="absolute top-1/2 left-0 w-[450px] h-[450px] rounded-full bg-gradient-to-tr from-[#38BDF8]/05 to-[#8B5CF6]/04 blur-3xl pointer-events-none -translate-y-1/2"
+      />
+
+      <Container>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start relative z-10">
+          {/* Left Column: Vertical Timeline */}
+          <div className="lg:col-span-5 order-2 lg:order-1">
+            <Timeline />
+          </div>
+
+          {/* Right Column: About Content */}
+          <motion.div
+            variants={contentVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-80px" }}
+            className="lg:col-span-7 flex flex-col justify-center space-y-6 order-1 lg:order-2"
+          >
+            {/* Section Badge */}
+            <div className="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-[#0B1120] border border-slate-800/80">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#38BDF8]" />
+              <span className="text-xs font-mono font-semibold text-[#38BDF8] tracking-wider uppercase">
+                Who I Am
+              </span>
+            </div>
+
+            {/* Section Heading */}
+            <h2 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#F8FAFC] leading-[1.1]">
+              Engineering Intelligent AI Solutions with Purpose
+            </h2>
+
+            {/* Description */}
+            <p className="text-base sm:text-lg text-[#94A3B8] leading-relaxed pt-2">
+              I am an AI/ML Engineer passionate about building intelligent systems that solve real-world problems. My interests include Agentic AI, Multi-Agent Systems, Machine Learning, Backend Engineering, and AI Research. I enjoy transforming ideas into scalable applications through clean architecture and continuous learning.
+            </p>
+
+            {/* Interest Badges */}
+            <div className="pt-4 flex flex-wrap gap-2.5">
+              {interests.map((interest, index) => (
+                <span
+                  key={index}
+                  className="px-3.5 py-1.5 rounded-lg bg-[#0B1120] border border-slate-800 text-xs font-mono font-medium text-[#F8FAFC] hover:border-[#38BDF8]/40 hover:text-[#38BDF8] transition-colors duration-200"
+                >
+                  {interest}
+                </span>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </Container>
+    </section>
   );
 }
