@@ -1,16 +1,15 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { motion, Variants } from "framer-motion";
+import { ExternalLink, ArrowRight, Play } from "lucide-react";
+import { Project } from "@/data/projects";
 import { CategoryBadge } from "./CategoryBadge";
 import { TechnologyChip } from "./TechnologyChip";
 
 export interface FeaturedProjectCardProps {
-  title: string;
-  category: string;
-  description: string;
-  technologies: string[];
-  buttons: { label: string; href?: string }[];
+  project: Project;
 }
 
 const cardVariants: Variants = {
@@ -22,13 +21,7 @@ const cardVariants: Variants = {
   },
 };
 
-export function FeaturedProjectCard({
-  title,
-  category,
-  description,
-  technologies,
-  buttons,
-}: FeaturedProjectCardProps) {
+export function FeaturedProjectCard({ project }: FeaturedProjectCardProps) {
   return (
     <motion.div
       variants={cardVariants}
@@ -40,29 +33,34 @@ export function FeaturedProjectCard({
       {/* Ambient Inner Gradient Glow */}
       <div
         aria-hidden="true"
-        className="absolute top-0 right-0 w-80 h-80 rounded-full bg-[radial-gradient(circle_at_top_right,rgba(56,189,248,0.08),transparent_70%)] pointer-events-none"
+        className="absolute top-0 right-0 w-80 h-80 rounded-full bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.08),transparent_70%)] pointer-events-none"
       />
 
       <div className="space-y-6 relative z-10">
         {/* Header Badge */}
-        <div className="flex items-center gap-3">
-          <span className="text-amber-400 text-lg">⭐</span>
-          <CategoryBadge category={category} />
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <span className="text-amber-400 text-lg">⭐</span>
+            <CategoryBadge category={project.category} />
+          </div>
+          <span className="text-xs font-mono text-[#94A3B8]">
+            {project.status}
+          </span>
         </div>
 
         {/* Title */}
         <h3 className="font-heading text-3xl sm:text-4xl font-bold tracking-tight text-[#F8FAFC] group-hover:text-[#38BDF8] transition-colors duration-200">
-          {title}
+          {project.title}
         </h3>
 
         {/* Description */}
         <p className="text-base sm:text-lg text-[#94A3B8] leading-relaxed max-w-4xl">
-          {description}
+          {project.description}
         </p>
 
         {/* Tech Stack Chips */}
         <div className="flex flex-wrap gap-2.5 pt-2">
-          {technologies.map((tech, i) => (
+          {project.technologies.map((tech, i) => (
             <TechnologyChip key={i} label={tech} />
           ))}
         </div>
@@ -70,22 +68,50 @@ export function FeaturedProjectCard({
 
       {/* Action Buttons */}
       <div className="flex flex-wrap items-center gap-4 pt-8 mt-6 border-t border-slate-800/80 relative z-10">
-        {buttons.map((btn, i) => {
-          const isPrimary = i === 0;
-          return (
-            <a
-              key={i}
-              href={btn.href || "#contact"}
-              className={`h-11 px-6 rounded-full text-xs sm:text-sm font-semibold tracking-wide inline-flex items-center justify-center transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8] ${
-                isPrimary
-                  ? "bg-[#38BDF8] text-[#050816] hover:bg-[#38BDF8]/90 hover:scale-[1.02] shadow-md shadow-[#38BDF8]/20"
-                  : "bg-transparent border border-slate-800 text-[#F8FAFC] hover:bg-[#111827] hover:border-[#38BDF8]/40"
-              }`}
-            >
-              {btn.label}
-            </a>
-          );
-        })}
+        {/* Primary CTA: Case Study */}
+        <Link
+          href={`/projects/${project.slug}`}
+          className="h-11 px-6 rounded-full text-xs sm:text-sm font-semibold tracking-wide inline-flex items-center gap-2 bg-[#38BDF8] text-[#050816] hover:bg-[#38BDF8]/90 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 shadow-md shadow-[#38BDF8]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]"
+        >
+          Case Study <ArrowRight className="h-4 w-4" />
+        </Link>
+
+        {/* Watch Demo Button (dynamic) */}
+        {project.demoUrl && (
+          <a
+            href={project.demoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="h-11 px-6 rounded-full text-xs sm:text-sm font-semibold tracking-wide inline-flex items-center gap-2 bg-violet-600 text-white hover:bg-violet-500 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+          >
+            <Play className="h-4 w-4 fill-current" /> Watch Demo
+          </a>
+        )}
+
+        {/* GitHub Button (Inline SVG) */}
+        <a
+          href={project.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="h-11 px-6 rounded-full text-xs sm:text-sm font-medium tracking-wide inline-flex items-center gap-2 bg-transparent border border-slate-800 text-[#F8FAFC] hover:bg-[#111827] hover:border-[#38BDF8]/40 active:scale-[0.98] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]"
+        >
+          <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+          </svg>
+          GitHub
+        </a>
+
+        {/* Live Demo Button (optional) */}
+        {project.demo && project.demo !== project.github && (
+          <a
+            href={project.demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="h-11 px-6 rounded-full text-xs sm:text-sm font-medium tracking-wide inline-flex items-center gap-2 bg-transparent border border-slate-800 text-[#F8FAFC] hover:bg-[#111827] hover:border-[#38BDF8]/40 active:scale-[0.98] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]"
+          >
+            <ExternalLink className="h-4 w-4" /> Live Demo
+          </a>
+        )}
       </div>
     </motion.div>
   );

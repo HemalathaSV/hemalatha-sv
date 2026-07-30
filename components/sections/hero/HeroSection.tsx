@@ -4,7 +4,6 @@ import React, { useCallback } from "react";
 import { motion, useMotionValue, useSpring, useTransform, Variants } from "framer-motion";
 import { Container } from "@/components/layout/Container";
 import { HeroContent } from "./HeroContent";
-import { CTAButtons } from "./CTAButtons";
 import { PortraitCard } from "./PortraitCard";
 import { AchievementCards } from "./AchievementCards";
 import { HeroParticles } from "./HeroParticles";
@@ -72,7 +71,6 @@ export function HeroSection() {
               className="lg:col-span-7 flex flex-col space-y-6 sm:space-y-8"
             >
               <HeroContent />
-              <CTAButtons />
             </motion.div>
 
             {/* Right Column (40% Desktop) */}

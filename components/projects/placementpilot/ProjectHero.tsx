@@ -19,7 +19,7 @@ export function ProjectHero() {
         <div className="flex flex-col space-y-8 max-w-4xl mx-auto relative z-10">
           {/* Back Link */}
           <Link
-            href="/#engineering-work"
+            href="/#featured-work"
             className="inline-flex items-center gap-2 text-xs font-mono font-medium text-[#94A3B8] hover:text-[#38BDF8] transition-colors self-start focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8] rounded"
           >
             <ArrowLeft className="h-4 w-4" />

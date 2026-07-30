@@ -3,6 +3,7 @@
 import React from "react";
 import { motion, Variants } from "framer-motion";
 import { Container } from "@/components/layout/Container";
+import { getInterests } from "@/data/skills";
 import { Timeline } from "./Timeline";
 
 const contentVariants: Variants = {
@@ -15,13 +16,7 @@ const contentVariants: Variants = {
 };
 
 export function AboutSection() {
-  const interests = [
-    "Agentic AI",
-    "Multi-Agent Systems",
-    "Machine Learning",
-    "Backend Engineering",
-    "AI Research",
-  ];
+  const interests = getInterests();
 
   return (
     <section

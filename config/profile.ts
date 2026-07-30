@@ -8,6 +8,7 @@ export const PROFILE = {
   linkedin: "https://www.linkedin.com/in/hemalatha-sv",
   location: "Srirangapatna, Mandya, Karnataka, India",
   resume: "#contact",
+  profileImage: "/profile/profile.jpg",
 } as const;
 
 export type ProfileConfig = typeof PROFILE;

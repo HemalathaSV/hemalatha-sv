@@ -5,6 +5,7 @@ import { motion, Variants } from "framer-motion";
 import { Container } from "@/components/layout/Container";
 import { FeaturedProjectCard } from "./FeaturedProjectCard";
 import { ProjectCard } from "./ProjectCard";
+import { PROJECTS } from "@/data/projects";
 
 const headerVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
@@ -16,46 +17,13 @@ const headerVariants: Variants = {
 };
 
 export function FeaturedWorkSection() {
-  const featuredProject = {
-    title: "PlacementPilot AI",
-    category: "Flagship Project",
-    description:
-      "An intelligent placement preparation platform powered by multiple AI agents for resume analysis, interview preparation, aptitude practice, ATS evaluation, and personalized career guidance.",
-    technologies: ["Python", "FastAPI", "Gemini", "Agentic AI", "SQLite"],
-    buttons: [
-      { label: "View Case Study", href: "#contact" },
-      { label: "GitHub", href: "https://github.com/HemalathaSV" },
-    ],
-  };
-
-  const secondaryProjects = [
-    {
-      title: "Tournament Management Agent",
-      category: "Research Publication",
-      description:
-        "An Agentic AI-powered tournament management system capable of understanding natural language requests and automating tournament operations using intelligent workflows.",
-      technologies: ["Python", "FastAPI", "SQLite", "Gemini"],
-      buttons: [
-        { label: "View Case Study", href: "#contact" },
-        { label: "Research Paper", href: "#research" },
-      ],
-    },
-    {
-      title: "CampusOS",
-      category: "Hackathon Project",
-      description:
-        "An AI-powered campus management platform designed to simplify academic administration through automation, intelligent workflows, and modern dashboards.",
-      technologies: ["Python", "FastAPI", "SQLite", "Next.js"],
-      buttons: [
-        { label: "View Case Study", href: "#contact" },
-        { label: "Live Demo", href: "#contact" },
-      ],
-    },
-  ];
+  // PlacementPilot AI is the flagship featured project (first in the database)
+  const featuredProject = PROJECTS[0];
+  const secondaryProjects = PROJECTS.slice(1);
 
   return (
     <section
-      id="engineering-work"
+      id="featured-work"
       className="relative min-h-screen w-full flex flex-col justify-center py-24 sm:py-32 bg-[#050816] overflow-hidden border-t border-slate-900/60"
     >
       {/* Ambient Background Radial Backlights */}
@@ -100,24 +68,16 @@ export function FeaturedWorkSection() {
           {/* Project Layout */}
           <div className="flex flex-col gap-8">
             {/* Top: Large Featured Project Card */}
-            <FeaturedProjectCard
-              title={featuredProject.title}
-              category={featuredProject.category}
-              description={featuredProject.description}
-              technologies={featuredProject.technologies}
-              buttons={featuredProject.buttons}
-            />
+            {featuredProject && (
+              <FeaturedProjectCard project={featuredProject} />
+            )}
 
-            {/* Bottom: Two Equal Project Cards */}
+            {/* Bottom: Secondary Project Cards in a Responsive Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
-              {secondaryProjects.map((project, index) => (
+              {secondaryProjects.map((project) => (
                 <ProjectCard
-                  key={index}
-                  title={project.title}
-                  category={project.category}
-                  description={project.description}
-                  technologies={project.technologies}
-                  buttons={project.buttons}
+                  key={project.id}
+                  project={project}
                 />
               ))}
             </div>

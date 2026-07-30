@@ -1,8 +1,3 @@
-export interface SkillCategory {
-  title: string;
-  skills: string[];
-}
-
 export interface CertificationItem {
   id: string;
   title: string;
@@ -11,27 +6,9 @@ export interface CertificationItem {
   skills: string[];
   completionDate?: string;
   credentialUrl?: string;
+  logo?: string;
   featured: boolean;
 }
-
-export const SKILL_CATEGORIES: SkillCategory[] = [
-  {
-    title: "Artificial Intelligence",
-    skills: ["Agentic AI", "Generative AI", "Machine Learning", "Prompt Engineering"],
-  },
-  {
-    title: "Cloud Computing",
-    skills: ["Microsoft Azure", "AWS Cloud", "IBM Cloud"],
-  },
-  {
-    title: "Programming",
-    skills: ["Python", "FastAPI", "Next.js", "TypeScript"],
-  },
-  {
-    title: "Professional Development",
-    skills: ["Hackathons", "Research", "Leadership", "Problem Solving"],
-  },
-];
 
 export const CERTIFICATIONS: CertificationItem[] = [
   {
@@ -41,6 +18,7 @@ export const CERTIFICATIONS: CertificationItem[] = [
     category: "Cloud Computing",
     skills: ["AWS", "Cloud Architecture"],
     completionDate: "2024",
+    logo: "/images/aws.png",
     featured: true,
   },
   {
@@ -50,6 +28,7 @@ export const CERTIFICATIONS: CertificationItem[] = [
     category: "Cloud Computing",
     skills: ["IBM Cloud", "Cloud Fundamentals"],
     completionDate: "2024",
+    logo: "/images/ibm.png",
     featured: true,
   },
   {
@@ -59,6 +38,7 @@ export const CERTIFICATIONS: CertificationItem[] = [
     category: "Cloud Computing",
     skills: ["Azure", "Cloud Infrastructure"],
     completionDate: "2024",
+    logo: "/images/microsoft.png",
     featured: true,
   },
   {
@@ -68,6 +48,7 @@ export const CERTIFICATIONS: CertificationItem[] = [
     category: "Programming",
     skills: ["Python", "Programming Logic"],
     completionDate: "2024",
+    logo: "/images/google.png",
     featured: true,
   },
   {
@@ -77,6 +58,7 @@ export const CERTIFICATIONS: CertificationItem[] = [
     category: "Artificial Intelligence",
     skills: ["Generative AI", "Data Analytics"],
     completionDate: "2024",
+    logo: "/images/tata.png",
     featured: true,
   },
   {
@@ -86,6 +68,7 @@ export const CERTIFICATIONS: CertificationItem[] = [
     category: "Professional Development",
     skills: ["Software Engineering", "Systems Design"],
     completionDate: "2024",
+    logo: "/images/wellsfargo.png",
     featured: true,
   },
 ];
@@ -96,8 +79,4 @@ export function getCertifications(): CertificationItem[] {
 
 export function getFeaturedCertifications(): CertificationItem[] {
   return CERTIFICATIONS.filter((c) => c.featured);
-}
-
-export function getSkillCategories(): SkillCategory[] {
-  return SKILL_CATEGORIES;
 }

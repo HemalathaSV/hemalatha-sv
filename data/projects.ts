@@ -29,6 +29,7 @@ export interface Project {
   technologies: string[];
   github: string;
   demo?: string;
+  demoUrl?: string;
   coverImage: string;
   featured: boolean;
   status: string;
@@ -59,6 +60,7 @@ export const PROJECTS: Project[] = [
     technologies: ["Python", "FastAPI", "Gemini API", "Agentic AI", "SQLite", "Next.js", "Tailwind CSS"],
     github: PROFILE.github,
     demo: PROFILE.github,
+    demoUrl: "https://github.com/HemalathaSV",
     coverImage: "/images/profile.png",
     featured: true,
     status: "Completed",
@@ -91,6 +93,51 @@ export const PROJECTS: Project[] = [
       { title: "Resume Analyzer", desc: "ATS score breakdown & keyword improvement suggestions" },
       { title: "Interview Module", desc: "Real-time AI mock interview simulation feed" },
       { title: "Aptitude Module", desc: "Timed problem sets with step-by-step AI solutions" },
+    ],
+  },
+  {
+    id: "campusos",
+    title: "CampusOS",
+    slug: "campusos",
+    category: "Hackathon Project",
+    filterCategory: "Hackathons",
+    tagline:
+      "Intelligent campus management operating system unifying student workflows, administrative tasks, and AI assistance.",
+    description:
+      "An AI-driven campus administration platform built to streamline student workflows, department notifications, and automated academic support.",
+    overview:
+      "CampusOS acts as a digital operating system for academic institutions, deploying AI agents to handle student queries, department hall bookings, and attendance analytics.",
+    problem:
+      "Colleges operate on siloed systems for attendance, notices, hall booking, and student helpdesks, creating administrative friction.",
+    solution:
+      "CampusOS unifies student services into a single clean web application powered by intelligent FastAPI microservices.",
+    technologies: ["Python", "FastAPI", "SQLite", "Next.js", "Tailwind CSS"],
+    github: PROFILE.github,
+    demo: PROFILE.github,
+    demoUrl: "https://github.com/HemalathaSV",
+    coverImage: "/images/profile.png",
+    featured: true,
+    status: "Hackathon Winner",
+    features: [
+      { title: "Automated Helpdesk", desc: "Instant answers for campus procedures and academic regulations." },
+      { title: "Smart Resource Booking", desc: "Prevents seminar hall overbooking with conflict detection." },
+      { title: "Department Analytics", desc: "Real-time dashboard monitoring student engagement." },
+    ],
+    challenges: [
+      "Designing a high-throughput backend within a 24-hour hackathon timeframe.",
+      "Ensuring smooth responsive UI state across diverse mobile devices.",
+    ],
+    learnings: [
+      "Rapid prototyping with FastAPI and Next.js enables rapid deployment under time pressure.",
+    ],
+    architecture: [
+      { title: "Frontend Client", desc: "Next.js responsive dashboard" },
+      { title: "API Gateway", desc: "FastAPI REST microservices" },
+      { title: "AI Assistant", desc: "Domain-trained student query bot" },
+    ],
+    screenshots: [
+      { title: "Campus Portal", desc: "Unified student dashboard and announcement feed" },
+      { title: "Hall Booking System", desc: "Interactive room reservation schedule grid" },
     ],
   },
   {
@@ -139,50 +186,6 @@ export const PROJECTS: Project[] = [
     ],
   },
   {
-    id: "campusos",
-    title: "CampusOS",
-    slug: "campusos",
-    category: "Hackathon Project",
-    filterCategory: "Hackathons",
-    tagline:
-      "Intelligent campus management operating system unifying student workflows, administrative tasks, and AI assistance.",
-    description:
-      "An AI-driven campus administration platform built to streamline student workflows, department notifications, and automated academic support.",
-    overview:
-      "CampusOS acts as a digital operating system for academic institutions, deploying AI agents to handle student queries, department hall bookings, and attendance analytics.",
-    problem:
-      "Colleges operate on siloed systems for attendance, notices, hall booking, and student helpdesks, creating administrative friction.",
-    solution:
-      "CampusOS unifies student services into a single clean web application powered by intelligent FastAPI microservices.",
-    technologies: ["Python", "FastAPI", "SQLite", "Next.js", "Tailwind CSS"],
-    github: PROFILE.github,
-    demo: PROFILE.github,
-    coverImage: "/images/profile.png",
-    featured: true,
-    status: "Hackathon Winner",
-    features: [
-      { title: "Automated Helpdesk", desc: "Instant answers for campus procedures and academic regulations." },
-      { title: "Smart Resource Booking", desc: "Prevents seminar hall overbooking with conflict detection." },
-      { title: "Department Analytics", desc: "Real-time dashboard monitoring student engagement." },
-    ],
-    challenges: [
-      "Designing a high-throughput backend within a 24-hour hackathon timeframe.",
-      "Ensuring smooth responsive UI state across diverse mobile devices.",
-    ],
-    learnings: [
-      "Rapid prototyping with FastAPI and Next.js enables rapid deployment under time pressure.",
-    ],
-    architecture: [
-      { title: "Frontend Client", desc: "Next.js responsive dashboard" },
-      { title: "API Gateway", desc: "FastAPI REST microservices" },
-      { title: "AI Assistant", desc: "Domain-trained student query bot" },
-    ],
-    screenshots: [
-      { title: "Campus Portal", desc: "Unified student dashboard and announcement feed" },
-      { title: "Hall Booking System", desc: "Interactive room reservation schedule grid" },
-    ],
-  },
-  {
     id: "resqnet",
     title: "ResQNet",
     slug: "resqnet",
@@ -202,7 +205,7 @@ export const PROJECTS: Project[] = [
     github: PROFILE.github,
     demo: PROFILE.github,
     coverImage: "/images/profile.png",
-    featured: false,
+    featured: true,
     status: "Completed",
     features: [
       { title: "Damage Classification", desc: "AI image classification of structural damage levels." },
@@ -245,7 +248,7 @@ export const PROJECTS: Project[] = [
     github: PROFILE.github,
     demo: PROFILE.github,
     coverImage: "/images/profile.png",
-    featured: false,
+    featured: true,
     status: "Completed",
     features: [
       { title: "Churn Prediction", desc: "Identifies high-risk customer accounts prior to cancellation." },

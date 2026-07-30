@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion, MotionValue, useTransform } from "framer-motion";
+import { PROFILE } from "@/config/profile";
 
 interface PortraitCardProps {
   imageSrc?: string;
@@ -13,8 +14,8 @@ interface PortraitCardProps {
 }
 
 export function PortraitCard({
-  imageSrc = "/images/profile.png",
-  alt = "Hemalatha S V AI",
+  imageSrc = PROFILE.profileImage,
+  alt = PROFILE.name,
   className = "",
   mouseX,
   mouseY,

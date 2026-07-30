@@ -3,7 +3,8 @@
 import React from "react";
 import { motion, Variants } from "framer-motion";
 import { Container } from "@/components/layout/Container";
-import { getFeaturedCertifications, getSkillCategories } from "@/data/certifications";
+import { getFeaturedCertifications } from "@/data/certifications";
+import { getSkillCategories } from "@/data/skills";
 import { LearningCategory } from "./LearningCategory";
 import { CertificationCard } from "./CertificationCard";
 

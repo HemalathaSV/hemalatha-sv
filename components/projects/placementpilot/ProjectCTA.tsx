@@ -38,7 +38,7 @@ export function ProjectCTA() {
               View GitHub Repository
             </a>
             <Link
-              href="/#engineering-work"
+              href="/#featured-work"
               className="h-12 px-7 rounded-full bg-transparent border border-slate-800 text-[#F8FAFC] font-medium text-sm inline-flex items-center gap-2 hover:bg-[#111827] hover:border-[#38BDF8]/40 active:scale-[0.98] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]"
             >
               <ArrowLeft className="h-4 w-4 stroke-[2]" />
