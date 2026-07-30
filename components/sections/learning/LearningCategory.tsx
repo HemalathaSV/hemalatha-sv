@@ -7,7 +7,6 @@ import { SkillBadge } from "./SkillBadge";
 export interface LearningCategoryProps {
   title: string;
   skills: string[];
-  index: number;
 }
 
 const cardVariants: Variants = {
@@ -19,7 +18,7 @@ const cardVariants: Variants = {
   },
 };
 
-export function LearningCategory({ title, skills, index: _ }: LearningCategoryProps) {
+export function LearningCategory({ title, skills }: LearningCategoryProps) {
   return (
     <motion.div
       variants={cardVariants}

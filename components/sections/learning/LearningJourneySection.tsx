@@ -3,6 +3,7 @@
 import React from "react";
 import { motion, Variants } from "framer-motion";
 import { Container } from "@/components/layout/Container";
+import { getFeaturedCertifications, getSkillCategories } from "@/data/certifications";
 import { LearningCategory } from "./LearningCategory";
 import { CertificationCard } from "./CertificationCard";
 
@@ -27,33 +28,8 @@ const gridContainerVariants: Variants = {
 };
 
 export function LearningJourneySection() {
-  const categories = [
-    {
-      title: "Artificial Intelligence",
-      skills: ["Agentic AI", "Generative AI", "Machine Learning", "Prompt Engineering"],
-    },
-    {
-      title: "Cloud Computing",
-      skills: ["Microsoft Azure", "AWS Cloud", "IBM Cloud"],
-    },
-    {
-      title: "Programming",
-      skills: ["Python", "FastAPI", "Next.js", "TypeScript"],
-    },
-    {
-      title: "Professional Development",
-      skills: ["Hackathons", "Research", "Leadership", "Problem Solving"],
-    },
-  ];
-
-  const certifications = [
-    { issuer: "AWS APAC", title: "Solutions Architecture" },
-    { issuer: "IBM", title: "Cloud Computing" },
-    { issuer: "Microsoft", title: "Azure Cloud Services" },
-    { issuer: "Google", title: "Python" },
-    { issuer: "Tata", title: "GenAI Data Analytics" },
-    { issuer: "Wells Fargo", title: "Software Engineering" },
-  ];
+  const categories = getSkillCategories();
+  const certifications = getFeaturedCertifications();
 
   return (
     <section
@@ -111,7 +87,6 @@ export function LearningJourneySection() {
               {categories.map((cat, i) => (
                 <LearningCategory
                   key={i}
-                  index={i}
                   title={cat.title}
                   skills={cat.skills}
                 />
@@ -130,11 +105,10 @@ export function LearningJourneySection() {
                 viewport={{ once: true, margin: "-50px" }}
                 className="grid grid-cols-1 sm:grid-cols-2 gap-4"
               >
-                {certifications.map((cert, i) => (
+                {certifications.map((cert) => (
                   <CertificationCard
-                    key={i}
-                    issuer={cert.issuer}
-                    title={cert.title}
+                    key={cert.id}
+                    certificate={cert}
                   />
                 ))}
               </motion.div>

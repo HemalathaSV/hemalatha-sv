@@ -1,10 +1,6 @@
 import React from "react";
 
-interface TimelineNodeProps {
-  stepIndex: number;
-}
-
-export function TimelineNode({ stepIndex: _ }: TimelineNodeProps) {
+export function TimelineNode() {
   return (
     <div className="relative flex items-center justify-center">
       {/* Outer Glowing Ring */}

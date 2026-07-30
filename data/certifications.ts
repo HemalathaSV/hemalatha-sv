@@ -5,8 +5,13 @@ export interface SkillCategory {
 
 export interface CertificationItem {
   id: string;
-  issuer: string;
   title: string;
+  provider: string;
+  category: string;
+  skills: string[];
+  completionDate?: string;
+  credentialUrl?: string;
+  featured: boolean;
 }
 
 export const SKILL_CATEGORIES: SkillCategory[] = [
@@ -29,16 +34,68 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
 ];
 
 export const CERTIFICATIONS: CertificationItem[] = [
-  { id: "cert-1", issuer: "AWS APAC", title: "Solutions Architecture" },
-  { id: "cert-2", issuer: "IBM", title: "Cloud Computing" },
-  { id: "cert-3", issuer: "Microsoft", title: "Azure Cloud Services" },
-  { id: "cert-4", issuer: "Google", title: "Python" },
-  { id: "cert-5", issuer: "Tata", title: "GenAI Data Analytics" },
-  { id: "cert-6", issuer: "Wells Fargo", title: "Software Engineering" },
+  {
+    id: "cert-1",
+    provider: "AWS APAC",
+    title: "Solutions Architecture",
+    category: "Cloud Computing",
+    skills: ["AWS", "Cloud Architecture"],
+    completionDate: "2024",
+    featured: true,
+  },
+  {
+    id: "cert-2",
+    provider: "IBM",
+    title: "Cloud Computing",
+    category: "Cloud Computing",
+    skills: ["IBM Cloud", "Cloud Fundamentals"],
+    completionDate: "2024",
+    featured: true,
+  },
+  {
+    id: "cert-3",
+    provider: "Microsoft",
+    title: "Azure Cloud Services",
+    category: "Cloud Computing",
+    skills: ["Azure", "Cloud Infrastructure"],
+    completionDate: "2024",
+    featured: true,
+  },
+  {
+    id: "cert-4",
+    provider: "Google",
+    title: "Python",
+    category: "Programming",
+    skills: ["Python", "Programming Logic"],
+    completionDate: "2024",
+    featured: true,
+  },
+  {
+    id: "cert-5",
+    provider: "Tata",
+    title: "GenAI Data Analytics",
+    category: "Artificial Intelligence",
+    skills: ["Generative AI", "Data Analytics"],
+    completionDate: "2024",
+    featured: true,
+  },
+  {
+    id: "cert-6",
+    provider: "Wells Fargo",
+    title: "Software Engineering",
+    category: "Professional Development",
+    skills: ["Software Engineering", "Systems Design"],
+    completionDate: "2024",
+    featured: true,
+  },
 ];
 
 export function getCertifications(): CertificationItem[] {
   return CERTIFICATIONS;
+}
+
+export function getFeaturedCertifications(): CertificationItem[] {
+  return CERTIFICATIONS.filter((c) => c.featured);
 }
 
 export function getSkillCategories(): SkillCategory[] {

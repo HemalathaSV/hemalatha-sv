@@ -85,7 +85,7 @@ export function Timeline() {
                 </div>
 
                 {/* Central Node */}
-                <TimelineNode stepIndex={index} />
+                <TimelineNode />
 
                 {/* Right Side Slot */}
                 <div className="w-1/2 pl-12 text-left flex justify-start">
@@ -103,7 +103,7 @@ export function Timeline() {
               {/* Mobile / Tablet Single Vertical Layout */}
               <div className="lg:hidden flex items-start gap-4 pl-1.5 w-full">
                 <div className="pt-6 shrink-0 z-10">
-                  <TimelineNode stepIndex={index} />
+                  <TimelineNode />
                 </div>
                 <div className="flex-1">
                   <ExperienceCard
