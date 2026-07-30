@@ -3,6 +3,7 @@ import {
   HeroSection,
   AboutSection,
   EngineeringSection,
+  PortfolioEngineeringSection,
   ResearchSection,
   ExperienceSection,
   LearningSection,
@@ -15,6 +16,7 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <EngineeringSection />
+      <PortfolioEngineeringSection />
       <ResearchSection />
       <ExperienceSection />
       <LearningSection />

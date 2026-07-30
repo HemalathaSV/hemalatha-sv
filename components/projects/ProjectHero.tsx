@@ -23,12 +23,25 @@ export function ProjectHero({ project }: ProjectHeroProps) {
         <div className="flex flex-col space-y-8 max-w-4xl mx-auto relative z-10">
           {/* Back Link */}
           <Link
-            href="/portfolio"
+            href="/#featured-work"
             className="inline-flex items-center gap-2 text-xs font-mono font-medium text-[#94A3B8] hover:text-[#38BDF8] transition-colors duration-300 self-start focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8] rounded"
           >
             <ArrowLeft className="h-4 w-4" />
-            Back to Portfolio
+            ← Back to Portfolio
           </Link>
+
+          {/* Breadcrumb Navigation */}
+          <nav aria-label="Breadcrumb" className="text-xs font-mono text-[#94A3B8] flex items-center gap-2 pt-2">
+            <Link href="/" className="hover:text-[#38BDF8] transition-colors">
+              Portfolio
+            </Link>
+            <span className="text-slate-800">/</span>
+            <Link href="/#featured-work" className="hover:text-[#38BDF8] transition-colors">
+              Featured Work
+            </Link>
+            <span className="text-slate-700">/</span>
+            <span className="text-[#F8FAFC] font-semibold">{project.title}</span>
+          </nav>
 
           {/* Category Badge */}
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0B1120] border border-[#38BDF8]/30 self-start">

@@ -20,6 +20,14 @@ export function Navbar() {
       } else {
         setIsScrolled(false);
       }
+
+      // Robust top/bottom boundaries check
+      const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 60;
+      if (window.scrollY < 40) {
+        setActiveSection("home");
+      } else if (isAtBottom) {
+        setActiveSection("contact");
+      }
     };
 
     handleScroll();
@@ -30,12 +38,16 @@ export function Navbar() {
   useEffect(() => {
     const observerOptions: IntersectionObserverInit = {
       root: null,
-      rootMargin: "-20% 0px -60% 0px",
+      rootMargin: "-30% 0px -40% 0px",
       threshold: 0,
     };
 
     const handleIntersection: IntersectionObserverCallback = (entries) => {
       entries.forEach((entry) => {
+        // Prevent overriding scroll top/bottom logic at boundary extremes
+        const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 60;
+        if (window.scrollY < 40 || isAtBottom) return;
+
         if (entry.isIntersecting) {
           setActiveSection(entry.target.id);
         }
