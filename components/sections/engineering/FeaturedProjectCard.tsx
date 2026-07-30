@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { motion, Variants } from "framer-motion";
-import { ExternalLink, ArrowRight, Play } from "lucide-react";
+import { ExternalLink, ArrowRight } from "lucide-react";
 import { Project } from "@/data/projects";
 import { CategoryBadge } from "./CategoryBadge";
 import { TechnologyChip } from "./TechnologyChip";
@@ -76,17 +76,7 @@ export function FeaturedProjectCard({ project }: FeaturedProjectCardProps) {
           Case Study <ArrowRight className="h-4 w-4" />
         </Link>
 
-        {/* Watch Demo Button (dynamic) */}
-        {project.demoUrl && (
-          <a
-            href={project.demoUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="h-11 px-6 rounded-full text-xs sm:text-sm font-semibold tracking-wide inline-flex items-center gap-2 bg-violet-600 text-white hover:bg-violet-500 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
-          >
-            <Play className="h-4 w-4 fill-current" /> Watch Demo
-          </a>
-        )}
+
 
         {/* GitHub Button (Inline SVG) */}
         <a

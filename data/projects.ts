@@ -1,5 +1,3 @@
-import { PROFILE } from "@/config/profile";
-
 export interface ProjectFeature {
   title: string;
   desc: string;
@@ -30,7 +28,6 @@ export interface Project {
   githubUrl: string;
   liveUrl?: string;
   caseStudyUrl: string;
-  demoUrl?: string;
   coverImage: string;
   featured: boolean;
   status: string;
@@ -59,10 +56,9 @@ export const PROJECTS: Project[] = [
     solution:
       "PlacementPilot AI integrates specialized autonomous AI agents under a central Coordinator Agent to provide an all-in-one placement preparation workspace.",
     technologies: ["Python", "FastAPI", "Gemini API", "Agentic AI", "SQLite", "Next.js", "Tailwind CSS"],
-    githubUrl: PROFILE.github,
+    githubUrl: "https://github.com/HemalathaSV/placement-ai-pro",
     liveUrl: "https://placement-ai-pro.vercel.app",
     caseStudyUrl: "/projects/placementpilot-ai",
-    demoUrl: "https://github.com/HemalathaSV",
     coverImage: "/images/profile.png",
     featured: true,
     status: "Completed",
@@ -114,10 +110,9 @@ export const PROJECTS: Project[] = [
     solution:
       "CampusOS unifies student services into a single clean web application powered by intelligent FastAPI microservices.",
     technologies: ["Python", "FastAPI", "SQLite", "Next.js", "Tailwind CSS"],
-    githubUrl: PROFILE.github,
+    githubUrl: "https://github.com/HemalathaSV/campusos",
     liveUrl: "https://campusos-alpha.vercel.app/",
     caseStudyUrl: "/projects/campusos",
-    demoUrl: "https://github.com/HemalathaSV",
     coverImage: "/images/profile.png",
     featured: true,
     status: "Hackathon Winner",
@@ -160,7 +155,7 @@ export const PROJECTS: Project[] = [
     solution:
       "By combining LLMs with deterministic python scheduling tools, the agent interprets commands like 'Schedule 16 teams into double elimination' and outputs fully structured fixtures instantly.",
     technologies: ["Python", "FastAPI", "SQLite", "Gemini API", "Agentic AI"],
-    githubUrl: PROFILE.github,
+    githubUrl: "https://github.com/HemalathaSV/EVO_MIND_77",
     caseStudyUrl: "/projects/tournament-management-agent",
     coverImage: "/images/profile.png",
     featured: true,

@@ -54,6 +54,7 @@ export function PortraitCard({
             fill
             sizes="(max-width: 640px) 320px, (max-width: 1024px) 380px, 420px"
             priority
+            unoptimized
             className="object-cover object-center transition-transform duration-500 hover:scale-105"
           />
         </div>

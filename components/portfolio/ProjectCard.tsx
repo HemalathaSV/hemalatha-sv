@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { motion, Variants } from "framer-motion";
-import { ArrowRight, Play, ExternalLink } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import { Project } from "@/data/projects";
 
 interface ProjectCardProps {
@@ -74,17 +74,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </Link>
         
         <div className="flex items-center gap-2">
-          {project.demoUrl && (
-            <a
-              href={project.demoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Watch Demo"
-              className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#111827] text-[#94A3B8] hover:text-[#38BDF8] hover:border-[#38BDF8]/40 border border-slate-800 transition-all"
-            >
-              <Play className="h-3.5 w-3.5 fill-current" />
-            </a>
-          )}
+
           {project.liveUrl && (
             <a
               href={project.liveUrl}
