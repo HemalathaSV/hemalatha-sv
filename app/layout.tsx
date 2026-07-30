@@ -3,6 +3,7 @@ import { Space_Grotesk, Inter } from "next/font/google";
 import "./globals.css";
 import { SkipToContent, Navbar } from "@/components/navigation";
 import { Footer } from "@/components/layout";
+import { LoadingScreen } from "@/components/ui/LoadingScreen";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -32,6 +33,7 @@ export default function RootLayout({
       className={`${spaceGrotesk.variable} ${inter.variable} dark h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[#050816] text-[#F8FAFC] selection:bg-[#38BDF8]/30 selection:text-[#38BDF8]">
+        <LoadingScreen />
         <SkipToContent />
         <Navbar />
         <div className="flex-1 flex flex-col">{children}</div>
