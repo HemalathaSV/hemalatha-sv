@@ -4,6 +4,7 @@ import React from "react";
 import { motion, Variants } from "framer-motion";
 import { Mail, MapPin, Globe, Share2 } from "lucide-react";
 import { Container } from "@/components/layout/Container";
+import { PROFILE } from "@/config/profile";
 import { ContactCard } from "./ContactCard";
 import { SocialLinks } from "./SocialLinks";
 import { CTAButtons } from "./CTAButtons";
@@ -33,25 +34,25 @@ export function ContactSection() {
     {
       icon: Mail,
       label: "Email",
-      value: "contact@hemalathasv.ai",
-      href: "mailto:contact@hemalathasv.ai",
+      value: PROFILE.email,
+      href: `mailto:${PROFILE.email}`,
     },
     {
       icon: Globe,
       label: "LinkedIn",
-      value: "linkedin.com/in/hemalathasv",
-      href: "https://linkedin.com/in/hemalathasv",
+      value: PROFILE.linkedin.replace("https://www.", "").replace("https://", ""),
+      href: PROFILE.linkedin,
     },
     {
       icon: Share2,
       label: "GitHub",
-      value: "github.com/HemalathaSV",
-      href: "https://github.com/HemalathaSV",
+      value: PROFILE.github.replace("https://", ""),
+      href: PROFILE.github,
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "Mysore, India",
+      value: PROFILE.location,
     },
   ];
 
@@ -132,7 +133,7 @@ export function ContactSection() {
       {/* Footer */}
       <footer className="pt-16 pb-6 text-center text-xs font-mono text-[#94A3B8]/60 border-t border-slate-900/60 mt-16 relative z-10">
         <Container>
-          <p>© {new Date().getFullYear()} Hemalatha S V AI. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} {PROFILE.brand}. All rights reserved.</p>
         </Container>
       </footer>
     </section>

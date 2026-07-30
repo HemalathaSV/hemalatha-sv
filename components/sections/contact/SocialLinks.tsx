@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Mail } from "lucide-react";
+import { PROFILE } from "@/config/profile";
 
 export function SocialLinks() {
   return (
@@ -11,7 +12,7 @@ export function SocialLinks() {
       </span>
       {/* GitHub Icon */}
       <a
-        href="https://github.com/HemalathaSV"
+        href={PROFILE.github}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="GitHub"
@@ -24,7 +25,7 @@ export function SocialLinks() {
 
       {/* LinkedIn Icon */}
       <a
-        href="https://linkedin.com/in/hemalathasv"
+        href={PROFILE.linkedin}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="LinkedIn"
@@ -37,7 +38,7 @@ export function SocialLinks() {
 
       {/* Email Icon */}
       <a
-        href="mailto:contact@hemalathasv.ai"
+        href={`mailto:${PROFILE.email}`}
         aria-label="Email"
         className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#0B1120] border border-slate-800 text-[#94A3B8] hover:text-[#38BDF8] hover:border-[#38BDF8]/40 hover:scale-105 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]"
       >

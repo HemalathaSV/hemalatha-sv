@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { PROFILE } from "@/config/profile";
 import { Container } from "./Container";
 import { FooterLinks } from "./FooterLinks";
 import { SocialIcons } from "./SocialIcons";
@@ -29,16 +30,16 @@ export function Footer() {
             <div className="md:col-span-5 flex flex-col space-y-3">
               <a
                 href="#home"
-                aria-label="Hemalatha S V AI Home"
+                aria-label={`${PROFILE.brand} Home`}
                 className="font-heading text-lg font-bold tracking-tight text-[#F8FAFC] inline-flex items-center gap-2 self-start hover:opacity-90 transition-opacity"
               >
-                Hemalatha S V{" "}
+                {PROFILE.name}{" "}
                 <span className="inline-flex items-center px-1.5 py-0.5 rounded text-xs font-mono font-bold bg-[#38BDF8]/10 text-[#38BDF8] border border-[#38BDF8]/30">
                   AI
                 </span>
               </a>
               <p className="text-xs sm:text-sm font-medium text-[#38BDF8]">
-                Building Intelligent AI Solutions
+                {PROFILE.tagline}
               </p>
               <p className="text-xs text-[#94A3B8] leading-relaxed max-w-sm pt-1">
                 Engineering research-driven AI applications, multi-agent systems, and scalable backend platforms.
@@ -62,9 +63,9 @@ export function Footer() {
           {/* Bottom Bar */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-[#94A3B8]/70 text-center sm:text-left">
             <div className="space-y-1">
-              <p>© 2026 Hemalatha S V. All rights reserved.</p>
+              <p>© {new Date().getFullYear()} {PROFILE.name}. All rights reserved.</p>
               <p className="text-[11px] text-[#94A3B8]/50">
-                Designed & Developed by Hemalatha S V
+                Designed & Developed by {PROFILE.name}
               </p>
             </div>
             <p className="text-[11px] text-[#94A3B8]/50 max-w-xs sm:text-right leading-relaxed">

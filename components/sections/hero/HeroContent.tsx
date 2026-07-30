@@ -2,62 +2,68 @@
 
 import React from "react";
 import { motion, Variants } from "framer-motion";
+import { PROFILE } from "@/config/profile";
+import { CTAButtons } from "./CTAButtons";
 
-interface HeroContentProps {
-  className?: string;
-}
-
-const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 16 },
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    y: 0,
-    transition: { duration: 0.5, ease: "easeOut" },
+    transition: {
+      staggerChildren: 0.12,
+      delayChildren: 0.1,
+    },
   },
 };
 
-export function HeroContent({ className = "" }: HeroContentProps) {
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
+
+export function HeroContent() {
   return (
-    <div className={`max-w-[620px] w-full text-left flex flex-col justify-center space-y-3.5 sm:space-y-5 lg:space-y-6 ${className}`}>
-      {/* Small Brand Label */}
-      <motion.div variants={itemVariants} className="inline-flex items-center gap-2 self-start px-2.5 py-1 rounded-full bg-[#0B1120] border border-slate-800/80">
-        <span className="h-2 w-2 rounded-full bg-[#38BDF8] animate-pulse" />
-        <span className="text-xs font-mono font-semibold text-[#38BDF8] tracking-wider uppercase">
-          Hemalatha S V AI
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      className="flex flex-col justify-center space-y-6 sm:space-y-8 w-full max-w-2xl text-left"
+    >
+      {/* 1. Greeting Badge */}
+      <motion.div variants={itemVariants} className="inline-flex items-center gap-2">
+        <span className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-mono font-medium bg-[#0B1120] border border-slate-800 text-[#38BDF8] shadow-sm">
+          👋 Hello, I'm
         </span>
       </motion.div>
 
-      {/* Main Heading */}
-      <motion.h1
-        variants={itemVariants}
-        className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight text-[#F8FAFC] leading-[1.04]"
-      >
-        Hemalatha S V
-      </motion.h1>
+      {/* 2. Main Name & Brand Title */}
+      <motion.div variants={itemVariants} className="space-y-2">
+        <h1 className="font-heading text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-[#F8FAFC] leading-[1.05]">
+          {PROFILE.name}
+        </h1>
+        <p className="font-heading text-xl sm:text-2xl lg:text-3xl font-semibold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#38BDF8] via-[#8B5CF6] to-[#38BDF8]">
+          {PROFILE.title}
+        </p>
+      </motion.div>
 
-      {/* Tagline */}
-      <motion.p
-        variants={itemVariants}
-        className="font-heading text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-[#38BDF8] tracking-tight"
-      >
-        Building Intelligent AI Systems
-      </motion.p>
+      {/* 3. Tagline & Description */}
+      <motion.div variants={itemVariants} className="space-y-3">
+        <h2 className="text-base sm:text-lg font-mono font-medium text-[#38BDF8]">
+          {PROFILE.tagline}
+        </h2>
+        <p className="text-base sm:text-lg text-[#94A3B8] leading-relaxed max-w-xl font-sans">
+          Specializing in autonomous multi-agent systems, deep learning architectures, scalable FastAPI backends, and cutting-edge AI research to power next-generation software.
+        </p>
+      </motion.div>
 
-      {/* Professional Title */}
-      <motion.p
-        variants={itemVariants}
-        className="text-xs sm:text-sm md:text-base font-mono text-[#94A3B8] font-medium tracking-wide"
-      >
-        AI/ML Engineer | Agentic AI Developer
-      </motion.p>
-
-      {/* Description */}
-      <motion.p
-        variants={itemVariants}
-        className="text-sm sm:text-base md:text-lg text-[#94A3B8] leading-relaxed max-w-[580px] pt-1"
-      >
-        Designing and engineering intelligent AI systems, multi-agent applications, and research-driven software for real-world impact.
-      </motion.p>
-    </div>
+      {/* 4. Action Buttons */}
+      <motion.div variants={itemVariants} className="pt-2">
+        <CTAButtons />
+      </motion.div>
+    </motion.div>
   );
 }

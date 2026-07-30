@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Container } from "@/components/layout/Container";
+import { PROFILE } from "@/config/profile";
 
 export function ProjectHero() {
   return (
@@ -46,7 +47,7 @@ export function ProjectHero() {
           {/* Action Buttons */}
           <div className="flex flex-wrap items-center gap-4 pt-2">
             <a
-              href="https://github.com/HemalathaSV"
+              href={PROFILE.github}
               target="_blank"
               rel="noopener noreferrer"
               className="h-12 px-6 rounded-full bg-[#38BDF8] text-[#050816] font-semibold text-sm inline-flex items-center gap-2.5 hover:bg-[#38BDF8]/90 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-lg shadow-[#38BDF8]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]"
@@ -57,7 +58,7 @@ export function ProjectHero() {
               GitHub Repository
             </a>
             <a
-              href="https://github.com/HemalathaSV"
+              href={PROFILE.github}
               target="_blank"
               rel="noopener noreferrer"
               className="h-12 px-6 rounded-full bg-[#0B1120] border border-slate-800 text-[#F8FAFC] font-medium text-sm inline-flex items-center gap-2 hover:border-[#38BDF8]/40 hover:bg-[#111827] active:scale-[0.98] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]"
