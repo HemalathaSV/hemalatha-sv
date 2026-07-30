@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export function ScrollIndicator() {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    const target = document.querySelector("#who-i-am");
+    const target = document.querySelector("#about");
     if (target) {
       const navOffset = 80;
       const elementPosition = target.getBoundingClientRect().top + window.scrollY;
@@ -27,9 +27,9 @@ export function ScrollIndicator() {
       className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2"
     >
       <a
-        href="#who-i-am"
+        href="#about"
         onClick={handleClick}
-        aria-label="Scroll down to Who I Am"
+        aria-label="Scroll down to About"
         className="group flex flex-col items-center gap-2 text-[#94A3B8] hover:text-[#38BDF8] transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8] rounded-full p-1"
       >
         {/* Mouse Icon Outline */}

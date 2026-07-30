@@ -68,9 +68,9 @@ export function FeaturedProjectCard({ project }: FeaturedProjectCardProps) {
 
       {/* Action Buttons */}
       <div className="flex flex-wrap items-center gap-4 pt-8 mt-6 border-t border-slate-800/80 relative z-10">
-        {/* Primary CTA: Case Study */}
+        {/* Case Study */}
         <Link
-          href={`/projects/${project.slug}`}
+          href={project.caseStudyUrl}
           className="h-11 px-6 rounded-full text-xs sm:text-sm font-semibold tracking-wide inline-flex items-center gap-2 bg-[#38BDF8] text-[#050816] hover:bg-[#38BDF8]/90 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 shadow-md shadow-[#38BDF8]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]"
         >
           Case Study <ArrowRight className="h-4 w-4" />
@@ -90,7 +90,7 @@ export function FeaturedProjectCard({ project }: FeaturedProjectCardProps) {
 
         {/* GitHub Button (Inline SVG) */}
         <a
-          href={project.github}
+          href={project.githubUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="h-11 px-6 rounded-full text-xs sm:text-sm font-medium tracking-wide inline-flex items-center gap-2 bg-transparent border border-slate-800 text-[#F8FAFC] hover:bg-[#111827] hover:border-[#38BDF8]/40 active:scale-[0.98] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]"
@@ -102,9 +102,9 @@ export function FeaturedProjectCard({ project }: FeaturedProjectCardProps) {
         </a>
 
         {/* Live Demo Button (optional) */}
-        {project.demo && project.demo !== project.github && (
+        {project.liveUrl && (
           <a
-            href={project.demo}
+            href={project.liveUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="h-11 px-6 rounded-full text-xs sm:text-sm font-medium tracking-wide inline-flex items-center gap-2 bg-transparent border border-slate-800 text-[#F8FAFC] hover:bg-[#111827] hover:border-[#38BDF8]/40 active:scale-[0.98] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]"

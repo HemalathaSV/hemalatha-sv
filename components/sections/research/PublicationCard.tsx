@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion, Variants } from "framer-motion";
+import { ExternalLink, Download } from "lucide-react";
 import { PublicationBadge } from "./PublicationBadge";
 
 export interface PublicationCardProps {
@@ -10,8 +11,6 @@ export interface PublicationCardProps {
   status: string;
   category: string;
   description: string;
-  primaryButtonText?: string;
-  secondaryButtonText?: string;
 }
 
 const cardVariants: Variants = {
@@ -29,9 +28,9 @@ export function PublicationCard({
   status,
   category,
   description,
-  primaryButtonText = "Read Publication",
-  secondaryButtonText = "View Related Project",
 }: PublicationCardProps) {
+  const paperUrl = "/research/IJCRT2512785.pdf";
+
   return (
     <motion.div
       variants={cardVariants}
@@ -85,16 +84,19 @@ export function PublicationCard({
       {/* Buttons */}
       <div className="flex flex-wrap items-center gap-3.5 pt-8 mt-6 border-t border-slate-800/80 relative z-10">
         <a
-          href="#contact"
-          className="h-11 px-6 rounded-full text-xs sm:text-sm font-semibold tracking-wide inline-flex items-center justify-center bg-[#38BDF8] text-[#050816] hover:bg-[#38BDF8]/90 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 shadow-md shadow-[#38BDF8]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]"
+          href={paperUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="h-11 px-6 rounded-full text-xs sm:text-sm font-semibold tracking-wide inline-flex items-center justify-center gap-2 bg-[#38BDF8] text-[#050816] hover:bg-[#38BDF8]/90 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 shadow-md shadow-[#38BDF8]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]"
         >
-          {primaryButtonText}
+          Read Paper <ExternalLink className="h-4 w-4" />
         </a>
         <a
-          href="#featured-work"
-          className="h-11 px-6 rounded-full text-xs sm:text-sm font-medium tracking-wide inline-flex items-center justify-center bg-transparent border border-slate-800 text-[#F8FAFC] hover:bg-[#111827] hover:border-[#38BDF8]/40 active:scale-[0.98] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]"
+          href={paperUrl}
+          download="Tournament_Management_Agent_IJCRT.pdf"
+          className="h-11 px-6 rounded-full text-xs sm:text-sm font-medium tracking-wide inline-flex items-center justify-center gap-2 bg-transparent border border-slate-800 text-[#F8FAFC] hover:bg-[#111827] hover:border-[#38BDF8]/40 active:scale-[0.98] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]"
         >
-          {secondaryButtonText}
+          Download PDF <Download className="h-4 w-4" />
         </a>
       </div>
     </motion.div>

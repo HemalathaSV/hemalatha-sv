@@ -27,8 +27,9 @@ export interface Project {
   problem: string;
   solution: string;
   technologies: string[];
-  github: string;
-  demo?: string;
+  githubUrl: string;
+  liveUrl?: string;
+  caseStudyUrl: string;
   demoUrl?: string;
   coverImage: string;
   featured: boolean;
@@ -58,8 +59,9 @@ export const PROJECTS: Project[] = [
     solution:
       "PlacementPilot AI integrates specialized autonomous AI agents under a central Coordinator Agent to provide an all-in-one placement preparation workspace.",
     technologies: ["Python", "FastAPI", "Gemini API", "Agentic AI", "SQLite", "Next.js", "Tailwind CSS"],
-    github: PROFILE.github,
-    demo: PROFILE.github,
+    githubUrl: PROFILE.github,
+    liveUrl: "https://placement-ai-pro.vercel.app",
+    caseStudyUrl: "/projects/placementpilot-ai",
     demoUrl: "https://github.com/HemalathaSV",
     coverImage: "/images/profile.png",
     featured: true,
@@ -112,8 +114,9 @@ export const PROJECTS: Project[] = [
     solution:
       "CampusOS unifies student services into a single clean web application powered by intelligent FastAPI microservices.",
     technologies: ["Python", "FastAPI", "SQLite", "Next.js", "Tailwind CSS"],
-    github: PROFILE.github,
-    demo: PROFILE.github,
+    githubUrl: PROFILE.github,
+    liveUrl: "https://campusos-alpha.vercel.app/",
+    caseStudyUrl: "/projects/campusos",
     demoUrl: "https://github.com/HemalathaSV",
     coverImage: "/images/profile.png",
     featured: true,
@@ -157,8 +160,8 @@ export const PROJECTS: Project[] = [
     solution:
       "By combining LLMs with deterministic python scheduling tools, the agent interprets commands like 'Schedule 16 teams into double elimination' and outputs fully structured fixtures instantly.",
     technologies: ["Python", "FastAPI", "SQLite", "Gemini API", "Agentic AI"],
-    github: PROFILE.github,
-    demo: PROFILE.github,
+    githubUrl: PROFILE.github,
+    caseStudyUrl: "/projects/tournament-management-agent",
     coverImage: "/images/profile.png",
     featured: true,
     status: "Published",
@@ -183,92 +186,6 @@ export const PROJECTS: Project[] = [
     screenshots: [
       { title: "Tournament Dashboard", desc: "Live match schedules and auto-updating bracket view" },
       { title: "Natural Language Prompt", desc: "Conversational fixture generator interface" },
-    ],
-  },
-  {
-    id: "resqnet",
-    title: "ResQNet",
-    slug: "resqnet",
-    category: "Disaster Response AI",
-    filterCategory: "AI Projects",
-    tagline:
-      "Emergency resource allocation and situational awareness platform powered by aerial computer vision and AI dispatch.",
-    description:
-      "An AI-powered emergency management system deploying machine learning vision models to assess disaster damage and optimize rescue worker dispatch.",
-    overview:
-      "ResQNet helps first responders triage disaster zones by analyzing satellite/drone imagery and routing emergency supplies based on AI urgency predictions.",
-    problem:
-      "During natural disasters, emergency responders suffer from information overload and lack real-time priority mapping for rescue teams.",
-    solution:
-      "ResQNet automates damage assessment from image feeds and runs optimization algorithms to dispatch resources where urgency is highest.",
-    technologies: ["Python", "PyTorch", "FastAPI", "Next.js", "Tailwind CSS"],
-    github: PROFILE.github,
-    demo: PROFILE.github,
-    coverImage: "/images/profile.png",
-    featured: true,
-    status: "Completed",
-    features: [
-      { title: "Damage Classification", desc: "AI image classification of structural damage levels." },
-      { title: "Rescue Routing", desc: "Calculates shortest safe path for emergency vehicle dispatch." },
-      { title: "Live Heatmap", desc: "Real-time incident map with geographic priority overlays." },
-    ],
-    challenges: [
-      "Processing high-resolution aerial imagery quickly on edge devices.",
-      "Handling noisy, incomplete real-time emergency report feeds.",
-    ],
-    learnings: [
-      "Lightweight vision backbones are essential for low-latency emergency response tools.",
-    ],
-    architecture: [
-      { title: "Image Feed", desc: "Drone / Satellite imagery input" },
-      { title: "Vision Model", desc: "Damage level classification model" },
-      { title: "Dispatch Engine", desc: "Optimal vehicle route solver" },
-    ],
-    screenshots: [
-      { title: "Situation Map", desc: "Real-time disaster zone heatmaps and active rescue units" },
-    ],
-  },
-  {
-    id: "customer-risk-intelligence",
-    title: "Customer Risk Intelligence System",
-    slug: "customer-risk-intelligence",
-    category: "Machine Learning",
-    filterCategory: "Machine Learning",
-    tagline:
-      "Predictive machine learning pipeline analyzing financial behavior to quantify churn and credit risk indicators.",
-    description:
-      "A predictive analytics system leveraging machine learning algorithms to evaluate customer risk profiles, churn probability, and financial anomaly detection.",
-    overview:
-      "This machine learning system analyzes historical transaction patterns and customer demographics to generate actionable risk scores for financial decision makers.",
-    problem:
-      "Financial institutions fail to identify early churn signals and credit default risks due to static rule-based legacy systems.",
-    solution:
-      "Customer Risk Intelligence uses ensemble machine learning models to continuously recalculate dynamic risk scores per account.",
-    technologies: ["Python", "Scikit-Learn", "FastAPI", "SQLite", "Tailwind CSS"],
-    github: PROFILE.github,
-    demo: PROFILE.github,
-    coverImage: "/images/profile.png",
-    featured: true,
-    status: "Completed",
-    features: [
-      { title: "Churn Prediction", desc: "Identifies high-risk customer accounts prior to cancellation." },
-      { title: "Anomaly Detection", desc: "Flags irregular transaction velocity or unusual activity." },
-      { title: "Explainable AI Metrics", desc: "Provides feature importance metrics for risk score transparency." },
-    ],
-    challenges: [
-      "Handling highly imbalanced credit risk datasets without overfitting.",
-      "Providing interpretable feature weights for compliance auditing.",
-    ],
-    learnings: [
-      "SHAP values and feature attribution are crucial for stakeholder trust in risk models.",
-    ],
-    architecture: [
-      { title: "Data Pipeline", desc: "Extracts & cleans financial history" },
-      { title: "Ensemble Model", desc: "Scikit-Learn Random Forest / XGBoost" },
-      { title: "Risk API", desc: "FastAPI risk scoring endpoint" },
-    ],
-    screenshots: [
-      { title: "Risk Dashboard", desc: "Customer risk tier distribution and anomaly flag feed" },
     ],
   },
 ];

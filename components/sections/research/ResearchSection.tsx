@@ -95,8 +95,6 @@ export function ResearchSection() {
                 status={publication.status}
                 category={publication.category}
                 description={publication.description}
-                primaryButtonText="Read Publication"
-                secondaryButtonText="View Related Project"
               />
             </div>
 

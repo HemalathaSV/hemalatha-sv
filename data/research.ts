@@ -29,7 +29,7 @@ export const PUBLICATIONS: Publication[] = [
       "SQLite Database",
       "Research Publication",
     ],
-    pdfUrl: "https://www.ijcrt.org",
+    pdfUrl: "/research/IJCRT2512785.pdf",
     projectSlug: "tournament-management-agent",
   },
 ];

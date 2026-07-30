@@ -31,7 +31,7 @@ export function ProjectCTA({ project }: ProjectCTAProps) {
 
           <div className="flex flex-wrap items-center justify-center gap-4 relative z-10">
             <a
-              href={project.github}
+              href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="h-12 px-7 rounded-full bg-[#38BDF8] text-[#050816] font-semibold text-sm inline-flex items-center gap-2 hover:bg-[#38BDF8]/90 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-lg shadow-[#38BDF8]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]"

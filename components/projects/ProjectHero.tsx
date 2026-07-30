@@ -51,7 +51,7 @@ export function ProjectHero({ project }: ProjectHeroProps) {
           {/* Action Buttons */}
           <div className="flex flex-wrap items-center gap-4 pt-2">
             <a
-              href={project.github}
+              href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="h-12 px-6 rounded-full bg-[#38BDF8] text-[#050816] font-semibold text-sm inline-flex items-center gap-2.5 hover:bg-[#38BDF8]/90 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-lg shadow-[#38BDF8]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]"
@@ -61,9 +61,9 @@ export function ProjectHero({ project }: ProjectHeroProps) {
               </svg>
               GitHub Repository
             </a>
-            {project.demo && (
+            {project.liveUrl && (
               <a
-                href={project.demo}
+                href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="h-12 px-6 rounded-full bg-[#0B1120] border border-slate-800 text-[#F8FAFC] font-medium text-sm inline-flex items-center gap-2 hover:border-[#38BDF8]/40 hover:bg-[#111827] active:scale-[0.98] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]"

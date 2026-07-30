@@ -64,9 +64,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
       {/* Action Buttons */}
       <div className="flex flex-wrap items-center gap-3 pt-6 mt-6 border-t border-slate-800/60">
-        {/* Primary CTA: Case Study */}
+        {/* Case Study */}
         <Link
-          href={`/projects/${project.slug}`}
+          href={project.caseStudyUrl}
           className="h-10 px-5 rounded-full text-xs font-semibold tracking-wide inline-flex items-center gap-1.5 bg-[#38BDF8] text-[#050816] hover:bg-[#38BDF8]/90 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 shadow-md shadow-[#38BDF8]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]"
         >
           Case Study <ArrowRight className="h-3.5 w-3.5" />
@@ -86,7 +86,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
         {/* GitHub Button (Inline SVG) */}
         <a
-          href={project.github}
+          href={project.githubUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="h-10 px-5 rounded-full text-xs font-medium tracking-wide inline-flex items-center gap-1.5 bg-transparent border border-slate-800 text-[#F8FAFC] hover:bg-[#111827] hover:border-[#38BDF8]/40 active:scale-[0.98] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]"
@@ -98,9 +98,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </a>
 
         {/* Live Demo Button (optional) */}
-        {project.demo && project.demo !== project.github && (
+        {project.liveUrl && (
           <a
-            href={project.demo}
+            href={project.liveUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="h-10 px-5 rounded-full text-xs font-medium tracking-wide inline-flex items-center gap-1.5 bg-transparent border border-slate-800 text-[#F8FAFC] hover:bg-[#111827] hover:border-[#38BDF8]/40 active:scale-[0.98] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]"

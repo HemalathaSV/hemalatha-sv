@@ -20,7 +20,7 @@ export function AboutSection() {
 
   return (
     <section
-      id="who-i-am"
+      id="about"
       className="relative min-h-screen w-full flex flex-col justify-center py-24 sm:py-32 bg-[#050816] overflow-hidden border-t border-slate-900/60"
     >
       {/* Subtle Ambient Glow */}
