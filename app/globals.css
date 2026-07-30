@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap");
 
 :root {
   --bg-background: #050816;
@@ -9,9 +8,6 @@
   --color-secondary: #8B5CF6;
   --color-text: #F8FAFC;
   --color-muted: #94A3B8;
-
-  --font-space-grotesk: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-inter: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 @theme inline {
