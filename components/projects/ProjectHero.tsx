@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ArrowLeft, ExternalLink, BookOpen } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 import { Project } from "@/data/projects";
 
@@ -24,7 +24,7 @@ export function ProjectHero({ project }: ProjectHeroProps) {
           {/* Back Link */}
           <Link
             href="/portfolio"
-            className="inline-flex items-center gap-2 text-xs font-mono font-medium text-[#94A3B8] hover:text-[#38BDF8] transition-colors self-start focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8] rounded"
+            className="inline-flex items-center gap-2 text-xs font-mono font-medium text-[#94A3B8] hover:text-[#38BDF8] transition-colors duration-300 self-start focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8] rounded"
           >
             <ArrowLeft className="h-4 w-4" />
             Back to Portfolio
@@ -70,6 +70,17 @@ export function ProjectHero({ project }: ProjectHeroProps) {
               >
                 <ExternalLink className="h-4 w-4 stroke-[2]" />
                 Live Demo
+              </a>
+            )}
+            {project.paperUrl && (
+              <a
+                href={project.paperUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="h-12 px-6 rounded-full bg-[#0B1120] border border-slate-800 text-[#F8FAFC] font-medium text-sm inline-flex items-center gap-2 hover:border-[#38BDF8]/40 hover:bg-[#111827] active:scale-[0.98] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]"
+              >
+                <BookOpen className="h-4 w-4 stroke-[2]" />
+                Research Paper
               </a>
             )}
           </div>

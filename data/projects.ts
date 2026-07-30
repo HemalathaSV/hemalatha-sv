@@ -28,6 +28,7 @@ export interface Project {
   githubUrl: string;
   liveUrl?: string;
   caseStudyUrl: string;
+  paperUrl?: string;
   coverImage: string;
   featured: boolean;
   status: string;
@@ -157,6 +158,7 @@ export const PROJECTS: Project[] = [
     technologies: ["Python", "FastAPI", "SQLite", "Gemini API", "Agentic AI"],
     githubUrl: "https://github.com/HemalathaSV/EVO_MIND_77",
     caseStudyUrl: "/projects/tournament-management-agent",
+    paperUrl: "/research/IJCRT2512785.pdf",
     coverImage: "/images/profile.png",
     featured: true,
     status: "Published",

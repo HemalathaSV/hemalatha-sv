@@ -8,7 +8,6 @@ import { ArchitectureDiagram } from "@/components/projects/ArchitectureDiagram";
 import { FeatureGrid } from "@/components/projects/FeatureGrid";
 import { TechStack } from "@/components/projects/TechStack";
 import { ChallengeCard } from "@/components/projects/ChallengeCard";
-import { Gallery } from "@/components/projects/Gallery";
 import { ProjectCTA } from "@/components/projects/ProjectCTA";
 
 interface ProjectPageProps {
@@ -55,7 +54,6 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
       <FeatureGrid project={project} />
       <TechStack project={project} />
       <ChallengeCard project={project} />
-      <Gallery project={project} />
       <ProjectCTA project={project} />
     </main>
   );
