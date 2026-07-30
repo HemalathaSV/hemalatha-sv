@@ -74,12 +74,18 @@ export default function RootLayout({
       className={`${spaceGrotesk.variable} ${inter.variable} dark h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[#050816] text-[#F8FAFC] selection:bg-[#38BDF8]/30 selection:text-[#38BDF8]">
+        {/* Premium Ambient Background Glows */}
+        <div className="fixed inset-0 overflow-hidden pointer-events-none z-0 select-none">
+          <div className="absolute top-1/4 left-1/4 w-[500px] sm:w-[650px] h-[500px] sm:h-[650px] rounded-full bg-gradient-to-tr from-[#38BDF8]/03 via-[#8B5CF6]/02 to-transparent blur-3xl ambient-glow-1" />
+          <div className="absolute bottom-1/4 right-1/4 w-[400px] sm:w-[550px] h-[400px] sm:h-[550px] rounded-full bg-gradient-to-bl from-[#8B5CF6]/03 via-[#38BDF8]/02 to-transparent blur-3xl ambient-glow-2" />
+        </div>
+
         <ScrollProgress />
         <LoadingScreen />
         <CommandPalette />
         <SkipToContent />
         <Navbar />
-        <div className="flex-1 flex flex-col">{children}</div>
+        <div className="flex-1 flex flex-col relative z-10">{children}</div>
         <Footer />
         <BackToTop />
       </body>

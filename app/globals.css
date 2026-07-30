@@ -40,3 +40,33 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-space-grotesk);
 }
+
+@keyframes float-glow-1 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(40px, -60px) scale(1.05);
+  }
+  66% {
+    transform: translate(-30px, 30px) scale(0.95);
+  }
+}
+
+@keyframes float-glow-2 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(-50px, 50px) scale(1.08);
+  }
+}
+
+.ambient-glow-1 {
+  animation: float-glow-1 30s infinite ease-in-out;
+}
+
+.ambient-glow-2 {
+  animation: float-glow-2 35s infinite ease-in-out;
+}
+

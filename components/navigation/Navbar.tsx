@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useCallback } from "react";
+import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { NavLogo } from "./NavLogo";
 import { NavLinks } from "./NavLinks";
@@ -9,6 +10,7 @@ import { NAV_ITEMS } from "./nav-config";
 import { Container } from "../layout/Container";
 
 export function Navbar() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [activeSection, setActiveSection] = useState<string>("home");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -33,9 +35,19 @@ export function Navbar() {
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [pathname]);
 
   useEffect(() => {
+    // Determine active section immediately on path mount (deferred to avoid synchronous state updates in effect body)
+    const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 60;
+    const timer = setTimeout(() => {
+      if (window.scrollY < 40) {
+        setActiveSection("home");
+      } else if (isAtBottom) {
+        setActiveSection("contact");
+      }
+    }, 0);
+
     const observerOptions: IntersectionObserverInit = {
       root: null,
       rootMargin: "-30% 0px -40% 0px",
@@ -64,9 +76,10 @@ export function Navbar() {
     });
 
     return () => {
+      clearTimeout(timer);
       observer.disconnect();
     };
-  }, []);
+  }, [pathname]);
 
   const handleNavigate = useCallback((href: string) => {
     const targetId = href.replace("#", "");

@@ -24,10 +24,10 @@ export function ProjectHero({ project }: ProjectHeroProps) {
           {/* Back Link */}
           <Link
             href="/#featured-work"
-            className="inline-flex items-center gap-2 text-xs font-mono font-medium text-[#94A3B8] hover:text-[#38BDF8] transition-colors duration-300 self-start focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8] rounded"
+            className="group inline-flex items-center gap-2.5 text-xs font-mono font-medium text-[#94A3B8] hover:text-[#38BDF8] transition-colors duration-300 self-start focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8] rounded p-1"
           >
-            <ArrowLeft className="h-4 w-4" />
-            ← Back to Portfolio
+            <ArrowLeft className="h-3.5 w-3.5 transition-transform duration-200 group-hover:-translate-x-1" />
+            Back to Portfolio
           </Link>
 
           {/* Breadcrumb Navigation */}

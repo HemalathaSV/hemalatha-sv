@@ -6,7 +6,6 @@ import { Container } from "@/components/layout/Container";
 import { HeroContent } from "./HeroContent";
 import { PortraitCard } from "./PortraitCard";
 import { AchievementCards } from "./AchievementCards";
-import { ScrollIndicator } from "./ScrollIndicator";
 
 const leftColumnVariants: Variants = {
   hidden: { opacity: 0 },
@@ -62,8 +61,6 @@ export function HeroSection() {
         </div>
       </Container>
 
-      {/* Minimal Scroll Indicator */}
-      <ScrollIndicator />
     </section>
   );
 }
