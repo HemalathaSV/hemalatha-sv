@@ -1,22 +1,140 @@
 "use client";
 
 import React from "react";
-import { SectionWrapper } from "@/components/layout";
+import { motion, Variants } from "framer-motion";
+import { Mail, MapPin, Globe, Share2 } from "lucide-react";
+import { Container } from "@/components/layout/Container";
+import { ContactCard } from "./ContactCard";
+import { SocialLinks } from "./SocialLinks";
+import { CTAButtons } from "./CTAButtons";
+
+const headerVariants: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
+
+const cardsContainerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.1,
+    },
+  },
+};
 
 export function ContactSection() {
+  const contactDetails = [
+    {
+      icon: Mail,
+      label: "Email",
+      value: "contact@hemalathasv.ai",
+      href: "mailto:contact@hemalathasv.ai",
+    },
+    {
+      icon: Globe,
+      label: "LinkedIn",
+      value: "linkedin.com/in/hemalathasv",
+      href: "https://linkedin.com/in/hemalathasv",
+    },
+    {
+      icon: Share2,
+      label: "GitHub",
+      value: "github.com/HemalathaSV",
+      href: "https://github.com/HemalathaSV",
+    },
+    {
+      icon: MapPin,
+      label: "Location",
+      value: "Mysore, India",
+    },
+  ];
+
   return (
-    <SectionWrapper id="contact" className="flex items-center justify-center">
-      <div className="flex flex-col items-start justify-center max-w-4xl py-12">
-        <span className="text-xs font-mono font-medium tracking-widest text-[#38BDF8] uppercase mb-4">
-          06 / Connect
-        </span>
-        <h2 className="font-heading text-3xl sm:text-5xl font-bold tracking-tight text-[#F8FAFC] mb-6">
-          Contact
-        </h2>
-        <p className="text-base sm:text-lg text-[#94A3B8] max-w-2xl leading-relaxed">
-          Open for high-impact AI engineering inquiries and research collaborations.
-        </p>
-      </div>
-    </SectionWrapper>
+    <section
+      id="contact"
+      className="relative min-h-screen w-full flex flex-col justify-between py-24 sm:py-32 bg-[#050816] overflow-hidden border-t border-slate-900/60"
+    >
+      {/* Ambient Background Radial Backlights */}
+      <div
+        aria-hidden="true"
+        className="absolute top-1/4 right-0 w-[500px] h-[500px] rounded-full bg-gradient-to-tr from-[#38BDF8]/06 to-[#8B5CF6]/04 blur-3xl pointer-events-none"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute bottom-10 left-0 w-[400px] h-[400px] rounded-full bg-gradient-to-bl from-[#8B5CF6]/05 to-[#38BDF8]/04 blur-3xl pointer-events-none"
+      />
+
+      <Container className="my-auto">
+        <div className="flex flex-col gap-12 sm:gap-16 relative z-10">
+          {/* Desktop 2-Column Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            {/* Left Column: Heading, Subtitle, Buttons & Social Links */}
+            <motion.div
+              variants={headerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-80px" }}
+              className="lg:col-span-7 flex flex-col space-y-6 sm:space-y-8"
+            >
+              {/* Section Badge */}
+              <div className="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-[#0B1120] border border-slate-800/80">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#38BDF8]" />
+                <span className="text-xs font-mono font-semibold text-[#38BDF8] tracking-wider uppercase">
+                  Contact
+                </span>
+              </div>
+
+              {/* Heading */}
+              <h2 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#F8FAFC] leading-[1.1]">
+                Let's Build Something Meaningful Together
+              </h2>
+
+              {/* Subtitle */}
+              <p className="text-base sm:text-lg text-[#94A3B8] leading-relaxed max-w-xl">
+                Whether it's an internship, research collaboration, freelance opportunity, hackathon, or full-time role, I'd love to connect and discuss how we can create impactful AI solutions.
+              </p>
+
+              {/* Primary & Secondary Action Buttons */}
+              <CTAButtons />
+
+              {/* Social Icon Links */}
+              <SocialLinks />
+            </motion.div>
+
+            {/* Right Column: Contact Information Cards Grid */}
+            <motion.div
+              variants={cardsContainerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-60px" }}
+              className="lg:col-span-5 flex flex-col space-y-4"
+            >
+              {contactDetails.map((item, index) => (
+                <ContactCard
+                  key={index}
+                  icon={item.icon}
+                  label={item.label}
+                  value={item.value}
+                  href={item.href}
+                />
+              ))}
+            </motion.div>
+          </div>
+        </div>
+      </Container>
+
+      {/* Footer */}
+      <footer className="pt-16 pb-6 text-center text-xs font-mono text-[#94A3B8]/60 border-t border-slate-900/60 mt-16 relative z-10">
+        <Container>
+          <p>© {new Date().getFullYear()} Hemalatha S V AI. All rights reserved.</p>
+        </Container>
+      </footer>
+    </section>
   );
 }
