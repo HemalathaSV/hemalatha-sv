@@ -4,7 +4,7 @@ interface TimelineNodeProps {
   stepIndex: number;
 }
 
-export function TimelineNode({ stepIndex }: TimelineNodeProps) {
+export function TimelineNode({ stepIndex: _ }: TimelineNodeProps) {
   return (
     <div className="relative flex items-center justify-center">
       {/* Outer Glowing Ring */}

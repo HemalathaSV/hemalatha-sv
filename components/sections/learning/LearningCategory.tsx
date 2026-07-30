@@ -19,7 +19,7 @@ const cardVariants: Variants = {
   },
 };
 
-export function LearningCategory({ title, skills, index }: LearningCategoryProps) {
+export function LearningCategory({ title, skills, index: _ }: LearningCategoryProps) {
   return (
     <motion.div
       variants={cardVariants}

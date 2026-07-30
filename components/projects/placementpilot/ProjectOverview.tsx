@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import { Container } from "@/components/layout/Container";
 
 export function ProjectOverview() {
@@ -46,7 +45,7 @@ export function ProjectOverview() {
                 </h3>
               </div>
               <p className="text-sm text-[#94A3B8] leading-relaxed">
-                PlacementPilot AI solves this by integrating specialized autonomous AI agents under a central Coordinator Agent. Each agent handles a targeted task while maintaining context across the student's preparation journey.
+                PlacementPilot AI solves this by integrating specialized autonomous AI agents under a central Coordinator Agent. Each agent handles a targeted task while maintaining context across the student&apos;s preparation journey.
               </p>
             </div>
           </div>

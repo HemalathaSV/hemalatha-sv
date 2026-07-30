@@ -1,10 +1,12 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion, Variants } from "framer-motion";
 import { Container } from "@/components/layout/Container";
 import { ProjectGrid } from "./ProjectGrid";
-import { PROJECTS } from "@/data/projects";
+import { FilterTabs } from "./FilterTabs";
+import { SearchBar } from "./SearchBar";
+import { filterProjects } from "@/data/projects";
 
 const headerVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
@@ -16,6 +18,19 @@ const headerVariants: Variants = {
 };
 
 export function PortfolioSection() {
+  const [activeCategory, setActiveCategory] = useState<string>("All");
+  const [searchQuery, setSearchQuery] = useState<string>("");
+
+  const categories = [
+    "All",
+    "AI Projects",
+    "Research",
+    "Hackathons",
+    "Machine Learning",
+  ];
+
+  const filteredProjects = filterProjects(activeCategory, searchQuery);
+
   return (
     <section className="relative min-h-screen w-full flex flex-col justify-center pt-32 pb-24 sm:pt-40 sm:pb-32 bg-[#050816] overflow-hidden">
       {/* Ambient Radial Glow */}
@@ -25,7 +40,7 @@ export function PortfolioSection() {
       />
 
       <Container>
-        <div className="flex flex-col gap-12 sm:gap-16 relative z-10">
+        <div className="flex flex-col gap-10 sm:gap-12 relative z-10">
           {/* Section Header */}
           <motion.div
             variants={headerVariants}
@@ -52,8 +67,38 @@ export function PortfolioSection() {
             </p>
           </motion.div>
 
-          {/* Project Grid */}
-          <ProjectGrid projects={PROJECTS} />
+          {/* Interactive Controls: Search & Category Filter */}
+          <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 pt-2">
+            <SearchBar value={searchQuery} onChange={setSearchQuery} />
+            <FilterTabs
+              categories={categories}
+              activeCategory={activeCategory}
+              onSelectCategory={setActiveCategory}
+            />
+          </div>
+
+          {/* Results Count & Project Grid */}
+          {filteredProjects.length > 0 ? (
+            <ProjectGrid projects={filteredProjects} />
+          ) : (
+            <div className="p-12 text-center rounded-2xl bg-[#0B1120] border border-slate-800 space-y-3 my-8">
+              <p className="font-heading text-lg font-bold text-[#F8FAFC]">
+                No matching projects found
+              </p>
+              <p className="text-xs text-[#94A3B8]">
+                Try adjusting your search query or switching category filters.
+              </p>
+              <button
+                onClick={() => {
+                  setActiveCategory("All");
+                  setSearchQuery("");
+                }}
+                className="mt-2 text-xs font-mono text-[#38BDF8] underline hover:opacity-80"
+              >
+                Reset Filters
+              </button>
+            </div>
+          )}
         </div>
       </Container>
     </section>

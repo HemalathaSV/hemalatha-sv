@@ -93,12 +93,12 @@ export function ContactSection() {
 
               {/* Heading */}
               <h2 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#F8FAFC] leading-[1.1]">
-                Let's Build Something Meaningful Together
+                Let&apos;s Build Something Meaningful Together
               </h2>
 
               {/* Subtitle */}
               <p className="text-base sm:text-lg text-[#94A3B8] leading-relaxed max-w-xl">
-                Whether it's an internship, research collaboration, freelance opportunity, hackathon, or full-time role, I'd love to connect and discuss how we can create impactful AI solutions.
+                Whether it&apos;s an internship, research collaboration, freelance opportunity, hackathon, or full-time role, I&apos;d love to connect and discuss how we can create impactful AI solutions.
               </p>
 
               {/* Primary & Secondary Action Buttons */}

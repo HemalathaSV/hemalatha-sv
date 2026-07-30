@@ -19,7 +19,8 @@ export interface Project {
   id: string;
   title: string;
   slug: string;
-  category: string;
+  category: "Flagship AI Project" | "Research Publication" | "Hackathon Project" | "Disaster Response AI" | "Machine Learning";
+  filterCategory: "AI Projects" | "Research" | "Hackathons" | "Machine Learning" | "Full Stack";
   tagline: string;
   description: string;
   overview: string;
@@ -44,6 +45,7 @@ export const PROJECTS: Project[] = [
     title: "PlacementPilot AI",
     slug: "placementpilot-ai",
     category: "Flagship AI Project",
+    filterCategory: "AI Projects",
     tagline:
       "An intelligent multi-agent placement preparation platform that helps students become job-ready through AI-powered guidance.",
     description:
@@ -96,6 +98,7 @@ export const PROJECTS: Project[] = [
     title: "Tournament Management Agent",
     slug: "tournament-management-agent",
     category: "Research Publication",
+    filterCategory: "Research",
     tagline:
       "Autonomous Agentic AI platform automating complex sports tournament operations via natural language processing.",
     description:
@@ -140,6 +143,7 @@ export const PROJECTS: Project[] = [
     title: "CampusOS",
     slug: "campusos",
     category: "Hackathon Project",
+    filterCategory: "Hackathons",
     tagline:
       "Intelligent campus management operating system unifying student workflows, administrative tasks, and AI assistance.",
     description:
@@ -183,6 +187,7 @@ export const PROJECTS: Project[] = [
     title: "ResQNet",
     slug: "resqnet",
     category: "Disaster Response AI",
+    filterCategory: "AI Projects",
     tagline:
       "Emergency resource allocation and situational awareness platform powered by aerial computer vision and AI dispatch.",
     description:
@@ -223,8 +228,9 @@ export const PROJECTS: Project[] = [
   {
     id: "customer-risk-intelligence",
     title: "Customer Risk Intelligence System",
-    slug: "customer-risk-[#38BDF8]",
+    slug: "customer-risk-intelligence",
     category: "Machine Learning",
+    filterCategory: "Machine Learning",
     tagline:
       "Predictive machine learning pipeline analyzing financial behavior to quantify churn and credit risk indicators.",
     description:
@@ -266,4 +272,35 @@ export const PROJECTS: Project[] = [
 
 export function getProjectBySlug(slug: string): Project | undefined {
   return PROJECTS.find((p) => p.slug === slug);
+}
+
+export function getFeaturedProjects(): Project[] {
+  return PROJECTS.filter((p) => p.featured);
+}
+
+export function getResearchProjects(): Project[] {
+  return PROJECTS.filter((p) => p.filterCategory === "Research");
+}
+
+export function getRecentProjects(limit: number = 3): Project[] {
+  return PROJECTS.slice(0, limit);
+}
+
+export function filterProjects(category: string, query: string): Project[] {
+  return PROJECTS.filter((project) => {
+    const matchesCategory =
+      category === "All" ||
+      project.filterCategory === category ||
+      project.category === category;
+
+    const q = query.toLowerCase().trim();
+    const matchesQuery =
+      !q ||
+      project.title.toLowerCase().includes(q) ||
+      project.description.toLowerCase().includes(q) ||
+      project.category.toLowerCase().includes(q) ||
+      project.technologies.some((tech) => tech.toLowerCase().includes(q));
+
+    return matchesCategory && matchesQuery;
+  });
 }
