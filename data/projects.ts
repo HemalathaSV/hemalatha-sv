@@ -116,7 +116,7 @@ export const PROJECTS: Project[] = [
     caseStudyUrl: "/projects/campusos",
     coverImage: "/images/profile.png",
     featured: true,
-    status: "Hackathon Winner",
+    status: "Innovathon 2026",
     features: [
       { title: "Automated Helpdesk", desc: "Instant answers for campus procedures and academic regulations." },
       { title: "Smart Resource Booking", desc: "Prevents seminar hall overbooking with conflict detection." },
