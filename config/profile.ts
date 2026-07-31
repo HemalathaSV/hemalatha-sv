@@ -7,7 +7,7 @@ export const PROFILE = {
   github: "https://github.com/HemalathaSV",
   linkedin: "https://www.linkedin.com/in/hemalatha-sv",
   location: "Srirangapatna, Mandya, Karnataka, India",
-  resume: "/resume.pdf",
+  resume: "/resume/Hemalatha_SV_Resume.pdf",
   profileImage: "/profile/profile.jpg",
 } as const;
 

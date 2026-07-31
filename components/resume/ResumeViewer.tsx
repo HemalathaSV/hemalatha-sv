@@ -31,6 +31,7 @@ export function ResumeViewer() {
             <div className="flex items-center gap-3">
               <a
                 href={PROFILE.resume}
+                download="Hemalatha_SV_Resume.pdf"
                 className="h-11 px-6 rounded-full bg-[#38BDF8] text-[#050816] font-semibold text-xs sm:text-sm inline-flex items-center gap-2 hover:bg-[#38BDF8]/90 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-md shadow-[#38BDF8]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8]"
               >
                 <Download className="h-4 w-4 stroke-[2]" />
