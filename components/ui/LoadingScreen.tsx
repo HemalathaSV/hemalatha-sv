@@ -73,7 +73,7 @@ export function LoadingScreen() {
 
   // Prevent flash or hydration mismatch issues by rendering a stable placeholder
   if (!isMounted) {
-    return <div className="fixed inset-0 z-[100] bg-[#050816]" />;
+    return <div className="fixed inset-0 z-[100] bg-[#0F0F12]" />;
   }
 
   if (skipAnimation) return null;
@@ -87,12 +87,12 @@ export function LoadingScreen() {
             opacity: 0,
             transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
           }}
-          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#050816] text-[#F8FAFC] p-6 overflow-hidden select-none"
+          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#0F0F12] text-[#FFFFFF] p-6 overflow-hidden select-none"
         >
           {/* Ambient Background Radial Glow */}
           <div
             aria-hidden="true"
-            className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.06),transparent_60%)] pointer-events-none"
+            className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(253,121,121,0.06),transparent_60%)] pointer-events-none"
           />
 
           <div className="relative z-10 flex flex-col items-center justify-center space-y-6 text-center max-w-md w-full">
@@ -101,7 +101,7 @@ export function LoadingScreen() {
               initial={{ opacity: 0, scale: 0.94 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-              className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border border-[#38BDF8]/20 shadow-lg shadow-black/50"
+              className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border border-[#FD7979]/20 shadow-lg shadow-black/50"
             >
               <Image
                 src={PROFILE.profileImage}
@@ -119,7 +119,7 @@ export function LoadingScreen() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                className="font-heading text-2xl sm:text-3xl font-bold tracking-tight text-[#F8FAFC]"
+                className="font-heading text-2xl sm:text-3xl font-bold tracking-tight text-[#FFFFFF]"
               >
                 {PROFILE.name}
               </motion.h1>
@@ -133,7 +133,7 @@ export function LoadingScreen() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -6 }}
                     transition={{ duration: 0.45, ease: "easeInOut" }}
-                    className="text-xs sm:text-sm font-mono text-[#38BDF8] tracking-wide"
+                    className="text-xs sm:text-sm font-mono text-[#FD7979] tracking-wide"
                   >
                     {roles[roleIndex]}
                   </motion.p>
@@ -142,7 +142,7 @@ export function LoadingScreen() {
             </div>
 
             {/* 4. Terminal Initialization Sequence Panel */}
-            <div className="w-full max-w-[280px] p-4 rounded-xl bg-[#0B1120]/60 border border-slate-900/60 font-mono text-[10px] sm:text-xs text-left text-slate-500 space-y-1.5 h-[120px] overflow-hidden backdrop-blur-sm">
+            <div className="w-full max-w-[280px] p-4 rounded-xl bg-[#19191D]/60 border border-[#FDACAC]/18 font-mono text-[10px] sm:text-xs text-left text-slate-500 space-y-1.5 h-[120px] overflow-hidden backdrop-blur-sm">
               {initLines.map((line, i) => (
                 <motion.div
                   key={i}
@@ -150,7 +150,7 @@ export function LoadingScreen() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.3 }}
                   className={`flex items-center gap-2 ${
-                    line === "Ready." ? "text-[#38BDF8] font-bold" : ""
+                    line === "Ready." ? "text-[#FD7979] font-bold" : ""
                   }`}
                 >
                   <span className="text-slate-700 select-none">&gt;</span>

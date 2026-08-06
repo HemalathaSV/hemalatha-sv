@@ -22,25 +22,25 @@ export function CertificationCard({ certificate }: CertificationCardProps) {
   return (
     <motion.div
       variants={cardVariants}
-      className="group relative flex flex-col justify-between p-5 sm:p-6 rounded-2xl bg-[#0B1120]/80 backdrop-blur-xl border border-slate-800/80 shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#38BDF8]/40 hover:shadow-xl hover:shadow-[#38BDF8]/5"
+      className="group relative flex flex-col justify-between p-5 sm:p-6 rounded-2xl bg-[#19191D]/80 backdrop-blur-xl border border-[#FDACAC]/18 shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#FD7979]/40 hover:shadow-xl hover:shadow-[#FD7979]/5"
     >
       <div className="space-y-3.5">
         <div className="flex items-center justify-between gap-2">
-          <span className="text-xs font-mono font-semibold text-[#38BDF8] px-2.5 py-0.5 rounded bg-[#38BDF8]/10 border border-[#38BDF8]/20">
+          <span className="text-xs font-mono font-semibold text-[#FD7979] px-2.5 py-0.5 rounded bg-[#FD7979]/10 border border-[#FD7979]/20">
             {certificate.provider}
           </span>
           {certificate.completionDate && (
-            <span className="text-[11px] font-mono text-[#94A3B8]">
+            <span className="text-[11px] font-mono text-[#B8B8C5]">
               {certificate.completionDate}
             </span>
           )}
         </div>
 
         <div className="space-y-1">
-          <span className="text-[10px] font-mono text-[#94A3B8] uppercase tracking-wider block">
+          <span className="text-[10px] font-mono text-[#B8B8C5] uppercase tracking-wider block">
             {certificate.category}
           </span>
-          <h4 className="font-heading text-base sm:text-lg font-bold tracking-tight text-[#F8FAFC] group-hover:text-[#38BDF8] transition-colors duration-200">
+          <h4 className="font-heading text-base sm:text-lg font-bold tracking-tight text-[#FFFFFF] group-hover:text-[#FD7979] transition-colors duration-200">
             {certificate.title}
           </h4>
         </div>
@@ -50,7 +50,7 @@ export function CertificationCard({ certificate }: CertificationCardProps) {
           {certificate.skills.map((skill, index) => (
             <span
               key={index}
-              className="px-2 py-0.5 rounded bg-[#111827] border border-slate-800 text-[10px] font-mono text-[#94A3B8]"
+              className="px-2 py-0.5 rounded bg-[#222228] border border-[#FDACAC]/18 text-[10px] font-mono text-[#B8B8C5]"
             >
               {skill}
             </span>
@@ -59,12 +59,12 @@ export function CertificationCard({ certificate }: CertificationCardProps) {
       </div>
 
       {certificate.credentialUrl && (
-        <div className="pt-4 mt-4 border-t border-slate-800/80 flex justify-end">
+        <div className="pt-4 mt-4 border-t border-[#FDACAC]/18 flex justify-end">
           <a
             href={certificate.credentialUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-xs text-[#38BDF8] hover:underline"
+            className="inline-flex items-center gap-1.5 text-xs text-[#FD7979] hover:underline"
           >
             Verify Credential <ExternalLink className="h-3 w-3" />
           </a>

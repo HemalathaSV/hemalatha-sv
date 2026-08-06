@@ -25,10 +25,10 @@ export function NavLinks({ activeSection, onNavigate, className = "" }: NavLinks
                 onNavigate(item.href);
               }}
               aria-current={isActive ? "page" : undefined}
-              className={`relative px-3 py-1.5 text-xs sm:text-sm font-medium rounded-full transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8] ${
+              className={`relative px-3 py-1.5 text-xs sm:text-sm font-medium rounded-full transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FD7979] ${
                 isActive
-                  ? "text-[#38BDF8] font-semibold"
-                  : "text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-[#0B1120]/60"
+                  ? "text-[#FD7979] font-semibold"
+                  : "text-[#B8B8C5] hover:text-[#FFFFFF] hover:bg-[#19191D]/60"
               }`}
             >
               <span className="relative z-10">{item.label}</span>
@@ -37,7 +37,7 @@ export function NavLinks({ activeSection, onNavigate, className = "" }: NavLinks
               {isActive && (
                 <motion.span
                   layoutId="activeNavUnderline"
-                  className="absolute bottom-0 left-2 right-2 h-0.5 rounded-full bg-[#38BDF8] shadow-[0_0_8px_rgba(56,189,248,0.6)]"
+                  className="absolute bottom-0 left-2 right-2 h-0.5 rounded-full bg-[#FD7979] shadow-[0_0_8px_rgba(253,121,121,0.6)]"
                   transition={{
                     type: "spring",
                     stiffness: 380,

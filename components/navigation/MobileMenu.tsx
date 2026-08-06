@@ -112,7 +112,7 @@ export function MobileMenu({
         aria-expanded={isOpen}
         aria-controls="mobile-navigation-menu"
         aria-label={isOpen ? "Close main menu" : "Open main menu"}
-        className="relative z-50 flex h-9 w-9 items-center justify-center rounded-lg text-[#F8FAFC] hover:bg-[#0B1120] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8] transition-colors"
+        className="relative z-50 flex h-9 w-9 items-center justify-center rounded-lg text-[#FFFFFF] hover:bg-[#19191D] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FD7979] transition-colors"
       >
         <svg
           className="h-5 w-5 stroke-current"
@@ -148,7 +148,7 @@ export function MobileMenu({
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
               onClick={onClose}
-              className="fixed inset-0 bg-[#050816]/80 backdrop-blur-xl"
+              className="fixed inset-0 bg-[#0F0F12]/80 backdrop-blur-xl"
             />
 
             {/* Menu Container */}
@@ -159,7 +159,7 @@ export function MobileMenu({
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="relative z-50 mt-20 mx-4 p-5 bg-[#0B1120]/95 backdrop-blur-2xl border border-slate-800/80 rounded-2xl shadow-2xl flex flex-col gap-3"
+              className="relative z-50 mt-20 mx-4 p-5 bg-[#19191D]/95 backdrop-blur-2xl border border-[#FDACAC]/18 rounded-2xl shadow-2xl flex flex-col gap-3"
             >
               <ul className="flex flex-col gap-1">
                 {NAV_ITEMS.map((item) => {
@@ -173,15 +173,15 @@ export function MobileMenu({
                           handleLinkClick(item.href);
                         }}
                         aria-current={isActive ? "page" : undefined}
-                        className={`flex items-center justify-between px-4 py-2.5 text-sm font-medium rounded-xl transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8] ${
+                        className={`flex items-center justify-between px-4 py-2.5 text-sm font-medium rounded-xl transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FD7979] ${
                           isActive
-                            ? "text-[#38BDF8] bg-[#111827] font-semibold border border-[#38BDF8]/20"
-                            : "text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-[#111827]/50"
+                            ? "text-[#FD7979] bg-[#222228] font-semibold border border-[#FD7979]/20"
+                            : "text-[#B8B8C5] hover:text-[#FFFFFF] hover:bg-[#222228]/50"
                         }`}
                       >
                         <span>{item.label}</span>
                         {isActive && (
-                          <span className="h-1.5 w-1.5 rounded-full bg-[#38BDF8] shadow-[0_0_8px_rgba(56,189,248,0.6)]" />
+                          <span className="h-1.5 w-1.5 rounded-full bg-[#FD7979] shadow-[0_0_8px_rgba(253,121,121,0.6)]" />
                         )}
                       </a>
                     </motion.li>

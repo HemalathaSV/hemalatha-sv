@@ -59,16 +59,16 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative min-h-screen w-full flex flex-col justify-between py-24 sm:py-32 bg-[#050816] overflow-hidden border-t border-slate-900/60"
+      className="relative min-h-screen w-full flex flex-col justify-between py-24 sm:py-32 bg-[#0F0F12] overflow-hidden border-t border-[#FDACAC]/18"
     >
       {/* Ambient Background Radial Backlights */}
       <div
         aria-hidden="true"
-        className="absolute top-1/4 right-0 w-[500px] h-[500px] rounded-full bg-gradient-to-tr from-[#38BDF8]/06 to-[#8B5CF6]/04 blur-3xl pointer-events-none"
+        className="absolute top-1/4 right-0 w-[500px] h-[500px] rounded-full bg-gradient-to-tr from-[#FD7979]/06 to-[#FDACAC]/04 blur-3xl pointer-events-none"
       />
       <div
         aria-hidden="true"
-        className="absolute bottom-10 left-0 w-[400px] h-[400px] rounded-full bg-gradient-to-bl from-[#8B5CF6]/05 to-[#38BDF8]/04 blur-3xl pointer-events-none"
+        className="absolute bottom-10 left-0 w-[400px] h-[400px] rounded-full bg-gradient-to-bl from-[#FDACAC]/05 to-[#FD7979]/04 blur-3xl pointer-events-none"
       />
 
       <Container className="my-auto">
@@ -84,20 +84,20 @@ export function ContactSection() {
               className="lg:col-span-7 flex flex-col space-y-6 sm:space-y-8"
             >
               {/* Section Badge */}
-              <div className="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-[#0B1120] border border-slate-800/80">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#38BDF8]" />
-                <span className="text-xs font-mono font-semibold text-[#38BDF8] tracking-wider uppercase">
+              <div className="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-[#19191D] border border-[#FDACAC]/18">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#FD7979]" />
+                <span className="text-xs font-mono font-semibold text-[#FD7979] tracking-wider uppercase">
                   Contact
                 </span>
               </div>
 
               {/* Heading */}
-              <h2 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#F8FAFC] leading-[1.1]">
+              <h2 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#FFFFFF] leading-[1.1]">
                 Let&apos;s Build Something Meaningful Together
               </h2>
 
               {/* Subtitle */}
-              <p className="text-base sm:text-lg text-[#94A3B8] leading-relaxed max-w-xl">
+              <p className="text-base sm:text-lg text-[#B8B8C5] leading-relaxed max-w-xl">
                 Whether it&apos;s an internship, research collaboration, freelance opportunity, hackathon, or full-time role, I&apos;d love to connect and discuss how we can create impactful AI solutions.
               </p>
 
@@ -131,7 +131,7 @@ export function ContactSection() {
       </Container>
 
       {/* Footer */}
-      <footer className="pt-16 pb-6 text-center text-xs font-mono text-[#94A3B8]/60 border-t border-slate-900/60 mt-16 relative z-10">
+      <footer className="pt-16 pb-6 text-center text-xs font-mono text-[#B8B8C5]/60 border-t border-[#FDACAC]/18 mt-16 relative z-10">
         <Container>
           <p>© {new Date().getFullYear()} {PROFILE.brand}. All rights reserved.</p>
         </Container>

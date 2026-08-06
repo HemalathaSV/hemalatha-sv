@@ -20,7 +20,7 @@ export function PublicationBadge({
       </span>
 
       {/* Category Badge */}
-      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-[#38BDF8]/10 text-[#38BDF8] border border-[#38BDF8]/30">
+      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-[#FD7979]/10 text-[#FD7979] border border-[#FD7979]/30">
         {category}
       </span>
     </div>

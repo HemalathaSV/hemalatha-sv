@@ -24,17 +24,17 @@ export function ContactCard({ icon: Icon, label, value, href }: ContactCardProps
   const content = (
     <motion.div
       variants={cardVariants}
-      className="group relative flex items-center gap-4 p-5 sm:p-6 rounded-2xl bg-[#0B1120]/80 backdrop-blur-xl border border-slate-800/80 shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#38BDF8]/40 hover:shadow-2xl hover:shadow-[#38BDF8]/5 w-full"
+      className="group relative flex items-center gap-4 p-5 sm:p-6 rounded-2xl bg-[#19191D]/80 backdrop-blur-xl border border-[#FDACAC]/18 shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#FD7979]/40 hover:shadow-2xl hover:shadow-[#FD7979]/5 w-full"
     >
-      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#111827] text-[#38BDF8] border border-slate-800/80 group-hover:border-[#38BDF8]/40 group-hover:scale-105 transition-all">
+      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#222228] text-[#FD7979] border border-[#FDACAC]/18 group-hover:border-[#FD7979]/40 group-hover:scale-105 transition-all">
         <Icon className="h-5 w-5 stroke-[1.75]" />
       </div>
 
       <div className="flex flex-col min-w-0">
-        <span className="text-xs font-mono font-medium text-[#94A3B8] uppercase tracking-wider">
+        <span className="text-xs font-mono font-medium text-[#B8B8C5] uppercase tracking-wider">
           {label}
         </span>
-        <span className="font-heading text-sm sm:text-base font-semibold text-[#F8FAFC] tracking-tight truncate group-hover:text-[#38BDF8] transition-colors">
+        <span className="font-heading text-sm sm:text-base font-semibold text-[#FFFFFF] tracking-tight truncate group-hover:text-[#FD7979] transition-colors">
           {value}
         </span>
       </div>
@@ -47,7 +47,7 @@ export function ContactCard({ icon: Icon, label, value, href }: ContactCardProps
         href={href}
         target={href.startsWith("http") ? "_blank" : undefined}
         rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-        className="block w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8] rounded-2xl"
+        className="block w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FD7979] rounded-2xl"
       >
         {content}
       </a>

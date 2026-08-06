@@ -8,9 +8,9 @@ interface CategoryBadgeProps {
 export function CategoryBadge({ category, className = "" }: CategoryBadgeProps) {
   return (
     <span
-      className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-[#38BDF8]/10 text-[#38BDF8] border border-[#38BDF8]/30 ${className}`}
+      className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-[#FD7979]/10 text-[#FD7979] border border-[#FD7979]/30 ${className}`}
     >
-      <span className="h-1.5 w-1.5 rounded-full bg-[#38BDF8]" />
+      <span className="h-1.5 w-1.5 rounded-full bg-[#FD7979]" />
       {category}
     </span>
   );

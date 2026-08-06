@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function PortfolioPage() {
   return (
-    <main className="min-h-screen bg-[#050816] text-[#F8FAFC]">
+    <main className="min-h-screen bg-[#0F0F12] text-[#FFFFFF]">
       <PortfolioSection />
     </main>
   );

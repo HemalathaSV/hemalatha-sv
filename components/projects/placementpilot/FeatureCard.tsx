@@ -46,14 +46,14 @@ export function FeatureCard() {
   ];
 
   return (
-    <section className="py-16 sm:py-24 bg-[#050816] relative border-b border-slate-900/60">
+    <section className="py-16 sm:py-24 bg-[#0F0F12] relative border-b border-[#FDACAC]/18">
       <Container>
         <div className="max-w-4xl mx-auto space-y-12">
           <div className="space-y-3">
-            <h2 className="font-heading text-xs font-mono font-semibold tracking-wider text-[#38BDF8] uppercase">
+            <h2 className="font-heading text-xs font-mono font-semibold tracking-wider text-[#FD7979] uppercase">
               Core Capabilities
             </h2>
-            <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#F8FAFC]">
+            <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#FFFFFF]">
               Key Platform Features
             </h3>
           </div>
@@ -64,15 +64,15 @@ export function FeatureCard() {
               return (
                 <div
                   key={index}
-                  className="p-6 rounded-2xl bg-[#0B1120]/80 backdrop-blur-xl border border-slate-800/80 space-y-3 hover:-translate-y-1 hover:border-[#38BDF8]/40 transition-all duration-300 shadow-xl"
+                  className="p-6 rounded-2xl bg-[#19191D]/80 backdrop-blur-xl border border-[#FDACAC]/18 space-y-3 hover:-translate-y-1 hover:border-[#FD7979]/40 transition-all duration-300 shadow-xl"
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#111827] text-[#38BDF8] border border-slate-800">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#222228] text-[#FD7979] border border-[#FDACAC]/18">
                     <Icon className="h-5 w-5 stroke-[1.75]" />
                   </div>
-                  <h4 className="font-heading text-base font-bold text-[#F8FAFC]">
+                  <h4 className="font-heading text-base font-bold text-[#FFFFFF]">
                     {item.title}
                   </h4>
-                  <p className="text-xs text-[#94A3B8] leading-relaxed">
+                  <p className="text-xs text-[#B8B8C5] leading-relaxed">
                     {item.desc}
                   </p>
                 </div>

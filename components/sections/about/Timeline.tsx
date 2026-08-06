@@ -33,7 +33,7 @@ export function Timeline() {
       className="flex flex-col w-full"
     >
       <div className="mb-4">
-        <h3 className="font-heading text-xs font-mono font-semibold tracking-wider text-[#38BDF8] uppercase">
+        <h3 className="font-heading text-xs font-mono font-semibold tracking-wider text-[#FD7979] uppercase">
           Milestones & Progression
         </h3>
       </div>
