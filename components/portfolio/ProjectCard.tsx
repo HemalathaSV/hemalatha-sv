@@ -26,8 +26,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <motion.div
         variants={cardVariants}
         className="group relative flex flex-col justify-between p-6 rounded-2xl bg-[#F7F5F4]/80 backdrop-blur-xl border border-[#D8C8BB] shadow-xl transition-all duration-300 w-full h-full"
+        style={{ transformStyle: "preserve-3d" }}
       >
-      <div className="space-y-4">
+      <div style={{ transform: "translateZ(25px)", transformStyle: "preserve-3d" }} className="space-y-4">
         {/* Category Badge & Status */}
         <div className="flex items-center justify-between gap-2">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-[#FFF4EC] text-[#8A5A3C] border border-[#DE8F5F]">
@@ -68,7 +69,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       </div>
 
       {/* Card Action Buttons */}
-      <div className="flex flex-wrap items-center justify-between gap-3 pt-6 mt-6 border-t border-[#D8C8BB]">
+      <div style={{ transform: "translateZ(15px)" }} className="flex flex-wrap items-center justify-between gap-3 pt-6 mt-6 border-t border-[#D8C8BB]">
         <Link
           href={project.caseStudyUrl}
           className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#5A4030] hover:underline group-hover:translate-x-0.5 transition-transform"

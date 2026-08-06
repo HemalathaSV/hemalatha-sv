@@ -31,8 +31,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
         whileInView="visible"
         viewport={{ once: true, margin: "-60px" }}
         className="group relative flex flex-col justify-between p-6 sm:p-8 rounded-2xl bg-[#F7F5F4]/80 backdrop-blur-xl border border-[#D8C8BB] shadow-xl transition-all duration-300 w-full h-full"
+        style={{ transformStyle: "preserve-3d" }}
       >
-      <div className="space-y-4">
+      <div style={{ transform: "translateZ(25px)", transformStyle: "preserve-3d" }} className="space-y-4">
         {/* Category Badge */}
         <div className="flex items-center justify-between">
           <CategoryBadge category={project.category} />
@@ -65,7 +66,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       </div>
 
       {/* Action Buttons */}
-      <div className="flex flex-wrap items-center gap-3 pt-6 mt-6 border-t border-[#D8C8BB]">
+      <div style={{ transform: "translateZ(15px)" }} className="flex flex-wrap items-center gap-3 pt-6 mt-6 border-t border-[#D8C8BB]">
         {/* Case Study */}
         <Link
           href={project.caseStudyUrl}

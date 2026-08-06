@@ -9,7 +9,7 @@ interface Tilt3DProps {
   maxRotation?: number; // Maximum rotation in degrees
 }
 
-export function Tilt3D({ children, className = "", maxRotation = 6 }: Tilt3DProps) {
+export function Tilt3D({ children, className = "", maxRotation = 8 }: Tilt3DProps) {
   const cardRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -18,7 +18,7 @@ export function Tilt3D({ children, className = "", maxRotation = 6 }: Tilt3DProp
   const y = useMotionValue(0.5);
 
   // Smooth springs to avoid jitter
-  const springConfig = { damping: 25, stiffness: 180, mass: 0.8 };
+  const springConfig = { damping: 22, stiffness: 160, mass: 0.6 };
   const rotateX = useSpring(useTransform(y, [0, 1], [maxRotation, -maxRotation]), springConfig);
   const rotateY = useSpring(useTransform(x, [0, 1], [-maxRotation, maxRotation]), springConfig);
 
@@ -40,25 +40,28 @@ export function Tilt3D({ children, className = "", maxRotation = 6 }: Tilt3DProp
   };
 
   return (
-    <motion.div
-      ref={cardRef}
-      onMouseMove={handleMouseMove}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={handleMouseLeave}
-      style={{
-        rotateX: rotateX,
-        rotateY: rotateY,
-        transformStyle: "preserve-3d",
-        perspective: 1000,
-      }}
-      animate={{
-        scale: isHovered ? 1.015 : 1,
-        z: isHovered ? 15 : 0,
-      }}
-      transition={{ duration: 0.35, ease: "easeOut" }}
-      className={`relative ${className}`}
-    >
-      {children}
-    </motion.div>
+    <div className="w-full h-full" style={{ perspective: 1000 }}>
+      <motion.div
+        ref={cardRef}
+        onMouseMove={handleMouseMove}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={handleMouseLeave}
+        style={{
+          rotateX: rotateX,
+          rotateY: rotateY,
+          transformStyle: "preserve-3d",
+        }}
+        animate={{
+          scale: isHovered ? 1.03 : 1,
+          translateZ: isHovered ? 30 : 0,
+        }}
+        transition={{ duration: 0.35, ease: "easeOut" }}
+        className={`relative w-full h-full transition-shadow duration-300 ${
+          isHovered ? "shadow-2xl shadow-[#B18C6A]/20" : "shadow-md"
+        } ${className}`}
+      >
+        {children}
+      </motion.div>
+    </div>
   );
 }

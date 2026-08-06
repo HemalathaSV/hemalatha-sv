@@ -18,11 +18,35 @@ const leftColumnVariants: Variants = {
   },
 };
 
+import { useMotionValue, useSpring, useTransform } from "framer-motion";
+
 export function HeroSection() {
+  const x = useMotionValue(0.5);
+  const y = useMotionValue(0.5);
+
+  const springConfig = { damping: 25, stiffness: 120 };
+  const rotateX = useSpring(useTransform(y, [0, 1], [6, -6]), springConfig);
+  const rotateY = useSpring(useTransform(x, [0, 1], [-6, 6]), springConfig);
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    x.set(e.clientX / width);
+    y.set(e.clientY / height);
+  };
+
+  const handleMouseLeave = () => {
+    x.set(0.5);
+    y.set(0.5);
+  };
+
   return (
     <section
       id="home"
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
       className="relative min-h-screen w-full flex flex-col justify-center pt-24 sm:pt-28 pb-16 sm:pb-20 bg-[#E4E0E1] overflow-hidden"
+      style={{ perspective: 1000 }}
     >
       {/* Soft Ambient Radial Backlights */}
       <div
@@ -40,6 +64,7 @@ export function HeroSection() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-16 items-center min-h-[calc(100vh-16rem)]">
             {/* Left Column (60% Desktop) */}
             <motion.div
+              style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
               variants={leftColumnVariants}
               initial="hidden"
               animate="visible"
