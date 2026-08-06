@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { PROJECTS } from "@/data/projects";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://hemalathasv.ai";
+  const baseUrl = "https://hemalatha-sv.vercel.app";
 
   const staticPages = [
     "",

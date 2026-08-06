@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Hemalatha S V" }],
   creator: "Hemalatha S V",
-  metadataBase: new URL("https://hemalathasv.ai"),
+  metadataBase: new URL("https://hemalatha-sv.vercel.app"),
   manifest: "/manifest.json",
   robots: {
     index: true,
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://hemalathasv.ai",
+    url: "https://hemalatha-sv.vercel.app",
     title: "Hemalatha S V AI — AI Engineer & Researcher",
     description:
       "Official personal brand and engineering portfolio for Hemalatha S V AI, showcasing intelligent multi-agent AI systems, machine learning pipelines, and research publications.",
