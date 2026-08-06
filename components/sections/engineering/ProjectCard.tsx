@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { Tilt3D } from "@/components/ui/Tilt3D";
 import Link from "next/link";
 import { motion, Variants } from "framer-motion";
 import { ExternalLink, ArrowRight } from "lucide-react";
@@ -23,13 +24,14 @@ const cardVariants: Variants = {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <motion.div
-      variants={cardVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-60px" }}
-      className="group relative flex flex-col justify-between p-6 sm:p-8 rounded-2xl bg-[#F7F5F4]/80 backdrop-blur-xl border border-[#D8C8BB] shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#B18C6A]/65 hover:shadow-2xl hover:shadow-[#5A4030]/5 h-full"
-    >
+    <Tilt3D className="w-full h-full">
+      <motion.div
+        variants={cardVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-60px" }}
+        className="group relative flex flex-col justify-between p-6 sm:p-8 rounded-2xl bg-[#F7F5F4]/80 backdrop-blur-xl border border-[#D8C8BB] shadow-xl transition-all duration-300 w-full h-full"
+      >
       <div className="space-y-4">
         {/* Category Badge */}
         <div className="flex items-center justify-between">
@@ -100,5 +102,6 @@ export function ProjectCard({ project }: ProjectCardProps) {
         )}
       </div>
     </motion.div>
+    </Tilt3D>
   );
 }

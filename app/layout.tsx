@@ -62,6 +62,9 @@ export const metadata: Metadata = {
   },
 };
 
+import { GlobalLightingCursor } from "@/components/ui/GlobalLightingCursor";
+import { PageTransition } from "@/components/ui/PageTransition";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -80,11 +83,14 @@ export default function RootLayout({
         </div>
 
         <ScrollProgress />
+        <GlobalLightingCursor />
         <LoadingScreen />
         <CommandPalette />
         <SkipToContent />
         <Navbar />
-        <div className="flex-1 flex flex-col relative z-10">{children}</div>
+        <PageTransition>
+          <div className="flex-1 flex flex-col relative z-10">{children}</div>
+        </PageTransition>
         <Footer />
         <BackToTop />
       </body>

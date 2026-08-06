@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { Tilt3D } from "@/components/ui/Tilt3D";
 import Link from "next/link";
 import { motion, Variants } from "framer-motion";
 import { ExternalLink, ArrowRight } from "lucide-react";
@@ -23,12 +24,13 @@ const cardVariants: Variants = {
 
 export function FeaturedProjectCard({ project }: FeaturedProjectCardProps) {
   return (
-    <motion.div
-      variants={cardVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-60px" }}
-      className="group relative flex flex-col justify-between p-6 sm:p-10 rounded-2xl bg-[#F7F5F4]/90 backdrop-blur-xl border border-[#D8C8BB] shadow-2xl transition-all duration-300 hover:-translate-y-1 hover:border-[#B18C6A]/50 hover:shadow-[0_0_30px_rgba(90,64,48,0.1)] w-full"
+    <Tilt3D className="w-full h-full">
+      <motion.div
+        variants={cardVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-60px" }}
+        className="group relative flex flex-col justify-between p-6 sm:p-10 rounded-2xl bg-[#F7F5F4]/90 backdrop-blur-xl border border-[#D8C8BB] shadow-2xl transition-all duration-300 w-full h-full"
     >
       {/* Ambient Inner Gradient Glow */}
       <div
@@ -104,5 +106,6 @@ export function FeaturedProjectCard({ project }: FeaturedProjectCardProps) {
         )}
       </div>
     </motion.div>
+    </Tilt3D>
   );
 }

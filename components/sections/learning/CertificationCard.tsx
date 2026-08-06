@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { Tilt3D } from "@/components/ui/Tilt3D";
 import { motion, Variants } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { CertificationItem } from "@/data/certifications";
@@ -20,9 +21,10 @@ const cardVariants: Variants = {
 
 export function CertificationCard({ certificate }: CertificationCardProps) {
   return (
-    <motion.div
-      variants={cardVariants}
-      className="group relative flex flex-col justify-between p-5 sm:p-6 rounded-2xl bg-[#F7F5F4]/80 backdrop-blur-xl border border-[#D8C8BB] shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#B18C6A]/65 hover:shadow-xl hover:shadow-[#5A4030]/5"
+    <Tilt3D className="w-full h-full">
+      <motion.div
+        variants={cardVariants}
+        className="group relative flex flex-col justify-between p-5 sm:p-6 rounded-2xl bg-[#F7F5F4]/80 backdrop-blur-xl border border-[#D8C8BB] shadow-xl transition-all duration-300 w-full h-full"
     >
       <div className="space-y-3.5">
         <div className="flex items-center justify-between gap-2">
@@ -71,5 +73,6 @@ export function CertificationCard({ certificate }: CertificationCardProps) {
         </div>
       )}
     </motion.div>
+    </Tilt3D>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { Tilt3D } from "@/components/ui/Tilt3D";
 import { motion, Variants } from "framer-motion";
 import { ExternalLink, Download } from "lucide-react";
 import { PublicationBadge } from "./PublicationBadge";
@@ -32,12 +33,13 @@ export function PublicationCard({
   const paperUrl = "/research/IJCRT2512785.pdf";
 
   return (
-    <motion.div
-      variants={cardVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-60px" }}
-      className="group relative flex flex-col justify-between p-6 sm:p-8 lg:p-10 rounded-2xl bg-[#F7F5F4]/80 backdrop-blur-xl border border-[#D8C8BB] shadow-2xl transition-all duration-300 hover:border-[#B18C6A]/65 hover:shadow-2xl hover:shadow-[#5A4030]/5 w-full"
+    <Tilt3D className="w-full h-full">
+      <motion.div
+        variants={cardVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-60px" }}
+        className="group relative flex flex-col justify-between p-6 sm:p-8 lg:p-10 rounded-2xl bg-[#F7F5F4]/80 backdrop-blur-xl border border-[#D8C8BB] shadow-2xl transition-all duration-300 w-full h-full"
     >
       {/* Ambient Gradient Glow */}
       <div
@@ -100,5 +102,6 @@ export function PublicationCard({
         </a>
       </div>
     </motion.div>
+    </Tilt3D>
   );
 }

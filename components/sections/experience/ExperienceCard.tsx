@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { Tilt3D } from "@/components/ui/Tilt3D";
 import { motion, Variants } from "framer-motion";
 
 export interface ExperienceCardProps {
@@ -21,9 +22,10 @@ const cardVariants: Variants = {
 
 export function ExperienceCard({ title, organization, description, index }: ExperienceCardProps) {
   return (
-    <motion.div
-      variants={cardVariants}
-      className="group relative flex flex-col justify-between p-6 sm:p-8 rounded-2xl bg-[#F7F5F4]/80 backdrop-blur-xl border border-[#D8C8BB] shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#B18C6A]/65 hover:shadow-2xl hover:shadow-[#5A4030]/5 w-full"
+    <Tilt3D className="w-full h-full">
+      <motion.div
+        variants={cardVariants}
+        className="group relative flex flex-col justify-between p-6 sm:p-8 rounded-2xl bg-[#F7F5F4]/80 backdrop-blur-xl border border-[#D8C8BB] shadow-xl transition-all duration-300 w-full h-full"
     >
       <div className="space-y-3">
         {/* Step Index Badge & Organization */}
@@ -47,5 +49,6 @@ export function ExperienceCard({ title, organization, description, index }: Expe
         </p>
       </div>
     </motion.div>
+    </Tilt3D>
   );
 }

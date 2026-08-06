@@ -53,7 +53,7 @@ export function AboutSection() {
             </div>
 
             {/* Section Heading */}
-            <h2 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#2E2A28] leading-[1.1]">
+            <h2 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] extruded-heading">
               Engineering Intelligent AI Solutions with Purpose
             </h2>
 

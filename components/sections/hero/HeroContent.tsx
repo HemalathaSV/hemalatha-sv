@@ -42,7 +42,7 @@ export function HeroContent() {
 
       {/* 2. Main Name & Brand Title */}
       <motion.div variants={itemVariants} className="space-y-2">
-        <h1 className="font-heading text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-[#2E2A28] leading-[1.05]">
+        <h1 className="font-heading text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05] extruded-heading">
           {PROFILE.name}
         </h1>
         <p className="font-heading text-xl sm:text-2xl lg:text-3xl font-semibold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#5A4030] via-[#B18C6A] to-[#5A4030]">

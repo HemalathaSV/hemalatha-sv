@@ -74,3 +74,13 @@ h1, h2, h3, h4, h5, h6 {
   animation: float-glow-2 35s infinite ease-in-out;
 }
 
+/* 3D Extruded Headings */
+.extruded-heading {
+  text-shadow: 0 1px 0 rgba(214, 195, 179, 0.5), 
+               0 2px 0 rgba(214, 195, 179, 0.4), 
+               0 6px 14px rgba(90, 64, 48, 0.12);
+  background: linear-gradient(135deg, #2E2A28 0%, #5A4030 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
