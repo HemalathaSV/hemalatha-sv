@@ -22,14 +22,14 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Hemalatha S V AI — AI Engineer & Researcher",
-    template: "%s | Hemalatha S V AI",
+    default: "Hemalatha S V  — AI Engineer & Researcher",
+    template: "%s | Hemalatha S V ",
   },
   description:
-    "Official personal brand and engineering portfolio for Hemalatha S V AI, showcasing intelligent multi-agent AI systems, machine learning pipelines, and research publications.",
+    "Official personal brand and engineering portfolio for Hemalatha S V , showcasing intelligent multi-agent AI systems, machine learning pipelines, and research publications.",
   keywords: [
     "Hemalatha S V",
-    "Hemalatha S V AI",
+    "Hemalatha S V ",
     "AI Engineer",
     "Agentic AI",
     "Multi-Agent Systems",
@@ -50,16 +50,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://hemalatha-sv.vercel.app",
-    title: "Hemalatha S V AI — AI Engineer & Researcher",
+    title: "Hemalatha S V — AI Engineer & Researcher",
     description:
-      "Official personal brand and engineering portfolio for Hemalatha S V AI, showcasing intelligent multi-agent AI systems, machine learning pipelines, and research publications.",
-    siteName: "Hemalatha S V AI Portfolio",
+      "Official personal brand and engineering portfolio for Hemalatha S V , showcasing intelligent multi-agent AI systems, machine learning pipelines, and research publications.",
+    siteName: "Hemalatha S V  Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hemalatha S V AI — AI Engineer & Researcher",
+    title: "Hemalatha S V  — AI Engineer & Researcher",
     description:
-      "Official personal brand and engineering portfolio for Hemalatha S V AI, showcasing intelligent multi-agent AI systems, machine learning pipelines, and research publications.",
+      "Official personal brand and engineering portfolio for Hemalatha S V , showcasing intelligent multi-agent AI systems, machine learning pipelines, and research publications.",
   },
 };
 
