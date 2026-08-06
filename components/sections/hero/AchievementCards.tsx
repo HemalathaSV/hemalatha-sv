@@ -31,21 +31,33 @@ export function AchievementCards() {
       icon: Trophy,
       title: "Published Research",
       subtitle: "IJCRT Publication",
+      iconBg: "#F3E5D8",
+      iconColor: "#8B5E3C",
+      borderColor: "#C89A6B",
     },
     {
       icon: Bot,
       title: "Agentic AI",
       subtitle: "Multi-Agent Systems",
+      iconBg: "#E8E3F7",
+      iconColor: "#6B5CA5",
+      borderColor: "#9C89D9",
     },
     {
       icon: Code,
       title: "AI Engineering",
       subtitle: "FastAPI • Python • Next.js",
+      iconBg: "#DDEEF4",
+      iconColor: "#3D6D80",
+      borderColor: "#6FA8C2",
     },
     {
       icon: Users,
       title: "Leadership",
       subtitle: "Executive Coordinator",
+      iconBg: "#E6F2E6",
+      iconColor: "#4D7C59",
+      borderColor: "#7EB38A",
     },
   ];
 
@@ -63,6 +75,9 @@ export function AchievementCards() {
             icon={item.icon}
             title={item.title}
             subtitle={item.subtitle}
+            iconBg={item.iconBg}
+            iconColor={item.iconColor}
+            borderColor={item.borderColor}
           />
         </motion.div>
       ))}
