@@ -14,7 +14,7 @@ export function ArchitectureDiagram() {
   ];
 
   return (
-    <section className="py-16 sm:py-24 bg-[#0F0F12] relative border-b border-[#FDACAC]/18">
+    <section className="py-16 sm:py-24 bg-[#151214] relative border-b border-[#FDACAC]/18">
       <Container>
         <div className="max-w-4xl mx-auto space-y-10">
           <div className="space-y-3 text-center">
@@ -42,7 +42,7 @@ export function ArchitectureDiagram() {
             <ArrowDown className="h-5 w-5 text-[#FD7979] animate-bounce" />
 
             {/* Step 2: Coordinator Agent */}
-            <div className="w-full max-w-md p-5 rounded-2xl bg-[#19191D] border border-[#FD7979]/40 shadow-xl text-center space-y-1">
+            <div className="w-full max-w-md p-5 rounded-2xl bg-[#19191D] border border-[#FDACAC]/40 shadow-xl text-center space-y-1">
               <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-[#FD7979]/10 text-[#FD7979] text-xs font-mono font-bold">
                 <Cpu className="h-3.5 w-3.5" />
                 Coordinator Agent
@@ -59,7 +59,7 @@ export function ArchitectureDiagram() {
               {subAgents.map((agent, index) => (
                 <div
                   key={index}
-                  className="p-3.5 rounded-xl bg-[#19191D]/90 border border-[#FDACAC]/18 flex flex-col items-center text-center space-y-1 hover:border-[#FD7979]/40 transition-colors"
+                  className="p-3.5 rounded-xl bg-[#19191D]/90 border border-[#FDACAC]/18 flex flex-col items-center text-center space-y-1 hover:border-[#FDACAC]/40 transition-colors"
                 >
                   <span className="text-xs font-heading font-bold text-[#FFFFFF]">
                     {agent.title}

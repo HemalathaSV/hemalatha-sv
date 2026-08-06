@@ -37,7 +37,7 @@ export function CTAButtons() {
       <a
         href="#featured-work"
         onClick={handleScrollToWork}
-        className="h-12 sm:h-[52px] px-7 sm:px-8 w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#FD7979] via-[#FDACAC] to-[#FFCDC9] text-[#0F0F12] font-semibold text-sm sm:text-base tracking-wide hover:opacity-95 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 shadow-lg shadow-[#FD7979]/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FD7979]"
+        className="h-12 sm:h-[52px] px-7 sm:px-8 w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#FD7979] via-[#FDACAC] to-[#FFCDC9] text-[#151214] font-semibold text-sm sm:text-base tracking-wide hover:opacity-95 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 shadow-lg shadow-[#FD7979]/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FD7979]"
       >
         View My Work
       </a>
@@ -56,7 +56,7 @@ export function CTAButtons() {
           </a>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="h-12 sm:h-[52px] px-4 border-l border-[#FDACAC]/18 rounded-r-full text-[#B8B8C5] hover:text-[#FFFFFF] hover:bg-[#222228] transition-all duration-200 flex items-center justify-center"
+            className="h-12 sm:h-[52px] px-4 border-l border-[#FDACAC]/18 rounded-r-full text-[#B8B8C5] hover:text-[#FDACAC] hover:bg-[#222228] transition-all duration-200 flex items-center justify-center"
             aria-label="More resume options"
           >
             <ChevronDown className={`h-4 w-4 transition-transform duration-250 ${isOpen ? "rotate-180" : ""}`} />

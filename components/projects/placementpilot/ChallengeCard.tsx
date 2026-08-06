@@ -19,7 +19,7 @@ export function ChallengeCard() {
   ];
 
   return (
-    <section className="py-16 sm:py-24 bg-[#0F0F12] relative border-b border-[#FDACAC]/18">
+    <section className="py-16 sm:py-24 bg-[#151214] relative border-b border-[#FDACAC]/18">
       <Container>
         <div className="max-w-4xl mx-auto space-y-12">
           {/* Engineering Challenges */}

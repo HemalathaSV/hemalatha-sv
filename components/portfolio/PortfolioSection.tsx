@@ -17,7 +17,7 @@ const headerVariants: Variants = {
 
 export function PortfolioSection() {
   return (
-    <section className="relative min-h-screen w-full flex flex-col justify-center pt-32 pb-24 sm:pt-40 sm:pb-32 bg-[#0F0F12] overflow-hidden">
+    <section className="relative min-h-screen w-full flex flex-col justify-center pt-32 pb-24 sm:pt-40 sm:pb-32 bg-[#151214] overflow-hidden">
       {/* Ambient Radial Glow */}
       <div
         aria-hidden="true"

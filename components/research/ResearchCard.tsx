@@ -23,7 +23,7 @@ export function ResearchCard({ publication }: ResearchCardProps) {
   return (
     <motion.div
       variants={cardVariants}
-      className="group relative flex flex-col justify-between p-6 sm:p-8 rounded-2xl bg-[#19191D]/80 backdrop-blur-xl border border-[#FDACAC]/18 shadow-2xl transition-all duration-300 hover:border-[#FD7979]/40 hover:shadow-2xl hover:shadow-[#FD7979]/5 w-full"
+      className="group relative flex flex-col justify-between p-6 sm:p-8 rounded-2xl bg-[#19191D]/80 backdrop-blur-xl border border-[#FDACAC]/18 shadow-2xl transition-all duration-300 hover:border-[#FDACAC]/40 hover:shadow-2xl hover:shadow-[#FD7979]/5 w-full"
     >
       <div className="space-y-6">
         {/* Status Badge & Category */}
@@ -33,7 +33,7 @@ export function ResearchCard({ publication }: ResearchCardProps) {
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
               {publication.status}
             </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-[#FD7979]/10 text-[#FD7979] border border-[#FD7979]/30">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-[#FD7979]/10 text-[#FD7979] border border-[#FDACAC]/30">
               {publication.category}
             </span>
           </div>
@@ -80,7 +80,7 @@ export function ResearchCard({ publication }: ResearchCardProps) {
             href={publication.pdfUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="h-11 px-6 rounded-full text-xs sm:text-sm font-semibold tracking-wide inline-flex items-center gap-2 bg-[#FD7979] text-[#0F0F12] hover:bg-[#FD7979]/90 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-md shadow-[#FD7979]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FD7979]"
+            className="h-11 px-6 rounded-full text-xs sm:text-sm font-semibold tracking-wide inline-flex items-center gap-2 bg-[#FD7979] text-[#151214] hover:bg-[#FD7979]/90 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-md shadow-[#FD7979]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FD7979]"
           >
             Read Publication <ExternalLink className="h-3.5 w-3.5" />
           </a>
@@ -88,7 +88,7 @@ export function ResearchCard({ publication }: ResearchCardProps) {
         {publication.projectSlug && (
           <Link
             href={`/projects/${publication.projectSlug}`}
-            className="h-11 px-6 rounded-full text-xs sm:text-sm font-medium tracking-wide inline-flex items-center gap-2 bg-transparent border border-[#FDACAC]/18 text-[#FFFFFF] hover:bg-[#222228] hover:border-[#FD7979]/40 active:scale-[0.98] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FD7979]"
+            className="h-11 px-6 rounded-full text-xs sm:text-sm font-medium tracking-wide inline-flex items-center gap-2 bg-transparent border border-[#FDACAC]/18 text-[#FFFFFF] hover:bg-[#222228] hover:border-[#FDACAC]/40 active:scale-[0.98] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FD7979]"
           >
             View Related Project <ArrowRight className="h-3.5 w-3.5" />
           </Link>

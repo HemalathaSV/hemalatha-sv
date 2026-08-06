@@ -22,16 +22,16 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-screen w-full flex flex-col justify-center pt-24 sm:pt-28 pb-16 sm:pb-20 bg-[#0F0F12] overflow-hidden"
+      className="relative min-h-screen w-full flex flex-col justify-center pt-24 sm:pt-28 pb-16 sm:pb-20 bg-[#151214] overflow-hidden"
     >
       {/* Soft Ambient Radial Backlights */}
       <div
         aria-hidden="true"
-        className="absolute top-1/4 right-5 sm:right-10 w-[450px] sm:w-[550px] h-[450px] sm:h-[550px] rounded-full bg-gradient-to-tr from-[#FD7979]/08 to-[#FDACAC]/06 blur-3xl pointer-events-none z-0"
+        className="absolute top-1/4 right-5 sm:right-10 w-[500px] sm:w-[650px] h-[500px] sm:h-[650px] rounded-full bg-[radial-gradient(circle_at_center,rgba(255,205,201,0.12),transparent_70%)] blur-3xl pointer-events-none z-0"
       />
       <div
         aria-hidden="true"
-        className="absolute bottom-10 left-5 sm:left-10 w-[350px] sm:w-[450px] h-[350px] sm:h-[450px] rounded-full bg-gradient-to-bl from-[#FDACAC]/06 to-[#FD7979]/04 blur-3xl pointer-events-none z-0"
+        className="absolute bottom-10 left-5 sm:left-10 w-[400px] sm:w-[500px] h-[400px] sm:h-[500px] rounded-full bg-[radial-gradient(circle_at_center,rgba(255,205,201,0.08),transparent_70%)] blur-3xl pointer-events-none z-0"
       />
 
       <Container>

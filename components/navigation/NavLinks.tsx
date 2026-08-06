@@ -28,7 +28,7 @@ export function NavLinks({ activeSection, onNavigate, className = "" }: NavLinks
               className={`relative px-3 py-1.5 text-xs sm:text-sm font-medium rounded-full transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FD7979] ${
                 isActive
                   ? "text-[#FD7979] font-semibold"
-                  : "text-[#B8B8C5] hover:text-[#FFFFFF] hover:bg-[#19191D]/60"
+                  : "text-[#B8B8C5] hover:text-[#FDACAC] hover:bg-[#19191D]/60"
               }`}
             >
               <span className="relative z-10">{item.label}</span>

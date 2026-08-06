@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function ResearchPage() {
   return (
-    <main className="min-h-screen bg-[#0F0F12] text-[#FFFFFF]">
+    <main className="min-h-screen bg-[#151214] text-[#FFFFFF]">
       <ResearchSection />
     </main>
   );

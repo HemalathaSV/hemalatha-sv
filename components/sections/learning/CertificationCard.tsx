@@ -22,11 +22,11 @@ export function CertificationCard({ certificate }: CertificationCardProps) {
   return (
     <motion.div
       variants={cardVariants}
-      className="group relative flex flex-col justify-between p-5 sm:p-6 rounded-2xl bg-[#19191D]/80 backdrop-blur-xl border border-[#FDACAC]/18 shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#FD7979]/40 hover:shadow-xl hover:shadow-[#FD7979]/5"
+      className="group relative flex flex-col justify-between p-5 sm:p-6 rounded-2xl bg-[#19191D]/80 backdrop-blur-xl border border-[#FDACAC]/18 shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#FDACAC]/40 hover:shadow-xl hover:shadow-[#FD7979]/5"
     >
       <div className="space-y-3.5">
         <div className="flex items-center justify-between gap-2">
-          <span className="text-xs font-mono font-semibold text-[#FD7979] px-2.5 py-0.5 rounded bg-[#FD7979]/10 border border-[#FD7979]/20">
+          <span className="text-xs font-mono font-semibold text-[#FD7979] px-2.5 py-0.5 rounded bg-[#FD7979]/10 border border-[#FDACAC]/20">
             {certificate.provider}
           </span>
           {certificate.completionDate && (

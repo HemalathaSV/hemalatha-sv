@@ -4,8 +4,8 @@
   "description": "Official personal brand and engineering portfolio for Hemalatha S V.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0F0F12",
-  "theme_color": "#0F0F12",
+  "background_color": "#151214",
+  "theme_color": "#151214",
   "icons": [
     {
       "src": "/favicon.ico",

@@ -13,7 +13,7 @@ export function Gallery({ project }: GalleryProps) {
   if (!project.screenshots || project.screenshots.length === 0) return null;
 
   return (
-    <section className="py-16 sm:py-24 bg-[#0F0F12] relative border-b border-[#FDACAC]/18">
+    <section className="py-16 sm:py-24 bg-[#151214] relative border-b border-[#FDACAC]/18">
       <Container>
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="space-y-3">
@@ -29,7 +29,7 @@ export function Gallery({ project }: GalleryProps) {
             {project.screenshots.map((item, index) => (
               <div
                 key={index}
-                className="group relative flex flex-col justify-between h-48 p-6 rounded-2xl bg-[#19191D] border border-[#FDACAC]/18 hover:border-[#FD7979]/40 transition-all shadow-xl overflow-hidden"
+                className="group relative flex flex-col justify-between h-48 p-6 rounded-2xl bg-[#19191D] border border-[#FDACAC]/18 hover:border-[#FDACAC]/40 transition-all shadow-xl overflow-hidden"
               >
                 <div
                   aria-hidden="true"

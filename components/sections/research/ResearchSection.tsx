@@ -48,7 +48,7 @@ export function ResearchSection() {
   return (
     <section
       id="research"
-      className="relative min-h-screen w-full flex flex-col justify-center py-24 sm:py-32 bg-[#0F0F12] overflow-hidden border-t border-[#FDACAC]/18"
+      className="relative min-h-screen w-full flex flex-col justify-center py-24 sm:py-32 bg-[#151214] overflow-hidden border-t border-[#FDACAC]/18"
     >
       {/* Ambient Background Radial Backlights */}
       <div

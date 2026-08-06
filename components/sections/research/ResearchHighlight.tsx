@@ -22,9 +22,9 @@ export function ResearchHighlight({ title, iconIndex = 0 }: ResearchHighlightPro
   return (
     <motion.div
       variants={itemVariants}
-      className="group flex items-center gap-3 p-4 rounded-xl bg-[#19191D]/75 backdrop-blur-md border border-[#FDACAC]/18 shadow-md hover:-translate-y-1 hover:border-[#FD7979]/40 hover:shadow-lg hover:shadow-[#FD7979]/5 transition-all duration-300"
+      className="group flex items-center gap-3 p-4 rounded-xl bg-[#19191D]/75 backdrop-blur-md border border-[#FDACAC]/18 shadow-md hover:-translate-y-1 hover:border-[#FDACAC]/40 hover:shadow-lg hover:shadow-[#FD7979]/5 transition-all duration-300"
     >
-      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#222228] text-[#FD7979] border border-[#FDACAC]/18 group-hover:border-[#FD7979]/40 transition-colors">
+      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#222228] text-[#FD7979] border border-[#FDACAC]/18 group-hover:border-[#FDACAC]/40 transition-colors">
         <span className="font-mono text-xs font-bold">0{iconIndex + 1}</span>
       </div>
       <span className="font-heading text-xs sm:text-sm font-semibold text-[#FFFFFF] tracking-tight group-hover:text-[#FD7979] transition-colors">

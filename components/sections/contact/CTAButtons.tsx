@@ -27,14 +27,14 @@ export function CTAButtons({ className = "" }: CTAButtonsProps) {
       {/* Primary Button */}
       <a
         href={`mailto:${PROFILE.email}`}
-        className="h-12 sm:h-[52px] px-7 sm:px-8 w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-[#FD7979] text-[#0F0F12] font-semibold text-sm hover:bg-[#FD7979]/90 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 shadow-lg shadow-[#FD7979]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FD7979]"
+        className="h-12 sm:h-[52px] px-7 sm:px-8 w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-[#FD7979] text-[#151214] font-semibold text-sm hover:bg-[#FD7979]/90 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 shadow-lg shadow-[#FD7979]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FD7979]"
       >
         Get In Touch
       </a>
 
       {/* Resume Dropdown Action Button */}
       <div className="relative w-full sm:w-auto" ref={dropdownRef}>
-        <div className="flex items-center w-full sm:w-auto rounded-full bg-transparent border border-[#FD7979]/30 focus-within:ring-2 focus-within:ring-[#FD7979] focus-within:border-transparent transition-all duration-200">
+        <div className="flex items-center w-full sm:w-auto rounded-full bg-transparent border border-[#FDACAC]/30 focus-within:ring-2 focus-within:ring-[#FD7979] focus-within:border-transparent transition-all duration-200">
           <a
             href={PROFILE.resume}
             target="_blank"
@@ -46,7 +46,7 @@ export function CTAButtons({ className = "" }: CTAButtonsProps) {
           </a>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="h-12 sm:h-[52px] px-4 border-l border-[#FD7979]/30 rounded-r-full text-[#B8B8C5] hover:text-[#FFFFFF] hover:bg-[#19191D] transition-all duration-200 flex items-center justify-center"
+            className="h-12 sm:h-[52px] px-4 border-l border-[#FDACAC]/30 rounded-r-full text-[#B8B8C5] hover:text-[#FDACAC] hover:bg-[#19191D] transition-all duration-200 flex items-center justify-center"
             aria-label="More resume options"
           >
             <ChevronDown className={`h-4 w-4 transition-transform duration-250 ${isOpen ? "rotate-180" : ""}`} />

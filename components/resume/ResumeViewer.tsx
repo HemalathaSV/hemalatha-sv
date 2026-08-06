@@ -9,7 +9,7 @@ import { PROFILE } from "@/config/profile";
 
 export function ResumeViewer() {
   return (
-    <section className="relative min-h-screen w-full flex flex-col justify-center pt-32 pb-24 sm:pt-40 sm:pb-32 bg-[#0F0F12] overflow-hidden">
+    <section className="relative min-h-screen w-full flex flex-col justify-center pt-32 pb-24 sm:pt-40 sm:pb-32 bg-[#151214] overflow-hidden">
       {/* Ambient Backlight Glow */}
       <div
         aria-hidden="true"
@@ -32,7 +32,7 @@ export function ResumeViewer() {
               <a
                 href={PROFILE.resume}
                 download="Hemalatha_SV_Resume.pdf"
-                className="h-11 px-6 rounded-full bg-gradient-to-r from-[#FD7979] via-[#FDACAC] to-[#FFCDC9] text-[#0F0F12] font-semibold text-xs sm:text-sm inline-flex items-center gap-2 hover:opacity-95 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-md shadow-[#FD7979]/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FD7979]"
+                className="h-11 px-6 rounded-full bg-gradient-to-r from-[#FD7979] via-[#FDACAC] to-[#FFCDC9] text-[#151214] font-semibold text-xs sm:text-sm inline-flex items-center gap-2 hover:opacity-95 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-md shadow-[#FD7979]/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FD7979]"
               >
                 <Download className="h-4 w-4 stroke-[2]" />
                 Download Resume PDF

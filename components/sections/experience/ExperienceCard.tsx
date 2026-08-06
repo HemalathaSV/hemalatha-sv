@@ -23,12 +23,12 @@ export function ExperienceCard({ title, organization, description, index }: Expe
   return (
     <motion.div
       variants={cardVariants}
-      className="group relative flex flex-col justify-between p-6 sm:p-8 rounded-2xl bg-[#19191D]/80 backdrop-blur-xl border border-[#FDACAC]/18 shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#FD7979]/40 hover:shadow-2xl hover:shadow-[#FD7979]/5 w-full"
+      className="group relative flex flex-col justify-between p-6 sm:p-8 rounded-2xl bg-[#19191D]/80 backdrop-blur-xl border border-[#FDACAC]/18 shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#FDACAC]/40 hover:shadow-2xl hover:shadow-[#FD7979]/5 w-full"
     >
       <div className="space-y-3">
         {/* Step Index Badge & Organization */}
         <div className="flex items-center justify-between gap-2">
-          <span className="text-xs font-mono font-semibold text-[#FD7979] px-2.5 py-1 rounded-md bg-[#FD7979]/10 border border-[#FD7979]/20">
+          <span className="text-xs font-mono font-semibold text-[#FD7979] px-2.5 py-1 rounded-md bg-[#FD7979]/10 border border-[#FDACAC]/20">
             0{index + 1}
           </span>
           <span className="text-xs font-mono text-[#B8B8C5] font-medium truncate max-w-[240px]">

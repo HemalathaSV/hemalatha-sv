@@ -12,7 +12,7 @@ export function FeatureGrid({ project }: FeatureGridProps) {
   if (!project.features || project.features.length === 0) return null;
 
   return (
-    <section className="py-16 sm:py-24 bg-[#0F0F12] relative border-b border-[#FDACAC]/18">
+    <section className="py-16 sm:py-24 bg-[#151214] relative border-b border-[#FDACAC]/18">
       <Container>
         <div className="max-w-4xl mx-auto space-y-12">
           <div className="space-y-3">
@@ -28,7 +28,7 @@ export function FeatureGrid({ project }: FeatureGridProps) {
             {project.features.map((item, index) => (
               <div
                 key={index}
-                className="p-6 rounded-2xl bg-[#19191D]/80 backdrop-blur-xl border border-[#FDACAC]/18 space-y-3 hover:-translate-y-1 hover:border-[#FD7979]/40 transition-all duration-300 shadow-xl"
+                className="p-6 rounded-2xl bg-[#19191D]/80 backdrop-blur-xl border border-[#FDACAC]/18 space-y-3 hover:-translate-y-1 hover:border-[#FDACAC]/40 transition-all duration-300 shadow-xl"
               >
                 <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#222228] text-[#FD7979] border border-[#FDACAC]/18 font-mono text-xs font-bold">
                   0{index + 1}

@@ -148,7 +148,7 @@ export function MobileMenu({
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
               onClick={onClose}
-              className="fixed inset-0 bg-[#0F0F12]/80 backdrop-blur-xl"
+              className="fixed inset-0 bg-[#151214]/80 backdrop-blur-xl"
             />
 
             {/* Menu Container */}
@@ -175,8 +175,8 @@ export function MobileMenu({
                         aria-current={isActive ? "page" : undefined}
                         className={`flex items-center justify-between px-4 py-2.5 text-sm font-medium rounded-xl transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FD7979] ${
                           isActive
-                            ? "text-[#FD7979] bg-[#222228] font-semibold border border-[#FD7979]/20"
-                            : "text-[#B8B8C5] hover:text-[#FFFFFF] hover:bg-[#222228]/50"
+                            ? "text-[#FD7979] bg-[#222228] font-semibold border border-[#FDACAC]/20"
+                            : "text-[#B8B8C5] hover:text-[#FDACAC] hover:bg-[#222228]/50"
                         }`}
                       >
                         <span>{item.label}</span>

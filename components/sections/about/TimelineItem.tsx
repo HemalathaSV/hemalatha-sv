@@ -24,7 +24,7 @@ export function TimelineItem({ step, title, isLast = false }: TimelineItemProps)
       {/* Vertical Connecting Line & Node Circle */}
       <div className="relative flex flex-col items-center">
         {/* Node Circle */}
-        <div className="relative z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#19191D] border border-[#FD7979]/40 text-[#FD7979] text-xs font-mono font-bold shadow-[0_0_12px_rgba(253,121,121,0.2)]">
+        <div className="relative z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#19191D] border border-[#FDACAC]/40 text-[#FD7979] text-xs font-mono font-bold shadow-[0_0_12px_rgba(253,121,121,0.2)]">
           {step}
         </div>
         {/* Connecting Line */}
@@ -37,7 +37,7 @@ export function TimelineItem({ step, title, isLast = false }: TimelineItemProps)
       </div>
 
       {/* Glassmorphism Card */}
-      <div className="group flex-1 p-4 sm:p-5 rounded-xl bg-[#19191D]/75 backdrop-blur-md border border-[#FDACAC]/18 shadow-md hover:-translate-y-0.5 hover:border-[#FD7979]/40 hover:shadow-lg hover:shadow-[#FD7979]/5 transition-all duration-300">
+      <div className="group flex-1 p-4 sm:p-5 rounded-xl bg-[#19191D]/75 backdrop-blur-md border border-[#FDACAC]/18 shadow-md hover:-translate-y-0.5 hover:border-[#FDACAC]/40 hover:shadow-lg hover:shadow-[#FD7979]/5 transition-all duration-300">
         <h4 className="font-heading text-sm sm:text-base font-semibold text-[#FFFFFF] tracking-tight group-hover:text-[#FD7979] transition-colors duration-200">
           {title}
         </h4>

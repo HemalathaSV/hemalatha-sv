@@ -21,7 +21,7 @@ export function AboutSection() {
   return (
     <section
       id="about"
-      className="relative min-h-screen w-full flex flex-col justify-center py-24 sm:py-32 bg-[#0F0F12] overflow-hidden border-t border-[#FDACAC]/18"
+      className="relative min-h-screen w-full flex flex-col justify-center py-24 sm:py-32 bg-[#151214] overflow-hidden border-t border-[#FDACAC]/18"
     >
       {/* Subtle Ambient Glow */}
       <div
@@ -67,7 +67,7 @@ export function AboutSection() {
               {interests.map((interest, index) => (
                 <span
                   key={index}
-                  className="px-3.5 py-1.5 rounded-lg bg-[#19191D] border border-[#FDACAC]/18 text-xs font-mono font-medium text-[#FFFFFF] hover:border-[#FD7979]/40 hover:text-[#FD7979] transition-colors duration-200"
+                  className="px-3.5 py-1.5 rounded-lg bg-[#19191D] border border-[#FDACAC]/18 text-xs font-mono font-medium text-[#FFFFFF] hover:border-[#FDACAC]/40 hover:text-[#FD7979] transition-colors duration-200"
                 >
                   {interest}
                 </span>

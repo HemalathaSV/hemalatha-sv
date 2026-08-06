@@ -26,12 +26,12 @@ export function PortraitCard({
       {/* Soft radial glow behind portrait */}
       <div
         aria-hidden="true"
-        className="absolute -inset-4 rounded-full bg-[radial-gradient(circle_at_center,rgba(253,121,121,0.15),transparent_70%)] blur-2xl pointer-events-none"
+        className="absolute -inset-10 rounded-full bg-[radial-gradient(circle_at_center,rgba(255,205,201,0.25),transparent_75%)] w-[120%] h-[120%] blur-3xl pointer-events-none"
       />
 
       {/* Stable Premium Card Container */}
-      <div className="relative z-10 w-full max-w-[320px] sm:max-w-[380px] lg:max-w-[420px] mx-auto overflow-hidden rounded-3xl bg-[#19191D]/80 backdrop-blur-xl border border-[#FD7979]/20 shadow-2xl shadow-black/70 p-3 sm:p-4 group">
-        <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl bg-[#0F0F12]">
+      <div className="relative z-10 w-full max-w-[320px] sm:max-w-[380px] lg:max-w-[420px] mx-auto overflow-hidden rounded-3xl bg-[#19191D]/80 backdrop-blur-xl border border-[#FDACAC]/20 shadow-2xl shadow-black/70 p-3 sm:p-4 group">
+        <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl bg-[#151214]">
           <Image
             src={imageSrc}
             alt={alt}

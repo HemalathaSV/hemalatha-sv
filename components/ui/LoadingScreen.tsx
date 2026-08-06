@@ -73,7 +73,7 @@ export function LoadingScreen() {
 
   // Prevent flash or hydration mismatch issues by rendering a stable placeholder
   if (!isMounted) {
-    return <div className="fixed inset-0 z-[100] bg-[#0F0F12]" />;
+    return <div className="fixed inset-0 z-[100] bg-[#151214]" />;
   }
 
   if (skipAnimation) return null;
@@ -87,12 +87,12 @@ export function LoadingScreen() {
             opacity: 0,
             transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
           }}
-          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#0F0F12] text-[#FFFFFF] p-6 overflow-hidden select-none"
+          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#151214] text-[#FFFFFF] p-6 overflow-hidden select-none"
         >
           {/* Ambient Background Radial Glow */}
           <div
             aria-hidden="true"
-            className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(253,121,121,0.06),transparent_60%)] pointer-events-none"
+            className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,205,201,0.10),transparent_70%)] pointer-events-none"
           />
 
           <div className="relative z-10 flex flex-col items-center justify-center space-y-6 text-center max-w-md w-full">
@@ -101,7 +101,7 @@ export function LoadingScreen() {
               initial={{ opacity: 0, scale: 0.94 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-              className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border border-[#FD7979]/20 shadow-lg shadow-black/50"
+              className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border border-[#FDACAC]/20 shadow-lg shadow-black/50"
             >
               <Image
                 src={PROFILE.profileImage}
