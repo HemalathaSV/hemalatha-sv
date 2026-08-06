@@ -26,7 +26,7 @@ export function TechStack({ project }: TechStackProps) {
             {project.technologies.map((tech, index) => (
               <div
                 key={index}
-                className="px-4 py-2 rounded-xl bg-[#F7F5F4] border border-[#B18C6A]/20 font-mono text-sm font-semibold text-[#5A4030] shadow-sm hover:border-[#B18C6A]/65 transition-colors"
+                className="inline-flex items-center justify-center px-[18px] py-[12px] rounded-full bg-[#F8EEE8] border border-[#D8B89E] text-xs font-medium text-[#7A563C] hover:bg-[#B18C6A] hover:text-white hover:border-[#B18C6A] transition-all duration-300 ease-in-out"
               >
                 {tech}
               </div>

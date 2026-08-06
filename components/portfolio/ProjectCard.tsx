@@ -28,7 +28,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <div className="space-y-4">
         {/* Category Badge & Status */}
         <div className="flex items-center justify-between gap-2">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-[#5A4030]/15 text-[#2E2A28] border border-[#B18C6A]/30">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-[#FFF4EC] text-[#8A5A3C] border border-[#DE8F5F]">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#DE8F5F]" />
             {project.category}
           </span>
           <span className="text-[11px] font-mono text-[#5F5854]">
@@ -51,13 +52,13 @@ export function ProjectCard({ project }: ProjectCardProps) {
           {project.technologies.slice(0, 4).map((tech, i) => (
             <span
               key={i}
-              className="px-2.5 py-1 rounded-lg bg-[#2E2A28] border border-[#B18C6A]/20 text-[11px] font-mono text-[#5F5854]"
+              className="inline-flex items-center justify-center px-[18px] py-[12px] rounded-full bg-[#F8EEE8] border border-[#D8B89E] text-xs font-medium text-[#7A563C] hover:bg-[#B18C6A] hover:text-white hover:border-[#B18C6A] transition-all duration-300 ease-in-out"
             >
               {tech}
             </span>
           ))}
           {project.technologies.length > 4 && (
-            <span className="px-2 py-1 rounded-lg bg-[#2E2A28] text-[11px] font-mono text-[#5F5854]/60">
+            <span className="inline-flex items-center justify-center px-[18px] py-[12px] rounded-full bg-[#F8EEE8] border border-[#D8B89E] text-xs font-medium text-[#7A563C]/60">
               +{project.technologies.length - 4}
             </span>
           )}

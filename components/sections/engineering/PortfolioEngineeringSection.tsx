@@ -106,7 +106,7 @@ export function PortfolioEngineeringSection() {
                     {techStack.map((tech, i) => (
                       <span
                         key={i}
-                        className="px-3 py-1.5 rounded-xl bg-[#2E2A28] border border-[#B18C6A]/20 text-xs font-mono text-[#5F5854] hover:border-[#B18C6A]/30 transition-colors"
+                        className="inline-flex items-center justify-center px-[18px] py-[12px] rounded-full bg-[#F8EEE8] border border-[#D8B89E] text-xs font-medium text-[#7A563C] hover:bg-[#B18C6A] hover:text-white hover:border-[#B18C6A] transition-all duration-300 ease-in-out"
                       >
                         {tech}
                       </span>
