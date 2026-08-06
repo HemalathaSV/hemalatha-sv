@@ -12,7 +12,7 @@ import {
 
 export default function Home() {
   return (
-    <main id="main-content" className="flex flex-col w-full min-h-screen bg-[#151214]">
+    <main id="main-content" className="flex flex-col w-full min-h-screen bg-[#FFCDC9]">
       <HeroSection />
       <AboutSection />
       <EngineeringSection />

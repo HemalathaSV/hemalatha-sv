@@ -17,7 +17,7 @@ const headerVariants: Variants = {
 
 export function ResearchSection() {
   return (
-    <section className="relative min-h-screen w-full flex flex-col justify-center pt-32 pb-24 sm:pt-40 sm:pb-32 bg-[#151214] overflow-hidden">
+    <section className="relative min-h-screen w-full flex flex-col justify-center pt-32 pb-24 sm:pt-40 sm:pb-32 bg-[#FFCDC9] overflow-hidden">
       {/* Ambient Background Radial Backlight */}
       <div
         aria-hidden="true"
@@ -34,7 +34,7 @@ export function ResearchSection() {
             className="flex flex-col space-y-4 max-w-3xl"
           >
             {/* Section Badge */}
-            <div className="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-[#19191D] border border-[#FDACAC]/18">
+            <div className="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-[#FFF6F5] border border-[#FDACAC]/35">
               <span className="h-1.5 w-1.5 rounded-full bg-[#FDACAC]" />
               <span className="text-xs font-mono font-semibold text-[#FDACAC] tracking-wider uppercase">
                 Research Library
@@ -42,12 +42,12 @@ export function ResearchSection() {
             </div>
 
             {/* Heading */}
-            <h1 className="font-heading text-4xl sm:text-6xl font-bold tracking-tight text-[#FFFFFF] leading-[1.1]">
+            <h1 className="font-heading text-4xl sm:text-6xl font-bold tracking-tight text-[#2B2323] leading-[1.1]">
               Research That Drives Innovation
             </h1>
 
             {/* Subtitle */}
-            <p className="text-base sm:text-lg text-[#B8B8C5] leading-relaxed">
+            <p className="text-base sm:text-lg text-[#5B4A4A] leading-relaxed">
               Exploring intelligent systems through applied research, peer-reviewed publications, and practical implementation.
             </p>
           </motion.div>

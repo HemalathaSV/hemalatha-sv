@@ -24,7 +24,7 @@ export function FeaturedWorkSection() {
   return (
     <section
       id="featured-work"
-      className="relative min-h-screen w-full flex flex-col justify-center py-24 sm:py-32 bg-[#151214] overflow-hidden border-t border-[#FDACAC]/18"
+      className="relative min-h-screen w-full flex flex-col justify-center py-24 sm:py-32 bg-[#FFCDC9] overflow-hidden border-t border-[#FDACAC]/35"
     >
       {/* Ambient Background Radial Backlights */}
       <div
@@ -47,7 +47,7 @@ export function FeaturedWorkSection() {
             className="flex flex-col space-y-4 max-w-3xl"
           >
             {/* Section Badge */}
-            <div className="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-[#19191D] border border-[#FDACAC]/18">
+            <div className="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-[#FFF6F5] border border-[#FDACAC]/35">
               <span className="h-1.5 w-1.5 rounded-full bg-[#FD7979]" />
               <span className="text-xs font-mono font-semibold text-[#FD7979] tracking-wider uppercase">
                 Featured Work
@@ -55,12 +55,12 @@ export function FeaturedWorkSection() {
             </div>
 
             {/* Heading */}
-            <h2 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#FFFFFF] leading-[1.1]">
+            <h2 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#2B2323] leading-[1.1]">
               Turning Ideas into Intelligent Solutions
             </h2>
 
             {/* Subtitle */}
-            <p className="text-base sm:text-lg text-[#B8B8C5] leading-relaxed">
+            <p className="text-base sm:text-lg text-[#5B4A4A] leading-relaxed">
               A collection of AI-powered applications, agentic AI systems, research-driven solutions, and full-stack engineering projects built to solve real-world challenges.
             </p>
           </motion.div>

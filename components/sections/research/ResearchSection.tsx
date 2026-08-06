@@ -48,7 +48,7 @@ export function ResearchSection() {
   return (
     <section
       id="research"
-      className="relative min-h-screen w-full flex flex-col justify-center py-24 sm:py-32 bg-[#151214] overflow-hidden border-t border-[#FDACAC]/18"
+      className="relative min-h-screen w-full flex flex-col justify-center py-24 sm:py-32 bg-[#FFCDC9] overflow-hidden border-t border-[#FDACAC]/35"
     >
       {/* Ambient Background Radial Backlights */}
       <div
@@ -67,7 +67,7 @@ export function ResearchSection() {
             className="flex flex-col space-y-4 max-w-3xl"
           >
             {/* Section Badge */}
-            <div className="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-[#19191D] border border-[#FDACAC]/18">
+            <div className="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-[#FFF6F5] border border-[#FDACAC]/35">
               <span className="h-1.5 w-1.5 rounded-full bg-[#FDACAC]" />
               <span className="text-xs font-mono font-semibold text-[#FDACAC] tracking-wider uppercase">
                 Research
@@ -75,12 +75,12 @@ export function ResearchSection() {
             </div>
 
             {/* Heading */}
-            <h2 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#FFFFFF] leading-[1.1]">
+            <h2 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#2B2323] leading-[1.1]">
               Research That Drives Innovation
             </h2>
 
             {/* Subtitle */}
-            <p className="text-base sm:text-lg text-[#B8B8C5] leading-relaxed">
+            <p className="text-base sm:text-lg text-[#5B4A4A] leading-relaxed">
               Exploring intelligent systems through applied research and practical implementation.
             </p>
           </motion.div>
@@ -100,14 +100,14 @@ export function ResearchSection() {
 
             {/* Right Column: Research Highlights Showcase */}
             <div className="lg:col-span-5 flex flex-col space-y-6">
-              <div className="p-6 rounded-2xl bg-[#19191D]/75 backdrop-blur-md border border-[#FDACAC]/18 space-y-4">
+              <div className="p-6 rounded-2xl bg-[#FFF6F5]/75 backdrop-blur-md border border-[#FDACAC]/35 space-y-4">
                 <div className="flex items-center gap-2">
                   <span className="h-2 w-2 rounded-full bg-[#FD7979]" />
-                  <h4 className="font-heading text-sm font-semibold text-[#FFFFFF] tracking-tight">
+                  <h4 className="font-heading text-sm font-semibold text-[#2B2323] tracking-tight">
                     Key Research Pillars
                   </h4>
                 </div>
-                <p className="text-xs text-[#B8B8C5] leading-relaxed">
+                <p className="text-xs text-[#5B4A4A] leading-relaxed">
                   Core computational domains and methodologies demonstrated in this research publication.
                 </p>
 

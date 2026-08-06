@@ -14,17 +14,17 @@ export function ArchitectureDiagram() {
   ];
 
   return (
-    <section className="py-16 sm:py-24 bg-[#151214] relative border-b border-[#FDACAC]/18">
+    <section className="py-16 sm:py-24 bg-[#FFCDC9] relative border-b border-[#FDACAC]/35">
       <Container>
         <div className="max-w-4xl mx-auto space-y-10">
           <div className="space-y-3 text-center">
             <h2 className="font-heading text-xs font-mono font-semibold tracking-wider text-[#FD7979] uppercase">
               System Architecture
             </h2>
-            <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#FFFFFF]">
+            <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#2B2323]">
               Multi-Agent Orchestration Flow
             </h3>
-            <p className="text-sm text-[#B8B8C5] max-w-xl mx-auto">
+            <p className="text-sm text-[#5B4A4A] max-w-xl mx-auto">
               How PlacementPilot AI routes student requests through autonomous specialized agents and LLM backends.
             </p>
           </div>
@@ -32,9 +32,9 @@ export function ArchitectureDiagram() {
           {/* Interactive Flow Diagram */}
           <div className="flex flex-col items-center space-y-6 pt-4">
             {/* Step 1: Student Input */}
-            <div className="w-full max-w-md p-4 rounded-xl bg-[#19191D] border border-[#FDACAC]/18 flex items-center justify-center gap-3 text-center shadow-lg">
+            <div className="w-full max-w-md p-4 rounded-xl bg-[#FFF6F5] border border-[#FDACAC]/35 flex items-center justify-center gap-3 text-center shadow-lg">
               <User className="h-5 w-5 text-[#FD7979]" />
-              <span className="font-heading text-sm font-semibold text-[#FFFFFF]">
+              <span className="font-heading text-sm font-semibold text-[#2B2323]">
                 Student Request / Prompt
               </span>
             </div>
@@ -42,12 +42,12 @@ export function ArchitectureDiagram() {
             <ArrowDown className="h-5 w-5 text-[#FD7979] animate-bounce" />
 
             {/* Step 2: Coordinator Agent */}
-            <div className="w-full max-w-md p-5 rounded-2xl bg-[#19191D] border border-[#FDACAC]/40 shadow-xl text-center space-y-1">
-              <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-[#FD7979]/10 text-[#FD7979] text-xs font-mono font-bold">
+            <div className="w-full max-w-md p-5 rounded-2xl bg-[#FFF6F5] border border-[#FDACAC]/40 shadow-xl text-center space-y-1">
+              <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-[#FD7979]/15 text-[#2B2323] text-xs font-mono font-bold">
                 <Cpu className="h-3.5 w-3.5" />
                 Coordinator Agent
               </div>
-              <p className="text-xs text-[#B8B8C5]">
+              <p className="text-xs text-[#5B4A4A]">
                 Evaluates intent & dispatches sub-agents in parallel
               </p>
             </div>
@@ -59,12 +59,12 @@ export function ArchitectureDiagram() {
               {subAgents.map((agent, index) => (
                 <div
                   key={index}
-                  className="p-3.5 rounded-xl bg-[#19191D]/90 border border-[#FDACAC]/18 flex flex-col items-center text-center space-y-1 hover:border-[#FDACAC]/40 transition-colors"
+                  className="p-3.5 rounded-xl bg-[#FFF6F5]/90 border border-[#FDACAC]/35 flex flex-col items-center text-center space-y-1 hover:border-[#FDACAC]/40 transition-colors"
                 >
-                  <span className="text-xs font-heading font-bold text-[#FFFFFF]">
+                  <span className="text-xs font-heading font-bold text-[#2B2323]">
                     {agent.title}
                   </span>
-                  <span className="text-[11px] text-[#B8B8C5] leading-tight">
+                  <span className="text-[11px] text-[#5B4A4A] leading-tight">
                     {agent.desc}
                   </span>
                 </div>
@@ -74,9 +74,9 @@ export function ArchitectureDiagram() {
             <ArrowDown className="h-5 w-5 text-[#FD7979]" />
 
             {/* Step 4: LLM Backend */}
-            <div className="w-full max-w-md p-4 rounded-xl bg-[#19191D] border border-[#FDACAC]/18 flex items-center justify-center gap-3 text-center shadow-lg">
+            <div className="w-full max-w-md p-4 rounded-xl bg-[#FFF6F5] border border-[#FDACAC]/35 flex items-center justify-center gap-3 text-center shadow-lg">
               <Sparkles className="h-5 w-5 text-[#FDACAC]" />
-              <span className="font-heading text-sm font-semibold text-[#FFFFFF]">
+              <span className="font-heading text-sm font-semibold text-[#2B2323]">
                 Google Gemini API & Fast Execution Engine
               </span>
             </div>

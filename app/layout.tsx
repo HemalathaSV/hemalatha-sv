@@ -70,9 +70,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${spaceGrotesk.variable} ${inter.variable} dark h-full antialiased`}
+      className={`${spaceGrotesk.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#151214] text-[#FFFFFF] selection:bg-[#FD7979]/30 selection:text-[#FD7979]">
+      <body className="min-h-full flex flex-col bg-[#FFCDC9] text-[#2B2323] selection:bg-[#FD7979]/30 selection:text-[#FD7979]">
         {/* Premium Ambient Background Glows */}
         <div className="fixed inset-0 overflow-hidden pointer-events-none z-0 select-none">
           <div className="absolute top-1/4 left-1/4 w-[500px] sm:w-[650px] h-[500px] sm:h-[650px] rounded-full bg-gradient-to-tr from-[#FD7979]/03 via-[#FDACAC]/02 to-transparent blur-3xl ambient-glow-1" />

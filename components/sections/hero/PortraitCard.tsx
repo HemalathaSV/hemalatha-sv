@@ -30,8 +30,8 @@ export function PortraitCard({
       />
 
       {/* Stable Premium Card Container */}
-      <div className="relative z-10 w-full max-w-[320px] sm:max-w-[380px] lg:max-w-[420px] mx-auto overflow-hidden rounded-3xl bg-[#19191D]/80 backdrop-blur-xl border border-[#FDACAC]/20 shadow-2xl shadow-black/70 p-3 sm:p-4 group">
-        <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl bg-[#151214]">
+      <div className="relative z-10 w-full max-w-[320px] sm:max-w-[380px] lg:max-w-[420px] mx-auto overflow-hidden rounded-3xl bg-[#FFF6F5]/80 backdrop-blur-xl border border-[#FDACAC]/20 shadow-2xl shadow-[#FDACAC]/15 p-3 sm:p-4 group">
+        <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl bg-[#FFCDC9]">
           <Image
             src={imageSrc}
             alt={alt}

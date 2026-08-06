@@ -22,7 +22,7 @@ export function CertificationCard({ certificate }: CertificationCardProps) {
   return (
     <motion.div
       variants={cardVariants}
-      className="group relative flex flex-col justify-between p-5 sm:p-6 rounded-2xl bg-[#19191D]/80 backdrop-blur-xl border border-[#FDACAC]/18 shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#FDACAC]/40 hover:shadow-xl hover:shadow-[#FD7979]/5"
+      className="group relative flex flex-col justify-between p-5 sm:p-6 rounded-2xl bg-[#FFF6F5]/80 backdrop-blur-xl border border-[#FDACAC]/35 shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#FDACAC]/40 hover:shadow-xl hover:shadow-[#FD7979]/5"
     >
       <div className="space-y-3.5">
         <div className="flex items-center justify-between gap-2">
@@ -30,17 +30,17 @@ export function CertificationCard({ certificate }: CertificationCardProps) {
             {certificate.provider}
           </span>
           {certificate.completionDate && (
-            <span className="text-[11px] font-mono text-[#B8B8C5]">
+            <span className="text-[11px] font-mono text-[#5B4A4A]">
               {certificate.completionDate}
             </span>
           )}
         </div>
 
         <div className="space-y-1">
-          <span className="text-[10px] font-mono text-[#B8B8C5] uppercase tracking-wider block">
+          <span className="text-[10px] font-mono text-[#5B4A4A] uppercase tracking-wider block">
             {certificate.category}
           </span>
-          <h4 className="font-heading text-base sm:text-lg font-bold tracking-tight text-[#FFFFFF] group-hover:text-[#FD7979] transition-colors duration-200">
+          <h4 className="font-heading text-base sm:text-lg font-bold tracking-tight text-[#2B2323] group-hover:text-[#FD7979] transition-colors duration-200">
             {certificate.title}
           </h4>
         </div>
@@ -50,7 +50,7 @@ export function CertificationCard({ certificate }: CertificationCardProps) {
           {certificate.skills.map((skill, index) => (
             <span
               key={index}
-              className="px-2 py-0.5 rounded bg-[#222228] border border-[#FDACAC]/18 text-[10px] font-mono text-[#B8B8C5]"
+              className="px-2 py-0.5 rounded bg-[#2B2323] border border-[#FDACAC]/35 text-[10px] font-mono text-[#5B4A4A]"
             >
               {skill}
             </span>
@@ -59,7 +59,7 @@ export function CertificationCard({ certificate }: CertificationCardProps) {
       </div>
 
       {certificate.credentialUrl && (
-        <div className="pt-4 mt-4 border-t border-[#FDACAC]/18 flex justify-end">
+        <div className="pt-4 mt-4 border-t border-[#FDACAC]/35 flex justify-end">
           <a
             href={certificate.credentialUrl}
             target="_blank"

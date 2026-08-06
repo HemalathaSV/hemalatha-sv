@@ -23,7 +23,7 @@ export function FooterLinks() {
       <h4 className="font-heading text-xs font-mono font-semibold tracking-wider text-[#FD7979] uppercase">
         Quick Links
       </h4>
-      <ul className="grid grid-cols-2 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-medium text-[#B8B8C5]">
+      <ul className="grid grid-cols-2 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-medium text-[#5B4A4A]">
         {NAV_ITEMS.map((item) => (
           <li key={item.id}>
             <a

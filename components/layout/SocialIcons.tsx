@@ -45,7 +45,7 @@ export function SocialIcons() {
               target={item.href.startsWith("http") ? "_blank" : undefined}
               rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
               aria-label={item.name}
-              className="flex items-center gap-2 px-3 py-2 rounded-xl bg-[#19191D] border border-[#FDACAC]/18 text-[#B8B8C5] hover:text-[#FD7979] hover:border-[#FDACAC]/40 hover:scale-105 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FD7979]"
+              className="flex items-center gap-2 px-3 py-2 rounded-xl bg-[#FFF6F5] border border-[#FDACAC]/35 text-[#5B4A4A] hover:text-[#FD7979] hover:border-[#FDACAC]/40 hover:scale-105 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FD7979]"
             >
               {item.isSvg ? (
                 <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24">

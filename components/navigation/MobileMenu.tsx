@@ -112,7 +112,7 @@ export function MobileMenu({
         aria-expanded={isOpen}
         aria-controls="mobile-navigation-menu"
         aria-label={isOpen ? "Close main menu" : "Open main menu"}
-        className="relative z-50 flex h-9 w-9 items-center justify-center rounded-lg text-[#FFFFFF] hover:bg-[#19191D] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FD7979] transition-colors"
+        className="relative z-50 flex h-9 w-9 items-center justify-center rounded-lg text-[#2B2323] hover:bg-[#FFF6F5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FD7979] transition-colors"
       >
         <svg
           className="h-5 w-5 stroke-current"
@@ -148,7 +148,7 @@ export function MobileMenu({
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
               onClick={onClose}
-              className="fixed inset-0 bg-[#151214]/80 backdrop-blur-xl"
+              className="fixed inset-0 bg-[#FFCDC9]/80 backdrop-blur-xl"
             />
 
             {/* Menu Container */}
@@ -159,7 +159,7 @@ export function MobileMenu({
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="relative z-50 mt-20 mx-4 p-5 bg-[#19191D]/95 backdrop-blur-2xl border border-[#FDACAC]/18 rounded-2xl shadow-2xl flex flex-col gap-3"
+              className="relative z-50 mt-20 mx-4 p-5 bg-[#FFF6F5]/95 backdrop-blur-2xl border border-[#FDACAC]/35 rounded-2xl shadow-2xl flex flex-col gap-3"
             >
               <ul className="flex flex-col gap-1">
                 {NAV_ITEMS.map((item) => {
@@ -175,8 +175,8 @@ export function MobileMenu({
                         aria-current={isActive ? "page" : undefined}
                         className={`flex items-center justify-between px-4 py-2.5 text-sm font-medium rounded-xl transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FD7979] ${
                           isActive
-                            ? "text-[#FD7979] bg-[#222228] font-semibold border border-[#FDACAC]/20"
-                            : "text-[#B8B8C5] hover:text-[#FDACAC] hover:bg-[#222228]/50"
+                            ? "text-[#FD7979] bg-[#2B2323] font-semibold border border-[#FDACAC]/20"
+                            : "text-[#5B4A4A] hover:text-[#FDACAC] hover:bg-[#2B2323]/50"
                         }`}
                       >
                         <span>{item.label}</span>

@@ -59,7 +59,7 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative min-h-screen w-full flex flex-col justify-between py-24 sm:py-32 bg-[#151214] overflow-hidden border-t border-[#FDACAC]/18"
+      className="relative min-h-screen w-full flex flex-col justify-between py-24 sm:py-32 bg-[#FFCDC9] overflow-hidden border-t border-[#FDACAC]/35"
     >
       {/* Ambient Background Radial Backlights */}
       <div
@@ -84,7 +84,7 @@ export function ContactSection() {
               className="lg:col-span-7 flex flex-col space-y-6 sm:space-y-8"
             >
               {/* Section Badge */}
-              <div className="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-[#19191D] border border-[#FDACAC]/18">
+              <div className="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-[#FFF6F5] border border-[#FDACAC]/35">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#FD7979]" />
                 <span className="text-xs font-mono font-semibold text-[#FD7979] tracking-wider uppercase">
                   Contact
@@ -92,12 +92,12 @@ export function ContactSection() {
               </div>
 
               {/* Heading */}
-              <h2 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#FFFFFF] leading-[1.1]">
+              <h2 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#2B2323] leading-[1.1]">
                 Let&apos;s Build Something Meaningful Together
               </h2>
 
               {/* Subtitle */}
-              <p className="text-base sm:text-lg text-[#B8B8C5] leading-relaxed max-w-xl">
+              <p className="text-base sm:text-lg text-[#5B4A4A] leading-relaxed max-w-xl">
                 Whether it&apos;s an internship, research collaboration, freelance opportunity, hackathon, or full-time role, I&apos;d love to connect and discuss how we can create impactful AI solutions.
               </p>
 
@@ -131,7 +131,7 @@ export function ContactSection() {
       </Container>
 
       {/* Footer */}
-      <footer className="pt-16 pb-6 text-center text-xs font-mono text-[#B8B8C5]/60 border-t border-[#FDACAC]/18 mt-16 relative z-10">
+      <footer className="pt-16 pb-6 text-center text-xs font-mono text-[#5B4A4A]/60 border-t border-[#FDACAC]/35 mt-16 relative z-10">
         <Container>
           <p>© {new Date().getFullYear()} {PROFILE.brand}. All rights reserved.</p>
         </Container>
