@@ -18,6 +18,7 @@ export function PortraitCard({
 }: PortraitCardProps) {
   const cardRef = React.useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = React.useState(false);
+  const [isMobileOrReduced, setIsMobileOrReduced] = React.useState(true);
 
   // Framer Motion values for pointer coordinates relative to card
   const x = useMotionValue(0.5);
@@ -27,8 +28,20 @@ export function PortraitCard({
   const rotateX = useSpring(useTransform(y, [0, 1], [15, -15]), springConfig);
   const rotateY = useSpring(useTransform(x, [0, 1], [-15, 15]), springConfig);
 
+  React.useEffect(() => {
+    const checkViewport = () => {
+      const hasTouch = window.matchMedia("(pointer: coarse)").matches || navigator.maxTouchPoints > 0;
+      const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      setIsMobileOrReduced(window.innerWidth < 1024 || hasTouch || prefersReduced);
+    };
+
+    checkViewport();
+    window.addEventListener("resize", checkViewport);
+    return () => window.removeEventListener("resize", checkViewport);
+  }, []);
+
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!cardRef.current) return;
+    if (isMobileOrReduced || !cardRef.current) return;
     const rect = cardRef.current.getBoundingClientRect();
     const width = rect.width;
     const height = rect.height;
@@ -50,7 +63,7 @@ export function PortraitCard({
       animate={{ 
         opacity: 1, 
         scale: 1,
-        y: [0, -10, 0] // Independent slow float cycle
+        y: [0, -10, 0] // Independent slow float cycle active on both mobile and desktop
       }}
       transition={{ 
         duration: 5, 
@@ -59,7 +72,7 @@ export function PortraitCard({
         repeatType: "mirror"
       }}
       className={`relative flex items-center justify-center w-full my-4 lg:my-0 ${className}`}
-      style={{ perspective: 1000 }}
+      style={{ perspective: isMobileOrReduced ? undefined : 1000 }}
     >
       {/* Soft radial glow behind portrait */}
       <div
@@ -74,18 +87,20 @@ export function PortraitCard({
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={handleMouseLeave}
         style={{
-          rotateX: rotateX,
-          rotateY: rotateY,
-          transformStyle: "preserve-3d",
+          rotateX: isMobileOrReduced ? 0 : rotateX,
+          rotateY: isMobileOrReduced ? 0 : rotateY,
+          transformStyle: isMobileOrReduced ? undefined : "preserve-3d",
           boxShadow: isHovered
             ? "0 25px 60px rgba(177,140,106,0.30)"
             : "0 20px 50px rgba(90,64,48,0.15)",
+          willChange: "transform",
         }}
         animate={{
           scale: isHovered ? 1.04 : 1,
-          translateZ: isHovered ? 40 : 0,
+          translateZ: isMobileOrReduced ? 0 : (isHovered ? 40 : 0),
         }}
         transition={{ duration: 0.35, ease: "easeOut" }}
+        whileTap={isMobileOrReduced ? { scale: 0.98 } : undefined}
         className="relative z-10 w-full max-w-[320px] sm:max-w-[380px] lg:max-w-[420px] mx-auto overflow-hidden rounded-[32px] bg-[#F7F3F0] border-2 border-[#D6C3B3] hover:border-[#B18C6A] transition-all duration-500 group aspect-[3/4]"
       >
         <Image

@@ -23,12 +23,26 @@ import { useMotionValue, useSpring, useTransform } from "framer-motion";
 export function HeroSection() {
   const x = useMotionValue(0.5);
   const y = useMotionValue(0.5);
+  const [isMobileOrReduced, setIsMobileOrReduced] = React.useState(true);
 
   const springConfig = { damping: 25, stiffness: 120 };
   const rotateX = useSpring(useTransform(y, [0, 1], [6, -6]), springConfig);
   const rotateY = useSpring(useTransform(x, [0, 1], [-6, 6]), springConfig);
 
+  React.useEffect(() => {
+    const checkViewport = () => {
+      const hasTouch = window.matchMedia("(pointer: coarse)").matches || navigator.maxTouchPoints > 0;
+      const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      setIsMobileOrReduced(window.innerWidth < 1024 || hasTouch || prefersReduced);
+    };
+
+    checkViewport();
+    window.addEventListener("resize", checkViewport);
+    return () => window.removeEventListener("resize", checkViewport);
+  }, []);
+
   const handleMouseMove = (e: React.MouseEvent) => {
+    if (isMobileOrReduced) return;
     const width = window.innerWidth;
     const height = window.innerHeight;
     x.set(e.clientX / width);
@@ -46,7 +60,7 @@ export function HeroSection() {
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       className="relative min-h-screen w-full flex flex-col justify-center pt-24 sm:pt-28 pb-16 sm:pb-20 bg-[#E4E0E1] overflow-hidden"
-      style={{ perspective: 1000 }}
+      style={{ perspective: isMobileOrReduced ? undefined : 1000 }}
     >
       {/* Soft Ambient Radial Backlights */}
       <div
@@ -64,7 +78,11 @@ export function HeroSection() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-16 items-center min-h-[calc(100vh-16rem)]">
             {/* Left Column (60% Desktop) */}
             <motion.div
-              style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
+              style={{ 
+                rotateX: isMobileOrReduced ? 0 : rotateX, 
+                rotateY: isMobileOrReduced ? 0 : rotateY, 
+                transformStyle: isMobileOrReduced ? undefined : "preserve-3d" 
+              }}
               variants={leftColumnVariants}
               initial="hidden"
               animate="visible"
