@@ -1,4 +1,4 @@
-# Hemalatha S V AI — Professional AI Engineer Portfolio
+# Hemalatha S V  — Professional AI Engineer Portfolio
 
 A premium, production-ready developer portfolio and case study platform for an AI/ML Engineer and Agentic AI Developer. Built with a modern dark aesthetic, modular architecture, dynamic routing, and instant command-palette search.
 
