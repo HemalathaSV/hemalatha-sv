@@ -14,7 +14,7 @@ export function ArchitectureDiagram() {
   ];
 
   return (
-    <section className="py-16 sm:py-24 bg-[#E4E0E1] relative border-b border-[#B18C6A]/20">
+    <section className="py-16 sm:py-24 bg-[#E4E0E1] relative border-b border-[#D8C8BB]">
       <Container>
         <div className="max-w-4xl mx-auto space-y-10">
           <div className="space-y-3 text-center">
@@ -32,7 +32,7 @@ export function ArchitectureDiagram() {
           {/* Interactive Flow Diagram */}
           <div className="flex flex-col items-center space-y-6 pt-4">
             {/* Step 1: Student Input */}
-            <div className="w-full max-w-md p-4 rounded-xl bg-[#F7F5F4] border border-[#B18C6A]/20 flex items-center justify-center gap-3 text-center shadow-lg">
+            <div className="w-full max-w-md p-4 rounded-xl bg-[#F7F5F4] border border-[#D8C8BB] flex items-center justify-center gap-3 text-center shadow-lg">
               <User className="h-5 w-5 text-[#5A4030]" />
               <span className="font-heading text-sm font-semibold text-[#2E2A28]">
                 Student Request / Prompt
@@ -59,7 +59,7 @@ export function ArchitectureDiagram() {
               {subAgents.map((agent, index) => (
                 <div
                   key={index}
-                  className="p-3.5 rounded-xl bg-[#F7F5F4]/90 border border-[#B18C6A]/20 flex flex-col items-center text-center space-y-1 hover:border-[#B18C6A]/65 transition-colors"
+                  className="p-3.5 rounded-xl bg-[#F7F5F4]/90 border border-[#D8C8BB] flex flex-col items-center text-center space-y-1 hover:border-[#B18C6A]/65 transition-colors"
                 >
                   <span className="text-xs font-heading font-bold text-[#2E2A28]">
                     {agent.title}
@@ -74,7 +74,7 @@ export function ArchitectureDiagram() {
             <ArrowDown className="h-5 w-5 text-[#5A4030]" />
 
             {/* Step 4: LLM Backend */}
-            <div className="w-full max-w-md p-4 rounded-xl bg-[#F7F5F4] border border-[#B18C6A]/20 flex items-center justify-center gap-3 text-center shadow-lg">
+            <div className="w-full max-w-md p-4 rounded-xl bg-[#F7F5F4] border border-[#D8C8BB] flex items-center justify-center gap-3 text-center shadow-lg">
               <Sparkles className="h-5 w-5 text-[#B18C6A]" />
               <span className="font-heading text-sm font-semibold text-[#2E2A28]">
                 Google Gemini API & Fast Execution Engine

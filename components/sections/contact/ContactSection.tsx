@@ -59,7 +59,7 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative min-h-screen w-full flex flex-col justify-between py-24 sm:py-32 bg-[#E4E0E1] overflow-hidden border-t border-[#B18C6A]/20"
+      className="relative min-h-screen w-full flex flex-col justify-between py-24 sm:py-32 bg-[#E4E0E1] overflow-hidden border-t border-[#D8C8BB]"
     >
       {/* Ambient Background Radial Backlights */}
       <div
@@ -84,7 +84,7 @@ export function ContactSection() {
               className="lg:col-span-7 flex flex-col space-y-6 sm:space-y-8"
             >
               {/* Section Badge */}
-              <div className="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-[#F7F5F4] border border-[#B18C6A]/20">
+              <div className="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-[#F7F5F4] border border-[#D8C8BB]">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#5A4030]" />
                 <span className="text-xs font-mono font-semibold text-[#5A4030] tracking-wider uppercase">
                   Contact
@@ -131,7 +131,7 @@ export function ContactSection() {
       </Container>
 
       {/* Footer */}
-      <footer className="pt-16 pb-6 text-center text-xs font-mono text-[#5F5854]/60 border-t border-[#B18C6A]/20 mt-16 relative z-10">
+      <footer className="pt-16 pb-6 text-center text-xs font-mono text-[#5F5854]/60 border-t border-[#D8C8BB] mt-16 relative z-10">
         <Container>
           <p>© {new Date().getFullYear()} {PROFILE.brand}. All rights reserved.</p>
         </Container>

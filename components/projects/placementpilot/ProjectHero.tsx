@@ -8,7 +8,7 @@ import { PROFILE } from "@/config/profile";
 
 export function ProjectHero() {
   return (
-    <section className="relative w-full pt-32 pb-20 sm:pt-40 sm:pb-24 bg-[#E4E0E1] overflow-hidden border-b border-[#B18C6A]/20">
+    <section className="relative w-full pt-32 pb-20 sm:pt-40 sm:pb-24 bg-[#E4E0E1] overflow-hidden border-b border-[#D8C8BB]">
       {/* Radial Backlight Glow */}
       <div
         aria-hidden="true"
@@ -27,7 +27,7 @@ export function ProjectHero() {
           </Link>
 
           {/* Category Badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F7F5F4] border border-[#B18C6A]/30 self-start">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F7F5F4] border border-[#D8C8BB] self-start">
             <span className="h-1.5 w-1.5 rounded-full bg-[#5A4030] animate-pulse" />
             <span className="text-xs font-mono font-semibold text-[#5A4030] tracking-wider uppercase">
               Flagship AI Project
@@ -61,7 +61,7 @@ export function ProjectHero() {
               href={PROFILE.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="h-12 px-6 rounded-full bg-[#F7F5F4] border border-[#B18C6A]/20 text-[#2E2A28] font-medium text-sm inline-flex items-center gap-2 hover:border-[#B18C6A]/65 hover:bg-[#2E2A28] active:scale-[0.98] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5A4030]"
+              className="h-12 px-6 rounded-full bg-[#F7F5F4] border border-[#D8C8BB] text-[#2E2A28] font-medium text-sm inline-flex items-center gap-2 hover:border-[#B18C6A] hover:bg-[#B18C6A] hover:text-white active:scale-[0.98] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5A4030]"
             >
               <ExternalLink className="h-4 w-4 stroke-[2]" />
               Live Demo

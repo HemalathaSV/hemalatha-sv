@@ -101,7 +101,7 @@ export function LoadingScreen() {
               initial={{ opacity: 0, scale: 0.94 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-              className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border border-[#B18C6A]/20 shadow-lg shadow-[#B18C6A]/12"
+              className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border border-[#D8C8BB] shadow-lg shadow-[#B18C6A]/12"
             >
               <Image
                 src={PROFILE.profileImage}
@@ -142,7 +142,7 @@ export function LoadingScreen() {
             </div>
 
             {/* 4. Terminal Initialization Sequence Panel */}
-            <div className="w-full max-w-[280px] p-4 rounded-xl bg-[#F7F5F4]/60 border border-[#B18C6A]/20 font-mono text-[10px] sm:text-xs text-left text-[#5F5854] space-y-1.5 h-[120px] overflow-hidden backdrop-blur-sm">
+            <div className="w-full max-w-[280px] p-4 rounded-xl bg-[#F7F5F4]/60 border border-[#D8C8BB] font-mono text-[10px] sm:text-xs text-left text-[#5F5854] space-y-1.5 h-[120px] overflow-hidden backdrop-blur-sm">
               {initLines.map((line, i) => (
                 <motion.div
                   key={i}

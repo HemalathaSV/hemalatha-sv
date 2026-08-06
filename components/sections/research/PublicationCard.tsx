@@ -37,7 +37,7 @@ export function PublicationCard({
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-60px" }}
-      className="group relative flex flex-col justify-between p-6 sm:p-8 lg:p-10 rounded-2xl bg-[#F7F5F4]/80 backdrop-blur-xl border border-[#B18C6A]/20 shadow-2xl transition-all duration-300 hover:border-[#B18C6A]/65 hover:shadow-2xl hover:shadow-[#5A4030]/5 w-full"
+      className="group relative flex flex-col justify-between p-6 sm:p-8 lg:p-10 rounded-2xl bg-[#F7F5F4]/80 backdrop-blur-xl border border-[#D8C8BB] shadow-2xl transition-all duration-300 hover:border-[#B18C6A]/65 hover:shadow-2xl hover:shadow-[#5A4030]/5 w-full"
     >
       {/* Ambient Gradient Glow */}
       <div
@@ -65,7 +65,7 @@ export function PublicationCard({
         </div>
 
         {/* Journal Citation Box */}
-        <div className="p-4 rounded-xl bg-[#2E2A28] border border-[#B18C6A]/20 font-mono text-xs text-[#5F5854] flex items-center gap-3">
+        <div className="p-4 rounded-xl bg-[#F8F3EF] border border-[#D8C8BB] font-mono text-xs text-[#5F5854] flex items-center gap-3">
           <span className="h-2 w-2 rounded-full bg-[#5A4030]" />
           <span><strong className="text-[#2E2A28]">Journal:</strong> {journal}</span>
         </div>
@@ -82,7 +82,7 @@ export function PublicationCard({
       </div>
 
       {/* Buttons */}
-      <div className="flex flex-wrap items-center gap-3.5 pt-8 mt-6 border-t border-[#B18C6A]/20 relative z-10">
+      <div className="flex flex-wrap items-center gap-3.5 pt-8 mt-6 border-t border-[#D8C8BB] relative z-10">
         <a
           href={paperUrl}
           target="_blank"
@@ -94,7 +94,7 @@ export function PublicationCard({
         <a
           href={paperUrl}
           download="Tournament_Management_Agent_IJCRT.pdf"
-          className="h-11 px-6 rounded-full text-xs sm:text-sm font-medium tracking-wide inline-flex items-center justify-center gap-2 bg-transparent border border-[#B18C6A]/20 text-[#2E2A28] hover:bg-[#2E2A28] hover:border-[#B18C6A]/65 active:scale-[0.98] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5A4030]"
+          className="h-11 px-6 rounded-full text-xs sm:text-sm font-medium tracking-wide inline-flex items-center justify-center gap-2 bg-transparent border border-[#D8C8BB] text-[#2E2A28] hover:bg-[#B18C6A] hover:text-white hover:border-[#B18C6A] active:scale-[0.98] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5A4030]"
         >
           Download PDF <Download className="h-4 w-4" />
         </a>

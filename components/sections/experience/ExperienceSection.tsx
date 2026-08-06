@@ -18,7 +18,7 @@ export function ExperienceSection() {
   return (
     <section
       id="experience"
-      className="relative min-h-screen w-full flex flex-col justify-center py-24 sm:py-32 bg-[#E4E0E1] overflow-hidden border-t border-[#B18C6A]/20"
+      className="relative min-h-screen w-full flex flex-col justify-center py-24 sm:py-32 bg-[#E4E0E1] overflow-hidden border-t border-[#D8C8BB]"
     >
       {/* Ambient Background Radial Backlights */}
       <div
@@ -41,7 +41,7 @@ export function ExperienceSection() {
             className="flex flex-col space-y-4 max-w-3xl mx-auto text-center items-center"
           >
             {/* Section Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F7F5F4] border border-[#B18C6A]/20">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F7F5F4] border border-[#D8C8BB]">
               <span className="h-1.5 w-1.5 rounded-full bg-[#5A4030]" />
               <span className="text-xs font-mono font-semibold text-[#5A4030] tracking-wider uppercase">
                 Experience

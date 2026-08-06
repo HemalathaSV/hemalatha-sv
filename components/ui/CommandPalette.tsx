@@ -60,10 +60,10 @@ export function CommandPalette() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="relative z-10 w-full max-w-xl rounded-2xl bg-[#F7F5F4] border border-[#B18C6A]/20 shadow-2xl overflow-hidden flex flex-col max-h-[80vh]"
+            className="relative z-10 w-full max-w-xl rounded-2xl bg-[#F7F5F4] border border-[#D8C8BB] shadow-2xl overflow-hidden flex flex-col max-h-[80vh]"
           >
             {/* Input Bar */}
-            <div className="flex items-center px-4 py-3.5 border-b border-[#B18C6A]/20 gap-3">
+            <div className="flex items-center px-4 py-3.5 border-b border-[#D8C8BB] gap-3">
               <Search className="h-5 w-5 text-[#5A4030] shrink-0" />
               <input
                 type="text"
@@ -90,28 +90,28 @@ export function CommandPalette() {
                 </span>
                 <div
                   onClick={() => handleNavigate("/")}
-                  className="flex items-center gap-3 px-3 py-2 rounded-xl text-[#5F5854] hover:bg-[#2E2A28] hover:text-[#B18C6A] cursor-pointer transition-colors"
+                  className="flex items-center gap-3 px-3 py-2 rounded-xl text-[#5F5854] hover:bg-[#F7F1EC] hover:text-[#B18C6A] cursor-pointer transition-colors"
                 >
                   <Home className="h-4 w-4 text-[#5A4030]" />
                   <span>Home Page</span>
                 </div>
                 <div
                   onClick={() => handleNavigate("/portfolio")}
-                  className="flex items-center gap-3 px-3 py-2 rounded-xl text-[#5F5854] hover:bg-[#2E2A28] hover:text-[#B18C6A] cursor-pointer transition-colors"
+                  className="flex items-center gap-3 px-3 py-2 rounded-xl text-[#5F5854] hover:bg-[#F7F1EC] hover:text-[#B18C6A] cursor-pointer transition-colors"
                 >
                   <FolderGit2 className="h-4 w-4 text-[#5A4030]" />
                   <span>All Portfolio Projects</span>
                 </div>
                 <div
                   onClick={() => handleNavigate("/research")}
-                  className="flex items-center gap-3 px-3 py-2 rounded-xl text-[#5F5854] hover:bg-[#2E2A28] hover:text-[#B18C6A] cursor-pointer transition-colors"
+                  className="flex items-center gap-3 px-3 py-2 rounded-xl text-[#5F5854] hover:bg-[#F7F1EC] hover:text-[#B18C6A] cursor-pointer transition-colors"
                 >
                   <BookOpen className="h-4 w-4 text-[#B18C6A]" />
                   <span>Research Library</span>
                 </div>
                 <div
                   onClick={() => handleNavigate("/resume")}
-                  className="flex items-center gap-3 px-3 py-2 rounded-xl text-[#5F5854] hover:bg-[#2E2A28] hover:text-[#B18C6A] cursor-pointer transition-colors"
+                  className="flex items-center gap-3 px-3 py-2 rounded-xl text-[#5F5854] hover:bg-[#F7F1EC] hover:text-[#B18C6A] cursor-pointer transition-colors"
                 >
                   <FileText className="h-4 w-4 text-emerald-400" />
                   <span>Resume Viewer</span>
@@ -128,13 +128,13 @@ export function CommandPalette() {
                     <div
                       key={p.id}
                       onClick={() => handleNavigate(`/projects/${p.slug}`)}
-                      className="flex items-center justify-between px-3 py-2 rounded-xl text-[#5F5854] hover:bg-[#2E2A28] hover:text-[#B18C6A] cursor-pointer transition-colors"
+                      className="flex items-center justify-between px-3 py-2 rounded-xl text-[#5F5854] hover:bg-[#F7F1EC] hover:text-[#B18C6A] cursor-pointer transition-colors"
                     >
                       <div className="flex items-center gap-2.5 truncate">
                         <FolderGit2 className="h-4 w-4 text-[#5A4030] shrink-0" />
                         <span className="font-semibold truncate">{p.title}</span>
                       </div>
-                      <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#2E2A28] border border-[#B18C6A]/20 text-[#5A4030] shrink-0">
+                      <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#F7F1EC] border border-[#D6C3B3] text-[#8A6348] shrink-0">
                         {p.category}
                       </span>
                     </div>
@@ -152,7 +152,7 @@ export function CommandPalette() {
                     <div
                       key={r.id}
                       onClick={() => handleNavigate(`/projects/${r.projectSlug || "tournament-management-agent"}`)}
-                      className="flex items-center justify-between px-3 py-2 rounded-xl text-[#5F5854] hover:bg-[#2E2A28] hover:text-[#B18C6A] cursor-pointer transition-colors"
+                      className="flex items-center justify-between px-3 py-2 rounded-xl text-[#5F5854] hover:bg-[#F7F1EC] hover:text-[#B18C6A] cursor-pointer transition-colors"
                     >
                       <div className="flex items-center gap-2.5 truncate">
                         <BookOpen className="h-4 w-4 text-[#B18C6A] shrink-0" />
@@ -168,8 +168,8 @@ export function CommandPalette() {
             </div>
 
             {/* Footer Bar */}
-            <div className="px-4 py-2 bg-[#E4E0E1] border-t border-[#B18C6A]/20 text-[11px] font-mono text-[#5F5854]/60 flex items-center justify-between">
-              <span>Press <kbd className="px-1.5 py-0.5 rounded bg-[#2E2A28] border border-[#B18C6A]/20">Ctrl + K</kbd> anytime to search</span>
+            <div className="px-4 py-2 bg-[#E4E0E1] border-t border-[#D8C8BB] text-[11px] font-mono text-[#5F5854]/60 flex items-center justify-between">
+              <span>Press <kbd className="px-1.5 py-0.5 rounded bg-[#F7F1EC] border border-[#D6C3B3] text-[#8A6348]">Ctrl + K</kbd> anytime to search</span>
               <span>Antigravity Engine</span>
             </div>
           </motion.div>

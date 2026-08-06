@@ -23,7 +23,7 @@ export function AchievementCard({
       style={{
         borderLeftColor: borderColor,
       }}
-      className="group relative flex flex-col p-4 sm:p-5 lg:p-6 rounded-xl bg-[#FFFFFF] border-l-4 border-y border-r border-[#B18C6A]/20 shadow-md transition-all duration-300 hover:-translate-y-1.5 hover:scale-[1.02] hover:shadow-lg hover:shadow-[#B18C6A]/15 hover:border-y-[#B18C6A]/45 hover:border-r-[#B18C6A]/45 h-full justify-center"
+      className="group relative flex flex-col p-4 sm:p-5 lg:p-6 rounded-xl bg-[#FFFFFF] border-l-4 border-y border-r border-[#D8C8BB] shadow-md transition-all duration-300 hover:-translate-y-1.5 hover:scale-[1.02] hover:shadow-lg hover:shadow-[#B18C6A]/15 hover:border-y-[#B18C6A]/45 hover:border-r-[#B18C6A]/45 h-full justify-center"
     >
       <div className="flex items-center gap-3 sm:gap-3.5">
         <div

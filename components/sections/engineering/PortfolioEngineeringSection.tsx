@@ -38,7 +38,7 @@ export function PortfolioEngineeringSection() {
   ];
 
   return (
-    <section className="relative py-16 sm:py-24 bg-[#E4E0E1] overflow-hidden border-t border-[#B18C6A]/20">
+    <section className="relative py-16 sm:py-24 bg-[#E4E0E1] overflow-hidden border-t border-[#D8C8BB]">
       {/* Ambient background glow */}
       <div
         aria-hidden="true"
@@ -56,7 +56,7 @@ export function PortfolioEngineeringSection() {
           {/* Section Header */}
           <div className="flex flex-col space-y-4 text-center items-center">
             {/* Section Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F7F5F4] border border-[#B18C6A]/20">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F7F5F4] border border-[#D8C8BB]">
               <span className="h-1.5 w-1.5 rounded-full bg-[#5A4030]" />
               <span className="text-xs font-mono font-semibold text-[#5A4030] tracking-wider uppercase">
                 Portfolio Engineering
@@ -75,7 +75,7 @@ export function PortfolioEngineeringSection() {
           </div>
 
           {/* Full-Width Premium Showcase Card */}
-          <div className="group relative p-6 sm:p-10 lg:p-12 rounded-3xl bg-[#F7F5F4]/90 backdrop-blur-xl border border-[#B18C6A]/20 shadow-2xl hover:border-[#B18C6A]/65 transition-all duration-300 w-full overflow-hidden">
+          <div className="group relative p-6 sm:p-10 lg:p-12 rounded-3xl bg-[#F7F5F4]/90 backdrop-blur-xl border border-[#D8C8BB] shadow-2xl hover:border-[#B18C6A]/65 transition-all duration-300 w-full overflow-hidden">
             {/* Subtle backlight inside card */}
             <div
               aria-hidden="true"
@@ -106,7 +106,7 @@ export function PortfolioEngineeringSection() {
                     {techStack.map((tech, i) => (
                       <span
                         key={i}
-                        className="inline-flex items-center justify-center px-[18px] py-[12px] rounded-full bg-[#F8EEE8] border border-[#D8B89E] text-xs font-medium text-[#7A563C] hover:bg-[#B18C6A] hover:text-white hover:border-[#B18C6A] transition-all duration-300 ease-in-out"
+                        className="inline-flex items-center justify-center px-[18px] py-[12px] rounded-full bg-[#F7F1EC] border border-[#D6C3B3] text-xs font-medium text-[#6F5542] hover:bg-[#B18C6A] hover:text-white hover:border-[#B18C6A] transition-all duration-300 ease-in-out"
                       >
                         {tech}
                       </span>
@@ -116,7 +116,7 @@ export function PortfolioEngineeringSection() {
               </div>
 
               {/* Right Side: Engineering Highlights (5 cols on desktop) */}
-              <div className="lg:col-span-5 flex flex-col justify-between p-6 sm:p-8 rounded-2xl bg-[#2E2A28]/60 border border-[#B18C6A]/20/60 space-y-6">
+              <div className="lg:col-span-5 flex flex-col justify-between p-6 sm:p-8 rounded-2xl bg-[#FFFFFF] border border-[#D8C8BB] space-y-6">
                 <div className="space-y-4">
                   <h4 className="font-heading text-xs font-mono font-semibold text-[#5A4030] uppercase tracking-wider">
                     Engineering Highlights:
@@ -134,7 +134,7 @@ export function PortfolioEngineeringSection() {
             </div>
 
             {/* Bottom: CTA Action Buttons */}
-            <div className="flex flex-wrap items-center gap-4 pt-8 mt-8 border-t border-[#B18C6A]/20 relative z-10">
+            <div className="flex flex-wrap items-center gap-4 pt-8 mt-8 border-t border-[#D8C8BB] relative z-10">
               <a
                 href="https://github.com/HemalathaSV/hemalatha-sv"
                 target="_blank"
@@ -148,7 +148,7 @@ export function PortfolioEngineeringSection() {
               </a>
               <a
                 href="#home"
-                className="h-11 px-6 rounded-full text-xs sm:text-sm font-medium tracking-wide inline-flex items-center justify-center gap-2.5 bg-transparent border border-[#B18C6A]/20 text-[#2E2A28] hover:bg-[#2E2A28] hover:border-[#B18C6A]/65 active:scale-[0.98] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5A4030]"
+                className="h-11 px-6 rounded-full text-xs sm:text-sm font-medium tracking-wide inline-flex items-center justify-center gap-2.5 bg-transparent border border-[#D8C8BB] text-[#2E2A28] hover:bg-[#B18C6A] hover:text-white hover:border-[#B18C6A] active:scale-[0.98] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5A4030]"
               >
                 Live Portfolio <ExternalLink className="h-4 w-4" />
               </a>

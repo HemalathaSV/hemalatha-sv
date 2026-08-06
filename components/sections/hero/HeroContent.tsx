@@ -35,7 +35,7 @@ export function HeroContent() {
     >
       {/* 1. Greeting Badge */}
       <motion.div variants={itemVariants} className="inline-flex items-center gap-2">
-        <span className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-mono font-medium bg-[#F7F5F4] border border-[#B18C6A]/20 text-[#5A4030] shadow-sm">
+        <span className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-mono font-medium bg-[#F7F5F4] border border-[#D8C8BB] text-[#5A4030] shadow-sm">
           👋 Hello, I&apos;m
         </span>
       </motion.div>

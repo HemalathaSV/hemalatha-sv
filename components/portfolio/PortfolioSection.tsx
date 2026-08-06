@@ -34,7 +34,7 @@ export function PortfolioSection() {
             className="flex flex-col space-y-4 max-w-3xl"
           >
             {/* Section Badge */}
-            <div className="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-[#F7F5F4] border border-[#B18C6A]/20">
+            <div className="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-[#F7F5F4] border border-[#D8C8BB]">
               <span className="h-1.5 w-1.5 rounded-full bg-[#5A4030]" />
               <span className="text-xs font-mono font-semibold text-[#5A4030] tracking-wider uppercase">
                 Portfolio

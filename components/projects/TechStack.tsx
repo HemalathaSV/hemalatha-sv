@@ -10,7 +10,7 @@ interface TechStackProps {
 
 export function TechStack({ project }: TechStackProps) {
   return (
-    <section className="py-16 sm:py-24 bg-[#E4E0E1] relative border-b border-[#B18C6A]/20">
+    <section className="py-16 sm:py-24 bg-[#E4E0E1] relative border-b border-[#D8C8BB]">
       <Container>
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="space-y-3">
@@ -26,7 +26,7 @@ export function TechStack({ project }: TechStackProps) {
             {project.technologies.map((tech, index) => (
               <div
                 key={index}
-                className="inline-flex items-center justify-center px-[18px] py-[12px] rounded-full bg-[#F8EEE8] border border-[#D8B89E] text-xs font-medium text-[#7A563C] hover:bg-[#B18C6A] hover:text-white hover:border-[#B18C6A] transition-all duration-300 ease-in-out"
+                className="inline-flex items-center justify-center px-[18px] py-[12px] rounded-full bg-[#F7F1EC] border border-[#D6C3B3] text-xs font-medium text-[#6F5542] hover:bg-[#B18C6A] hover:text-white hover:border-[#B18C6A] transition-all duration-300 ease-in-out"
               >
                 {tech}
               </div>

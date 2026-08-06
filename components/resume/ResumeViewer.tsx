@@ -45,10 +45,10 @@ export function ResumeViewer() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="p-6 sm:p-10 rounded-3xl bg-[#F7F5F4]/90 backdrop-blur-xl border border-[#B18C6A]/20 shadow-2xl space-y-10"
+            className="p-6 sm:p-10 rounded-3xl bg-[#F7F5F4]/90 backdrop-blur-xl border border-[#D8C8BB] shadow-2xl space-y-10"
           >
             {/* Header / Name */}
-            <div className="border-b border-[#B18C6A]/20 pb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div className="border-b border-[#D8C8BB] pb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div>
                 <h1 className="font-heading text-3xl sm:text-4xl font-bold text-[#2E2A28]">
                   {PROFILE.name}
@@ -92,7 +92,7 @@ export function ResumeViewer() {
                 ].map((skill, i) => (
                   <span
                     key={i}
-                    className="inline-flex items-center justify-center px-[18px] py-[12px] rounded-full bg-[#F8EEE8] border border-[#D8B89E] text-xs font-medium text-[#7A563C] hover:bg-[#B18C6A] hover:text-white hover:border-[#B18C6A] transition-all duration-300 ease-in-out"
+                    className="inline-flex items-center justify-center px-[18px] py-[12px] rounded-full bg-[#F7F1EC] border border-[#D6C3B3] text-xs font-medium text-[#6F5542] hover:bg-[#B18C6A] hover:text-white hover:border-[#B18C6A] transition-all duration-300 ease-in-out"
                   >
                     {skill}
                   </span>
@@ -110,7 +110,7 @@ export function ResumeViewer() {
               </div>
 
               <div className="space-y-4 text-xs text-[#5F5854]">
-                <div className="p-4 rounded-xl bg-[#2E2A28] border border-[#B18C6A]/20 space-y-1.5">
+                <div className="p-4 rounded-xl bg-[#F8F3EF] border border-[#D8C8BB] space-y-1.5">
                   <div className="flex items-center justify-between font-heading text-sm font-bold text-[#2E2A28]">
                     <span>PlacementPilot AI (Flagship Project)</span>
                     <span className="font-mono text-xs text-[#5A4030]">Completed</span>
@@ -120,7 +120,7 @@ export function ResumeViewer() {
                   </p>
                 </div>
 
-                <div className="p-4 rounded-xl bg-[#2E2A28] border border-[#B18C6A]/20 space-y-1.5">
+                <div className="p-4 rounded-xl bg-[#F8F3EF] border border-[#D8C8BB] space-y-1.5">
                   <div className="flex items-center justify-between font-heading text-sm font-bold text-[#2E2A28]">
                     <span>Tournament Management Agent (Research Publication)</span>
                     <span className="font-mono text-xs text-emerald-400">Published - IJCRT</span>
@@ -140,7 +140,7 @@ export function ResumeViewer() {
                   Education
                 </h2>
               </div>
-              <div className="p-4 rounded-xl bg-[#2E2A28] border border-[#B18C6A]/20 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+              <div className="p-4 rounded-xl bg-[#F8F3EF] border border-[#D8C8BB] flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
                 <div>
                   <h3 className="font-heading font-bold text-[#2E2A28] text-sm">
                     Maharaja Institute of Technology Mysore
@@ -162,13 +162,13 @@ export function ResumeViewer() {
                 </h2>
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs font-mono text-[#5F5854]">
-                <div className="p-3 rounded-lg bg-[#2E2A28] border border-[#B18C6A]/20">
+                <div className="p-3 rounded-lg bg-[#F8F3EF] border border-[#D8C8BB]">
                   <span className="text-[#5A4030] block font-bold">AWS APAC</span> Solutions Architecture
                 </div>
-                <div className="p-3 rounded-lg bg-[#2E2A28] border border-[#B18C6A]/20">
+                <div className="p-3 rounded-lg bg-[#F8F3EF] border border-[#D8C8BB]">
                   <span className="text-[#5A4030] block font-bold">IBM</span> Cloud Computing
                 </div>
-                <div className="p-3 rounded-lg bg-[#2E2A28] border border-[#B18C6A]/20">
+                <div className="p-3 rounded-lg bg-[#F8F3EF] border border-[#D8C8BB]">
                   <span className="text-[#5A4030] block font-bold">Microsoft</span> Azure Cloud
                 </div>
               </div>

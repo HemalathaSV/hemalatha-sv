@@ -21,7 +21,7 @@ export function AboutSection() {
   return (
     <section
       id="about"
-      className="relative min-h-screen w-full flex flex-col justify-center py-24 sm:py-32 bg-[#E4E0E1] overflow-hidden border-t border-[#B18C6A]/20"
+      className="relative min-h-screen w-full flex flex-col justify-center py-24 sm:py-32 bg-[#E4E0E1] overflow-hidden border-t border-[#D8C8BB]"
     >
       {/* Subtle Ambient Glow */}
       <div
@@ -45,7 +45,7 @@ export function AboutSection() {
             className="lg:col-span-7 flex flex-col justify-center space-y-6 order-1 lg:order-2"
           >
             {/* Section Badge */}
-            <div className="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-[#F7F5F4] border border-[#B18C6A]/20">
+            <div className="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-[#F7F5F4] border border-[#D8C8BB]">
               <span className="h-1.5 w-1.5 rounded-full bg-[#5A4030]" />
               <span className="text-xs font-mono font-semibold text-[#5A4030] tracking-wider uppercase">
                 Who I Am
@@ -67,7 +67,7 @@ export function AboutSection() {
               {interests.map((interest, index) => (
                 <span
                   key={index}
-                  className="px-3.5 py-1.5 rounded-lg bg-[#F7F5F4] border border-[#B18C6A]/20 text-xs font-mono font-medium text-[#2E2A28] hover:border-[#B18C6A]/65 hover:text-[#5A4030] transition-colors duration-200"
+                  className="px-3.5 py-1.5 rounded-lg bg-[#F7F5F4] border border-[#D8C8BB] text-xs font-mono font-medium text-[#2E2A28] hover:border-[#B18C6A]/65 hover:text-[#5A4030] transition-colors duration-200"
                 >
                   {interest}
                 </span>

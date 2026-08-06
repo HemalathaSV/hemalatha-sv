@@ -13,7 +13,7 @@ export function ArchitectureDiagram({ project }: ArchitectureDiagramProps) {
   if (!project.architecture || project.architecture.length === 0) return null;
 
   return (
-    <section className="py-16 sm:py-24 bg-[#E4E0E1] relative border-b border-[#B18C6A]/20">
+    <section className="py-16 sm:py-24 bg-[#E4E0E1] relative border-b border-[#D8C8BB]">
       <Container>
         <div className="max-w-4xl mx-auto space-y-10">
           <div className="space-y-3 text-center">
@@ -28,7 +28,7 @@ export function ArchitectureDiagram({ project }: ArchitectureDiagramProps) {
           <div className="flex flex-col items-center space-y-4 pt-4">
             {project.architecture.map((step, index) => (
               <React.Fragment key={index}>
-                <div className="w-full max-w-md p-5 rounded-2xl bg-[#F7F5F4] border border-[#B18C6A]/20 shadow-xl text-center space-y-1 hover:border-[#B18C6A]/65 transition-colors">
+                <div className="w-full max-w-md p-5 rounded-2xl bg-[#F7F5F4] border border-[#D8C8BB] shadow-xl text-center space-y-1 hover:border-[#B18C6A]/65 transition-colors">
                   <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-[#5A4030]/15 text-[#2E2A28] text-xs font-mono font-bold">
                     Step 0{index + 1}: {step.title}
                   </div>

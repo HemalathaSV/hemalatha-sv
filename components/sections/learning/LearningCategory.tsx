@@ -22,7 +22,7 @@ export function LearningCategory({ title, skills }: LearningCategoryProps) {
   return (
     <motion.div
       variants={cardVariants}
-      className="p-5 sm:p-6 rounded-2xl bg-[#F7F5F4]/80 backdrop-blur-xl border border-[#B18C6A]/20 shadow-lg space-y-3.5 hover:border-[#B18C6A]/30 transition-all duration-300"
+      className="p-5 sm:p-6 rounded-2xl bg-[#F7F5F4]/80 backdrop-blur-xl border border-[#D8C8BB] shadow-lg space-y-3.5 hover:border-[#D8C8BB] transition-all duration-300"
     >
       <div className="flex items-center gap-2">
         <span className="h-1.5 w-1.5 rounded-full bg-[#5A4030]" />

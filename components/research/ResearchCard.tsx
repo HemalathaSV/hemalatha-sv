@@ -23,7 +23,7 @@ export function ResearchCard({ publication }: ResearchCardProps) {
   return (
     <motion.div
       variants={cardVariants}
-      className="group relative flex flex-col justify-between p-6 sm:p-8 rounded-2xl bg-[#F7F5F4]/80 backdrop-blur-xl border border-[#B18C6A]/20 shadow-2xl transition-all duration-300 hover:border-[#B18C6A]/65 hover:shadow-2xl hover:shadow-[#5A4030]/5 w-full"
+      className="group relative flex flex-col justify-between p-6 sm:p-8 rounded-2xl bg-[#F7F5F4]/80 backdrop-blur-xl border border-[#D8C8BB] shadow-2xl transition-all duration-300 hover:border-[#B18C6A]/65 hover:shadow-2xl hover:shadow-[#5A4030]/5 w-full"
     >
       <div className="space-y-6">
         {/* Status Badge & Category */}
@@ -33,7 +33,7 @@ export function ResearchCard({ publication }: ResearchCardProps) {
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
               {publication.status}
             </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-[#5A4030]/15 text-[#2E2A28] border border-[#B18C6A]/30">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-[#5A4030]/15 text-[#2E2A28] border border-[#D8C8BB]">
               {publication.category}
             </span>
           </div>
@@ -50,7 +50,7 @@ export function ResearchCard({ publication }: ResearchCardProps) {
         </div>
 
         {/* Journal Citation Box */}
-        <div className="p-4 rounded-xl bg-[#2E2A28] border border-[#B18C6A]/20 font-mono text-xs text-[#5F5854] flex items-center gap-3">
+        <div className="p-4 rounded-xl bg-[#F8F3EF] border border-[#D8C8BB] font-mono text-xs text-[#5F5854] flex items-center gap-3">
           <BookOpen className="h-4 w-4 text-[#5A4030] shrink-0" />
           <span><strong className="text-[#2E2A28]">Journal:</strong> {publication.journal}</span>
         </div>
@@ -65,7 +65,7 @@ export function ResearchCard({ publication }: ResearchCardProps) {
           {publication.highlights.map((h, i) => (
             <span
               key={i}
-              className="inline-flex items-center justify-center px-[18px] py-[12px] rounded-full bg-[#F8EEE8] border border-[#D8B89E] text-xs font-medium text-[#7A563C] hover:bg-[#B18C6A] hover:text-white hover:border-[#B18C6A] transition-all duration-300 ease-in-out"
+              className="inline-flex items-center justify-center px-[18px] py-[12px] rounded-full bg-[#F7F1EC] border border-[#D6C3B3] text-xs font-medium text-[#6F5542] hover:bg-[#B18C6A] hover:text-white hover:border-[#B18C6A] transition-all duration-300 ease-in-out"
             >
               {h}
             </span>
@@ -74,7 +74,7 @@ export function ResearchCard({ publication }: ResearchCardProps) {
       </div>
 
       {/* Buttons */}
-      <div className="flex flex-wrap items-center gap-3.5 pt-8 mt-6 border-t border-[#B18C6A]/20">
+      <div className="flex flex-wrap items-center gap-3.5 pt-8 mt-6 border-t border-[#D8C8BB]">
         {publication.pdfUrl && (
           <a
             href={publication.pdfUrl}
@@ -88,7 +88,7 @@ export function ResearchCard({ publication }: ResearchCardProps) {
         {publication.projectSlug && (
           <Link
             href={`/projects/${publication.projectSlug}`}
-            className="h-11 px-6 rounded-full text-xs sm:text-sm font-medium tracking-wide inline-flex items-center gap-2 bg-transparent border border-[#B18C6A]/20 text-[#2E2A28] hover:bg-[#2E2A28] hover:border-[#B18C6A]/65 active:scale-[0.98] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5A4030]"
+            className="h-11 px-6 rounded-full text-xs sm:text-sm font-medium tracking-wide inline-flex items-center gap-2 bg-transparent border border-[#D8C8BB] text-[#2E2A28] hover:bg-[#B18C6A] hover:text-white hover:border-[#B18C6A] active:scale-[0.98] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5A4030]"
           >
             View Related Project <ArrowRight className="h-3.5 w-3.5" />
           </Link>

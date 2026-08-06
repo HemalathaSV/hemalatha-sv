@@ -14,7 +14,7 @@ export function ProjectCTA({ project }: ProjectCTAProps) {
   return (
     <section className="py-20 sm:py-28 bg-[#E4E0E1] relative">
       <Container>
-        <div className="max-w-3xl mx-auto text-center space-y-8 p-8 sm:p-12 rounded-3xl bg-[#F7F5F4]/90 border border-[#B18C6A]/20 shadow-2xl relative overflow-hidden">
+        <div className="max-w-3xl mx-auto text-center space-y-8 p-8 sm:p-12 rounded-3xl bg-[#F7F5F4]/90 border border-[#D8C8BB] shadow-2xl relative overflow-hidden">
           <div
             aria-hidden="true"
             className="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 rounded-full bg-gradient-to-b from-[#5A4030]/10 via-[#B18C6A]/05 to-transparent blur-3xl pointer-events-none"
@@ -43,7 +43,7 @@ export function ProjectCTA({ project }: ProjectCTAProps) {
             </a>
             <Link
               href="/portfolio"
-              className="h-12 px-7 rounded-full bg-transparent border border-[#B18C6A]/20 text-[#2E2A28] font-medium text-sm inline-flex items-center gap-2 hover:bg-[#2E2A28] hover:border-[#B18C6A]/65 active:scale-[0.98] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5A4030]"
+              className="h-12 px-7 rounded-full bg-transparent border border-[#D8C8BB] text-[#2E2A28] font-medium text-sm inline-flex items-center gap-2 hover:bg-[#B18C6A] hover:text-white hover:border-[#B18C6A] active:scale-[0.98] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5A4030]"
             >
               <ArrowLeft className="h-4 w-4 stroke-[2]" />
               Back to Portfolio

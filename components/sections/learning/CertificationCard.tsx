@@ -22,11 +22,11 @@ export function CertificationCard({ certificate }: CertificationCardProps) {
   return (
     <motion.div
       variants={cardVariants}
-      className="group relative flex flex-col justify-between p-5 sm:p-6 rounded-2xl bg-[#F7F5F4]/80 backdrop-blur-xl border border-[#B18C6A]/20 shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#B18C6A]/65 hover:shadow-xl hover:shadow-[#5A4030]/5"
+      className="group relative flex flex-col justify-between p-5 sm:p-6 rounded-2xl bg-[#F7F5F4]/80 backdrop-blur-xl border border-[#D8C8BB] shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#B18C6A]/65 hover:shadow-xl hover:shadow-[#5A4030]/5"
     >
       <div className="space-y-3.5">
         <div className="flex items-center justify-between gap-2">
-          <span className="text-xs font-mono font-semibold text-[#5A4030] px-2.5 py-0.5 rounded bg-[#5A4030]/10 border border-[#B18C6A]/20">
+          <span className="text-xs font-mono font-semibold text-[#5A4030] px-2.5 py-0.5 rounded bg-[#5A4030]/10 border border-[#D8C8BB]">
             {certificate.provider}
           </span>
           {certificate.completionDate && (
@@ -50,7 +50,7 @@ export function CertificationCard({ certificate }: CertificationCardProps) {
           {certificate.skills.map((skill, index) => (
             <span
               key={index}
-              className="inline-flex items-center justify-center px-[18px] py-[12px] rounded-full bg-[#F8EEE8] border border-[#D8B89E] text-xs font-medium text-[#7A563C] hover:bg-[#B18C6A] hover:text-white hover:border-[#B18C6A] transition-all duration-300 ease-in-out"
+              className="inline-flex items-center justify-center px-[18px] py-[12px] rounded-full bg-[#F7F1EC] border border-[#D6C3B3] text-xs font-medium text-[#6F5542] hover:bg-[#B18C6A] hover:text-white hover:border-[#B18C6A] transition-all duration-300 ease-in-out"
             >
               {skill}
             </span>
@@ -59,7 +59,7 @@ export function CertificationCard({ certificate }: CertificationCardProps) {
       </div>
 
       {certificate.credentialUrl && (
-        <div className="pt-4 mt-4 border-t border-[#B18C6A]/20 flex justify-end">
+        <div className="pt-4 mt-4 border-t border-[#D8C8BB] flex justify-end">
           <a
             href={certificate.credentialUrl}
             target="_blank"

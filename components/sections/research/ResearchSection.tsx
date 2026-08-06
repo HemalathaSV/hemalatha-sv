@@ -48,7 +48,7 @@ export function ResearchSection() {
   return (
     <section
       id="research"
-      className="relative min-h-screen w-full flex flex-col justify-center py-24 sm:py-32 bg-[#E4E0E1] overflow-hidden border-t border-[#B18C6A]/20"
+      className="relative min-h-screen w-full flex flex-col justify-center py-24 sm:py-32 bg-[#E4E0E1] overflow-hidden border-t border-[#D8C8BB]"
     >
       {/* Ambient Background Radial Backlights */}
       <div
@@ -67,7 +67,7 @@ export function ResearchSection() {
             className="flex flex-col space-y-4 max-w-3xl"
           >
             {/* Section Badge */}
-            <div className="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-[#F7F5F4] border border-[#B18C6A]/20">
+            <div className="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-[#F7F5F4] border border-[#D8C8BB]">
               <span className="h-1.5 w-1.5 rounded-full bg-[#B18C6A]" />
               <span className="text-xs font-mono font-semibold text-[#B18C6A] tracking-wider uppercase">
                 Research
@@ -100,7 +100,7 @@ export function ResearchSection() {
 
             {/* Right Column: Research Highlights Showcase */}
             <div className="lg:col-span-5 flex flex-col space-y-6">
-              <div className="p-6 rounded-2xl bg-[#F7F5F4]/75 backdrop-blur-md border border-[#B18C6A]/20 space-y-4">
+              <div className="p-6 rounded-2xl bg-[#F7F5F4]/75 backdrop-blur-md border border-[#D8C8BB] space-y-4">
                 <div className="flex items-center gap-2">
                   <span className="h-2 w-2 rounded-full bg-[#5A4030]" />
                   <h4 className="font-heading text-sm font-semibold text-[#2E2A28] tracking-tight">

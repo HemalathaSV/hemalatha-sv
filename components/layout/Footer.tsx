@@ -14,7 +14,7 @@ export function Footer() {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="w-full bg-[#E4E0E1] border-t border-[#B18C6A]/20 pt-16 pb-8 relative z-10 overflow-hidden"
+      className="w-full bg-[#E4E0E1] border-t border-[#D8C8BB] pt-16 pb-8 relative z-10 overflow-hidden"
     >
       {/* Ambient Radial Backlight */}
       <div
@@ -34,7 +34,7 @@ export function Footer() {
                 className="font-heading text-lg font-bold tracking-tight text-[#2E2A28] inline-flex items-center gap-2 self-start hover:opacity-90 transition-opacity"
               >
                 {PROFILE.name}{" "}
-                <span className="inline-flex items-center px-1.5 py-0.5 rounded text-xs font-mono font-bold bg-[#5A4030]/15 text-[#2E2A28] border border-[#B18C6A]/30">
+                <span className="inline-flex items-center px-1.5 py-0.5 rounded text-xs font-mono font-bold bg-[#5A4030]/15 text-[#2E2A28] border border-[#D8C8BB]">
                   AI
                 </span>
               </a>

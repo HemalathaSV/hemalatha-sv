@@ -29,7 +29,7 @@ export function Gallery() {
   ];
 
   return (
-    <section className="py-16 sm:py-24 bg-[#E4E0E1] relative border-b border-[#B18C6A]/20">
+    <section className="py-16 sm:py-24 bg-[#E4E0E1] relative border-b border-[#D8C8BB]">
       <Container>
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="space-y-3">
@@ -47,13 +47,13 @@ export function Gallery() {
               return (
                 <div
                   key={index}
-                  className="group relative flex flex-col justify-between h-52 p-6 rounded-2xl bg-[#F7F5F4] border border-[#B18C6A]/20 hover:border-[#B18C6A]/65 transition-all shadow-xl overflow-hidden"
+                  className="group relative flex flex-col justify-between h-52 p-6 rounded-2xl bg-[#F7F5F4] border border-[#D8C8BB] hover:border-[#B18C6A]/65 transition-all shadow-xl overflow-hidden"
                 >
                   <div
                     aria-hidden="true"
                     className="absolute top-0 right-0 w-40 h-40 rounded-full bg-[radial-gradient(circle_at_top_right,rgba(90,64,48,0.06),transparent_70%)]"
                   />
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#2E2A28] text-[#5A4030] border border-[#B18C6A]/20">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#F5E9DF] text-[#8A6348] border border-[#D6C3B3]">
                     <Icon className="h-5 w-5" />
                   </div>
                   <div className="space-y-1 relative z-10">

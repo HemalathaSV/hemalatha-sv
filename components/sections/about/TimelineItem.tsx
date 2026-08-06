@@ -37,7 +37,7 @@ export function TimelineItem({ step, title, isLast = false }: TimelineItemProps)
       </div>
 
       {/* Glassmorphism Card */}
-      <div className="group flex-1 p-4 sm:p-5 rounded-xl bg-[#F7F5F4]/75 backdrop-blur-md border border-[#B18C6A]/20 shadow-md hover:-translate-y-0.5 hover:border-[#B18C6A]/65 hover:shadow-lg hover:shadow-[#5A4030]/5 transition-all duration-300">
+      <div className="group flex-1 p-4 sm:p-5 rounded-xl bg-[#F7F5F4]/75 backdrop-blur-md border border-[#D8C8BB] shadow-md hover:-translate-y-0.5 hover:border-[#B18C6A]/65 hover:shadow-lg hover:shadow-[#5A4030]/5 transition-all duration-300">
         <h4 className="font-heading text-sm sm:text-base font-semibold text-[#2E2A28] tracking-tight group-hover:text-[#5A4030] transition-colors duration-200">
           {title}
         </h4>

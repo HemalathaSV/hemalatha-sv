@@ -24,9 +24,9 @@ export function ContactCard({ icon: Icon, label, value, href }: ContactCardProps
   const content = (
     <motion.div
       variants={cardVariants}
-      className="group relative flex items-center gap-4 p-5 sm:p-6 rounded-2xl bg-[#F7F5F4]/80 backdrop-blur-xl border border-[#B18C6A]/20 shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#B18C6A]/65 hover:shadow-2xl hover:shadow-[#5A4030]/5 w-full"
+      className="group relative flex items-center gap-4 p-5 sm:p-6 rounded-2xl bg-[#F7F5F4]/80 backdrop-blur-xl border border-[#D8C8BB] shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#B18C6A]/65 hover:shadow-2xl hover:shadow-[#5A4030]/5 w-full"
     >
-      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#2E2A28] text-[#5A4030] border border-[#B18C6A]/20 group-hover:border-[#B18C6A]/65 group-hover:scale-105 transition-all">
+      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#F5E9DF] text-[#8A6348] border border-[#D6C3B3] group-hover:scale-105 transition-all">
         <Icon className="h-5 w-5 stroke-[1.75]" />
       </div>
 
