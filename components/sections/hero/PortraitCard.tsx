@@ -57,6 +57,9 @@ export function PortraitCard({
     y.set(0.5);
   };
 
+  const glossX = useTransform(x, [0, 1], ["-120%", "120%"]);
+  const glossY = useTransform(y, [0, 1], ["-120%", "120%"]);
+
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.96 }}
@@ -72,12 +75,28 @@ export function PortraitCard({
         repeatType: "mirror"
       }}
       className={`relative flex items-center justify-center w-full my-4 lg:my-0 ${className}`}
-      style={{ perspective: isMobileOrReduced ? undefined : 1000 }}
+      style={{ perspective: isMobileOrReduced ? undefined : 1200, transformStyle: "preserve-3d" }}
     >
+      {/* 1. Frosted Glass Circle (Deepest Z layer) */}
+      {!isMobileOrReduced && (
+        <div
+          style={{ transform: "translateZ(-80px)" }}
+          className="absolute w-[340px] sm:w-[380px] h-[340px] sm:h-[380px] rounded-full border border-white/20 backdrop-blur-[2px] bg-white/5 pointer-events-none z-0"
+        />
+      )}
+
+      {/* 2. Warm glow backplate circle */}
+      {!isMobileOrReduced && (
+        <div
+          style={{ transform: "translateZ(-40px)" }}
+          className="absolute w-[280px] sm:w-[320px] h-[280px] sm:320px] rounded-full bg-gradient-to-tr from-[#B18C6A]/12 to-transparent pointer-events-none z-0 blur-xl"
+        />
+      )}
+
       {/* Soft radial glow behind portrait */}
       <div
         aria-hidden="true"
-        className="absolute -inset-10 rounded-full bg-[radial-gradient(circle_at_center,rgba(177,140,106,0.20),transparent_75%)] w-[120%] h-[120%] blur-3xl pointer-events-none"
+        className="absolute -inset-10 rounded-full bg-[radial-gradient(circle_at_center,rgba(177,140,106,0.18),transparent_75%)] w-[120%] h-[120%] blur-3xl pointer-events-none"
       />
 
       {/* Stable Premium Card Container */}
@@ -111,8 +130,20 @@ export function PortraitCard({
           priority
           unoptimized
           className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-          style={{ transform: "translateZ(20px)" }} // Image pops out slightly
+          style={{ transform: isMobileOrReduced ? "translateZ(0px)" : "translateZ(20px)" }} // Image pops out slightly
         />
+
+        {/* Dynamic Glass Reflection Glare Overlay */}
+        {!isMobileOrReduced && (
+          <motion.div
+            style={{
+              x: glossX,
+              y: glossY,
+              transform: "translateZ(25px)",
+            }}
+            className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/20 to-transparent pointer-events-none mix-blend-overlay"
+          />
+        )}
       </motion.div>
     </motion.div>
   );

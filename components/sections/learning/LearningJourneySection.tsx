@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion, Variants } from "framer-motion";
+import { Heading3D } from "@/components/ui/Heading3D";
 import { Container } from "@/components/layout/Container";
 import { getFeaturedCertifications } from "@/data/certifications";
 import { getSkillCategories } from "@/data/skills";
@@ -62,9 +63,9 @@ export function LearningJourneySection() {
             </div>
 
             {/* Heading */}
-            <h2 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] extruded-heading">
+            <Heading3D tag="h2" className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
               Committed to Continuous Learning
-            </h2>
+            </Heading3D>
 
             {/* Subtitle */}
             <p className="text-base sm:text-lg text-[#5F5854] leading-relaxed">

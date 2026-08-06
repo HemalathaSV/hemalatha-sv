@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowLeft, ExternalLink, BookOpen } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 import { Project } from "@/data/projects";
+import { Heading3D } from "@/components/ui/Heading3D";
 
 interface ProjectHeroProps {
   project: Project;
@@ -12,21 +13,21 @@ interface ProjectHeroProps {
 
 export function ProjectHero({ project }: ProjectHeroProps) {
   return (
-    <section className="relative w-full pt-32 pb-20 sm:pt-40 sm:pb-24 bg-[#E4E0E1] overflow-hidden border-b border-[#D8C8BB]">
-      {/* Radial Backlight Glow */}
+    <section className="relative w-full py-20 bg-[#E4E0E1] border-b border-[#D8C8BB] overflow-hidden">
+      {/* Subtle Ambient Backlights */}
       <div
         aria-hidden="true"
-        className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-gradient-to-b from-[#5A4030]/10 via-[#B18C6A]/05 to-transparent blur-3xl pointer-events-none"
+        className="absolute top-1/4 right-10 w-[450px] h-[450px] rounded-full bg-[radial-gradient(circle_at_center,rgba(214,195,179,0.15),transparent_70%)] blur-3xl pointer-events-none"
       />
 
       <Container>
-        <div className="flex flex-col space-y-8 max-w-4xl mx-auto relative z-10">
+        <div className="flex flex-col gap-6 relative z-10">
           {/* Back Link */}
           <Link
             href="/#featured-work"
-            className="group inline-flex items-center gap-2.5 text-xs font-mono font-medium text-[#5F5854] hover:text-[#5A4030] transition-colors duration-300 self-start focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5A4030] rounded p-1"
+            className="inline-flex items-center gap-2 text-xs font-mono font-medium text-[#5F5854] hover:text-[#5A4030] transition-colors self-start focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5A4030] rounded"
           >
-            <ArrowLeft className="h-3.5 w-3.5 transition-transform duration-200 group-hover:-translate-x-1" />
+            <ArrowLeft className="h-4 w-4" />
             Back to Portfolio
           </Link>
 
@@ -53,9 +54,9 @@ export function ProjectHero({ project }: ProjectHeroProps) {
 
           {/* Title & Tagline */}
           <div className="space-y-4">
-            <h1 className="font-heading text-4xl sm:text-6xl font-bold tracking-tight text-[#2E2A28] leading-[1.1]">
+            <Heading3D tag="h1" className="text-4xl sm:text-6xl font-bold tracking-tight leading-[1.1]">
               {project.title}
-            </h1>
+            </Heading3D>
             <p className="text-lg sm:text-xl text-[#5F5854] leading-relaxed max-w-3xl">
               {project.tagline}
             </p>

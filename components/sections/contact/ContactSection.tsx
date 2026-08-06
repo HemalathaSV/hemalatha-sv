@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion, Variants } from "framer-motion";
+import { Heading3D } from "@/components/ui/Heading3D";
 import { Mail, MapPin, Globe, Share2 } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 import { PROFILE } from "@/config/profile";
@@ -92,9 +93,9 @@ export function ContactSection() {
               </div>
 
               {/* Heading */}
-              <h2 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] extruded-heading">
+              <Heading3D tag="h2" className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
                 Let&apos;s Build Something Meaningful Together
-              </h2>
+              </Heading3D>
 
               {/* Subtitle */}
               <p className="text-base sm:text-lg text-[#5F5854] leading-relaxed max-w-xl">

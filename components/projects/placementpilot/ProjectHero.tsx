@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 import { PROFILE } from "@/config/profile";
+import { Heading3D } from "@/components/ui/Heading3D";
 
 export function ProjectHero() {
   return (
@@ -36,9 +37,9 @@ export function ProjectHero() {
 
           {/* Title & Tagline */}
           <div className="space-y-4">
-            <h1 className="font-heading text-4xl sm:text-6xl font-bold tracking-tight text-[#2E2A28] leading-[1.1]">
+            <Heading3D tag="h1" className="text-4xl sm:text-6xl font-bold tracking-tight leading-[1.1]">
               PlacementPilot AI
-            </h1>
+            </Heading3D>
             <p className="text-lg sm:text-xl text-[#5F5854] leading-relaxed max-w-3xl">
               An intelligent multi-agent placement preparation platform that helps students become job-ready through AI-powered guidance.
             </p>
