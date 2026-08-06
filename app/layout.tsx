@@ -22,14 +22,13 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Hemalatha S V  — AI Engineer & Researcher",
-    template: "%s | Hemalatha S V ",
+    default: "Hemalatha S V — AI Engineer & Researcher",
+    template: "%s | Hemalatha S V",
   },
   description:
-    "Official personal brand and engineering portfolio for Hemalatha S V , showcasing intelligent multi-agent AI systems, machine learning pipelines, and research publications.",
+    "Official personal brand and engineering portfolio for Hemalatha S V, showcasing intelligent multi-agent AI systems, machine learning pipelines, and research publications.",
   keywords: [
     "Hemalatha S V",
-    "Hemalatha S V ",
     "AI Engineer",
     "Agentic AI",
     "Multi-Agent Systems",
@@ -52,14 +51,14 @@ export const metadata: Metadata = {
     url: "https://hemalatha-sv.vercel.app",
     title: "Hemalatha S V — AI Engineer & Researcher",
     description:
-      "Official personal brand and engineering portfolio for Hemalatha S V , showcasing intelligent multi-agent AI systems, machine learning pipelines, and research publications.",
-    siteName: "Hemalatha S V  Portfolio",
+      "Official personal brand and engineering portfolio for Hemalatha S V, showcasing intelligent multi-agent AI systems, machine learning pipelines, and research publications.",
+    siteName: "Hemalatha S V Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hemalatha S V  — AI Engineer & Researcher",
+    title: "Hemalatha S V — AI Engineer & Researcher",
     description:
-      "Official personal brand and engineering portfolio for Hemalatha S V , showcasing intelligent multi-agent AI systems, machine learning pipelines, and research publications.",
+      "Official personal brand and engineering portfolio for Hemalatha S V, showcasing intelligent multi-agent AI systems, machine learning pipelines, and research publications.",
   },
 };
 

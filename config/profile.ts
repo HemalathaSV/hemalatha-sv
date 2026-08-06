@@ -1,6 +1,6 @@
 export const PROFILE = {
   name: "Hemalatha S V",
-  brand: "Hemalatha S V AI",
+  brand: "Hemalatha S V",
   tagline: "Building Intelligent AI Systems",
   title: "AI/ML Engineer | Agentic AI Developer",
   email: "heamalathasv@gmail.com",

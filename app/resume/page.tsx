@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import { ResumeViewer } from "@/components/resume/ResumeViewer";
 
 export const metadata: Metadata = {
-  title: "Resume — Hemalatha S V AI",
+  title: "Resume — Hemalatha S V",
   description:
-    "Official resume of Hemalatha S V AI, AI/ML Engineer specializing in Agentic AI systems, FastAPI backends, and Next.js.",
+    "Official resume of Hemalatha S V, AI/ML Engineer specializing in Agentic AI systems, FastAPI backends, and Next.js.",
 };
 
 export default function ResumePage() {

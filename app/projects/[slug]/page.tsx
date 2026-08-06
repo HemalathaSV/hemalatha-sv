@@ -28,12 +28,12 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
 
   if (!project) {
     return {
-      title: "Project Not Found | Hemalatha S V AI",
+      title: "Project Not Found | Hemalatha S V",
     };
   }
 
   return {
-    title: `${project.title} — Case Study | Hemalatha S V AI`,
+    title: `${project.title} — Case Study | Hemalatha S V`,
     description: project.description,
   };
 }

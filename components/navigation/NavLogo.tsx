@@ -28,14 +28,11 @@ export function NavLogo({ onNavigate }: NavLogoProps) {
       onClick={handleClick}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
-      aria-label="Hemalatha S V AI Home"
+      aria-label="Hemalatha S V Home"
       className="group relative inline-flex items-center gap-2 rounded-lg py-1 px-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8] transition-colors"
     >
       <span className="font-heading text-base sm:text-lg font-bold tracking-tight text-[#F8FAFC] group-hover:text-white transition-colors duration-200">
-        Hemalatha S V{" "}
-        <span className="inline-flex items-center px-1.5 py-0.5 rounded text-xs font-mono font-bold bg-[#38BDF8]/10 text-[#38BDF8] border border-[#38BDF8]/30 group-hover:border-[#38BDF8]/60 group-hover:shadow-[0_0_12px_rgba(56,189,248,0.25)] transition-all duration-300">
-          AI
-        </span>
+        Hemalatha S V
       </span>
     </motion.a>
   );
