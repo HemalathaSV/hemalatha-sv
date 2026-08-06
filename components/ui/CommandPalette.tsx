@@ -60,22 +60,22 @@ export function CommandPalette() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="relative z-10 w-full max-w-xl rounded-2xl bg-[#FFF6F5] border border-[#FDACAC]/35 shadow-2xl overflow-hidden flex flex-col max-h-[80vh]"
+            className="relative z-10 w-full max-w-xl rounded-2xl bg-[#F7F5F4] border border-[#B18C6A]/20 shadow-2xl overflow-hidden flex flex-col max-h-[80vh]"
           >
             {/* Input Bar */}
-            <div className="flex items-center px-4 py-3.5 border-b border-[#FDACAC]/35 gap-3">
-              <Search className="h-5 w-5 text-[#FD7979] shrink-0" />
+            <div className="flex items-center px-4 py-3.5 border-b border-[#B18C6A]/20 gap-3">
+              <Search className="h-5 w-5 text-[#5A4030] shrink-0" />
               <input
                 type="text"
                 autoFocus
                 placeholder="Search projects, research, resume, contact... (Esc to exit)"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                className="w-full bg-transparent text-sm text-[#2B2323] placeholder-[#5B4A4A]/60 focus:outline-none"
+                className="w-full bg-transparent text-sm text-[#2E2A28] placeholder-[#5F5854]/60 focus:outline-none"
               />
               <button
                 onClick={() => setIsOpen(false)}
-                className="text-[#5B4A4A] hover:text-[#FDACAC] p-1"
+                className="text-[#5F5854] hover:text-[#B18C6A] p-1"
               >
                 <X className="h-4 w-4" />
               </button>
@@ -85,33 +85,33 @@ export function CommandPalette() {
             <div className="overflow-y-auto p-3 space-y-4 text-xs font-sans">
               {/* Quick Navigation Section */}
               <div className="space-y-1">
-                <span className="px-2 font-mono font-semibold text-[10px] text-[#FD7979] uppercase tracking-wider">
+                <span className="px-2 font-mono font-semibold text-[10px] text-[#5A4030] uppercase tracking-wider">
                   Navigation
                 </span>
                 <div
                   onClick={() => handleNavigate("/")}
-                  className="flex items-center gap-3 px-3 py-2 rounded-xl text-[#5B4A4A] hover:bg-[#2B2323] hover:text-[#FDACAC] cursor-pointer transition-colors"
+                  className="flex items-center gap-3 px-3 py-2 rounded-xl text-[#5F5854] hover:bg-[#2E2A28] hover:text-[#B18C6A] cursor-pointer transition-colors"
                 >
-                  <Home className="h-4 w-4 text-[#FD7979]" />
+                  <Home className="h-4 w-4 text-[#5A4030]" />
                   <span>Home Page</span>
                 </div>
                 <div
                   onClick={() => handleNavigate("/portfolio")}
-                  className="flex items-center gap-3 px-3 py-2 rounded-xl text-[#5B4A4A] hover:bg-[#2B2323] hover:text-[#FDACAC] cursor-pointer transition-colors"
+                  className="flex items-center gap-3 px-3 py-2 rounded-xl text-[#5F5854] hover:bg-[#2E2A28] hover:text-[#B18C6A] cursor-pointer transition-colors"
                 >
-                  <FolderGit2 className="h-4 w-4 text-[#FD7979]" />
+                  <FolderGit2 className="h-4 w-4 text-[#5A4030]" />
                   <span>All Portfolio Projects</span>
                 </div>
                 <div
                   onClick={() => handleNavigate("/research")}
-                  className="flex items-center gap-3 px-3 py-2 rounded-xl text-[#5B4A4A] hover:bg-[#2B2323] hover:text-[#FDACAC] cursor-pointer transition-colors"
+                  className="flex items-center gap-3 px-3 py-2 rounded-xl text-[#5F5854] hover:bg-[#2E2A28] hover:text-[#B18C6A] cursor-pointer transition-colors"
                 >
-                  <BookOpen className="h-4 w-4 text-[#FDACAC]" />
+                  <BookOpen className="h-4 w-4 text-[#B18C6A]" />
                   <span>Research Library</span>
                 </div>
                 <div
                   onClick={() => handleNavigate("/resume")}
-                  className="flex items-center gap-3 px-3 py-2 rounded-xl text-[#5B4A4A] hover:bg-[#2B2323] hover:text-[#FDACAC] cursor-pointer transition-colors"
+                  className="flex items-center gap-3 px-3 py-2 rounded-xl text-[#5F5854] hover:bg-[#2E2A28] hover:text-[#B18C6A] cursor-pointer transition-colors"
                 >
                   <FileText className="h-4 w-4 text-emerald-400" />
                   <span>Resume Viewer</span>
@@ -121,20 +121,20 @@ export function CommandPalette() {
               {/* Projects Results */}
               {filteredProjects.length > 0 && (
                 <div className="space-y-1">
-                  <span className="px-2 font-mono font-semibold text-[10px] text-[#FD7979] uppercase tracking-wider">
+                  <span className="px-2 font-mono font-semibold text-[10px] text-[#5A4030] uppercase tracking-wider">
                     Projects ({filteredProjects.length})
                   </span>
                   {filteredProjects.map((p) => (
                     <div
                       key={p.id}
                       onClick={() => handleNavigate(`/projects/${p.slug}`)}
-                      className="flex items-center justify-between px-3 py-2 rounded-xl text-[#5B4A4A] hover:bg-[#2B2323] hover:text-[#FDACAC] cursor-pointer transition-colors"
+                      className="flex items-center justify-between px-3 py-2 rounded-xl text-[#5F5854] hover:bg-[#2E2A28] hover:text-[#B18C6A] cursor-pointer transition-colors"
                     >
                       <div className="flex items-center gap-2.5 truncate">
-                        <FolderGit2 className="h-4 w-4 text-[#FD7979] shrink-0" />
+                        <FolderGit2 className="h-4 w-4 text-[#5A4030] shrink-0" />
                         <span className="font-semibold truncate">{p.title}</span>
                       </div>
-                      <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#2B2323] border border-[#FDACAC]/35 text-[#FD7979] shrink-0">
+                      <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#2E2A28] border border-[#B18C6A]/20 text-[#5A4030] shrink-0">
                         {p.category}
                       </span>
                     </div>
@@ -145,17 +145,17 @@ export function CommandPalette() {
               {/* Research Results */}
               {filteredResearch.length > 0 && (
                 <div className="space-y-1">
-                  <span className="px-2 font-mono font-semibold text-[10px] text-[#FDACAC] uppercase tracking-wider">
+                  <span className="px-2 font-mono font-semibold text-[10px] text-[#B18C6A] uppercase tracking-wider">
                     Research ({filteredResearch.length})
                   </span>
                   {filteredResearch.map((r) => (
                     <div
                       key={r.id}
                       onClick={() => handleNavigate(`/projects/${r.projectSlug || "tournament-management-agent"}`)}
-                      className="flex items-center justify-between px-3 py-2 rounded-xl text-[#5B4A4A] hover:bg-[#2B2323] hover:text-[#FDACAC] cursor-pointer transition-colors"
+                      className="flex items-center justify-between px-3 py-2 rounded-xl text-[#5F5854] hover:bg-[#2E2A28] hover:text-[#B18C6A] cursor-pointer transition-colors"
                     >
                       <div className="flex items-center gap-2.5 truncate">
-                        <BookOpen className="h-4 w-4 text-[#FDACAC] shrink-0" />
+                        <BookOpen className="h-4 w-4 text-[#B18C6A] shrink-0" />
                         <span className="font-semibold truncate">{r.title}</span>
                       </div>
                       <span className="text-[10px] font-mono text-emerald-400 shrink-0">
@@ -168,8 +168,8 @@ export function CommandPalette() {
             </div>
 
             {/* Footer Bar */}
-            <div className="px-4 py-2 bg-[#FFCDC9] border-t border-[#FDACAC]/35 text-[11px] font-mono text-[#5B4A4A]/60 flex items-center justify-between">
-              <span>Press <kbd className="px-1.5 py-0.5 rounded bg-[#2B2323] border border-[#FDACAC]/35">Ctrl + K</kbd> anytime to search</span>
+            <div className="px-4 py-2 bg-[#E4E0E1] border-t border-[#B18C6A]/20 text-[11px] font-mono text-[#5F5854]/60 flex items-center justify-between">
+              <span>Press <kbd className="px-1.5 py-0.5 rounded bg-[#2E2A28] border border-[#B18C6A]/20">Ctrl + K</kbd> anytime to search</span>
               <span>Antigravity Engine</span>
             </div>
           </motion.div>

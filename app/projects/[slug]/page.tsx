@@ -47,7 +47,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
   }
 
   return (
-    <main className="min-h-screen bg-[#FFCDC9] text-[#2B2323]">
+    <main className="min-h-screen bg-[#E4E0E1] text-[#2E2A28]">
       <ProjectHero project={project} />
       <ProjectOverview project={project} />
       <ArchitectureDiagram project={project} />

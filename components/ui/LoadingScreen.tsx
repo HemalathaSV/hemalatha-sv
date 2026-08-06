@@ -73,7 +73,7 @@ export function LoadingScreen() {
 
   // Prevent flash or hydration mismatch issues by rendering a stable placeholder
   if (!isMounted) {
-    return <div className="fixed inset-0 z-[100] bg-[#FFCDC9]" />;
+    return <div className="fixed inset-0 z-[100] bg-[#E4E0E1]" />;
   }
 
   if (skipAnimation) return null;
@@ -87,12 +87,12 @@ export function LoadingScreen() {
             opacity: 0,
             transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
           }}
-          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#FFCDC9] text-[#2B2323] p-6 overflow-hidden select-none"
+          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#E4E0E1] text-[#2E2A28] p-6 overflow-hidden select-none"
         >
           {/* Ambient Background Radial Glow */}
           <div
             aria-hidden="true"
-            className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,205,201,0.10),transparent_70%)] pointer-events-none"
+            className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(214,195,179,0.15),transparent_70%)] pointer-events-none"
           />
 
           <div className="relative z-10 flex flex-col items-center justify-center space-y-6 text-center max-w-md w-full">
@@ -101,7 +101,7 @@ export function LoadingScreen() {
               initial={{ opacity: 0, scale: 0.94 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-              className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border border-[#FDACAC]/20 shadow-lg shadow-[#FDACAC]/12"
+              className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border border-[#B18C6A]/20 shadow-lg shadow-[#B18C6A]/12"
             >
               <Image
                 src={PROFILE.profileImage}
@@ -119,7 +119,7 @@ export function LoadingScreen() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                className="font-heading text-2xl sm:text-3xl font-bold tracking-tight text-[#2B2323]"
+                className="font-heading text-2xl sm:text-3xl font-bold tracking-tight text-[#2E2A28]"
               >
                 {PROFILE.name}
               </motion.h1>
@@ -133,7 +133,7 @@ export function LoadingScreen() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -6 }}
                     transition={{ duration: 0.45, ease: "easeInOut" }}
-                    className="text-xs sm:text-sm font-mono text-[#FD7979] tracking-wide"
+                    className="text-xs sm:text-sm font-mono text-[#5A4030] tracking-wide"
                   >
                     {roles[roleIndex]}
                   </motion.p>
@@ -142,7 +142,7 @@ export function LoadingScreen() {
             </div>
 
             {/* 4. Terminal Initialization Sequence Panel */}
-            <div className="w-full max-w-[280px] p-4 rounded-xl bg-[#FFF6F5]/60 border border-[#FDACAC]/35 font-mono text-[10px] sm:text-xs text-left text-[#5B4A4A] space-y-1.5 h-[120px] overflow-hidden backdrop-blur-sm">
+            <div className="w-full max-w-[280px] p-4 rounded-xl bg-[#F7F5F4]/60 border border-[#B18C6A]/20 font-mono text-[10px] sm:text-xs text-left text-[#5F5854] space-y-1.5 h-[120px] overflow-hidden backdrop-blur-sm">
               {initLines.map((line, i) => (
                 <motion.div
                   key={i}
@@ -150,10 +150,10 @@ export function LoadingScreen() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.3 }}
                   className={`flex items-center gap-2 ${
-                    line === "Ready." ? "text-[#FD7979] font-bold" : ""
+                    line === "Ready." ? "text-[#5A4030] font-bold" : ""
                   }`}
                 >
-                  <span className="text-[#7B6B6B] select-none">&gt;</span>
+                  <span className="text-[#8C827C] select-none">&gt;</span>
                   <span>{line}</span>
                 </motion.div>
               ))}

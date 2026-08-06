@@ -72,11 +72,11 @@ export default function RootLayout({
       lang="en"
       className={`${spaceGrotesk.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#FFCDC9] text-[#2B2323] selection:bg-[#FD7979]/30 selection:text-[#FD7979]">
+      <body className="min-h-full flex flex-col bg-[#E4E0E1] text-[#2E2A28] selection:bg-[#5A4030]/30 selection:text-[#5A4030]">
         {/* Premium Ambient Background Glows */}
         <div className="fixed inset-0 overflow-hidden pointer-events-none z-0 select-none">
-          <div className="absolute top-1/4 left-1/4 w-[500px] sm:w-[650px] h-[500px] sm:h-[650px] rounded-full bg-gradient-to-tr from-[#FD7979]/03 via-[#FDACAC]/02 to-transparent blur-3xl ambient-glow-1" />
-          <div className="absolute bottom-1/4 right-1/4 w-[400px] sm:w-[550px] h-[400px] sm:h-[550px] rounded-full bg-gradient-to-bl from-[#FDACAC]/03 via-[#FD7979]/02 to-transparent blur-3xl ambient-glow-2" />
+          <div className="absolute top-1/4 left-1/4 w-[500px] sm:w-[650px] h-[500px] sm:h-[650px] rounded-full bg-gradient-to-tr from-[#5A4030]/03 via-[#B18C6A]/02 to-transparent blur-3xl ambient-glow-1" />
+          <div className="absolute bottom-1/4 right-1/4 w-[400px] sm:w-[550px] h-[400px] sm:h-[550px] rounded-full bg-gradient-to-bl from-[#B18C6A]/03 via-[#5A4030]/02 to-transparent blur-3xl ambient-glow-2" />
         </div>
 
         <ScrollProgress />

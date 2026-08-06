@@ -24,16 +24,16 @@ export function FeaturedWorkSection() {
   return (
     <section
       id="featured-work"
-      className="relative min-h-screen w-full flex flex-col justify-center py-24 sm:py-32 bg-[#FFCDC9] overflow-hidden border-t border-[#FDACAC]/35"
+      className="relative min-h-screen w-full flex flex-col justify-center py-24 sm:py-32 bg-[#E4E0E1] overflow-hidden border-t border-[#B18C6A]/20"
     >
       {/* Ambient Background Radial Backlights */}
       <div
         aria-hidden="true"
-        className="absolute top-1/3 right-0 w-[500px] h-[500px] rounded-full bg-gradient-to-tr from-[#FD7979]/06 to-[#FDACAC]/04 blur-3xl pointer-events-none"
+        className="absolute top-1/3 right-0 w-[500px] h-[500px] rounded-full bg-gradient-to-tr from-[#5A4030]/06 to-[#B18C6A]/04 blur-3xl pointer-events-none"
       />
       <div
         aria-hidden="true"
-        className="absolute bottom-10 left-0 w-[400px] h-[400px] rounded-full bg-gradient-to-bl from-[#FDACAC]/05 to-[#FD7979]/04 blur-3xl pointer-events-none"
+        className="absolute bottom-10 left-0 w-[400px] h-[400px] rounded-full bg-gradient-to-bl from-[#B18C6A]/05 to-[#5A4030]/04 blur-3xl pointer-events-none"
       />
 
       <Container>
@@ -47,20 +47,20 @@ export function FeaturedWorkSection() {
             className="flex flex-col space-y-4 max-w-3xl"
           >
             {/* Section Badge */}
-            <div className="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-[#FFF6F5] border border-[#FDACAC]/35">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#FD7979]" />
-              <span className="text-xs font-mono font-semibold text-[#FD7979] tracking-wider uppercase">
+            <div className="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-[#F7F5F4] border border-[#B18C6A]/20">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#5A4030]" />
+              <span className="text-xs font-mono font-semibold text-[#5A4030] tracking-wider uppercase">
                 Featured Work
               </span>
             </div>
 
             {/* Heading */}
-            <h2 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#2B2323] leading-[1.1]">
+            <h2 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#2E2A28] leading-[1.1]">
               Turning Ideas into Intelligent Solutions
             </h2>
 
             {/* Subtitle */}
-            <p className="text-base sm:text-lg text-[#5B4A4A] leading-relaxed">
+            <p className="text-base sm:text-lg text-[#5F5854] leading-relaxed">
               A collection of AI-powered applications, agentic AI systems, research-driven solutions, and full-stack engineering projects built to solve real-world challenges.
             </p>
           </motion.div>

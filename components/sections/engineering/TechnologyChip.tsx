@@ -8,7 +8,7 @@ interface TechnologyChipProps {
 export function TechnologyChip({ label, className = "" }: TechnologyChipProps) {
   return (
     <span
-      className={`px-3 py-1 rounded-lg bg-[#2B2323] border border-[#FDACAC]/35 text-xs font-mono font-medium text-[#5B4A4A] hover:text-[#FDACAC] hover:border-[#FDACAC]/40 transition-colors duration-200 ${className}`}
+      className={`px-3 py-1 rounded-lg bg-[#2E2A28] border border-[#B18C6A]/20 text-xs font-mono font-medium text-[#5F5854] hover:text-[#B18C6A] hover:border-[#B18C6A]/65 transition-colors duration-200 ${className}`}
     >
       {label}
     </span>

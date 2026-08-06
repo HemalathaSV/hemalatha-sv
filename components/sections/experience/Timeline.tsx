@@ -55,13 +55,13 @@ export function Timeline() {
       {/* Central Vertical Line for Desktop */}
       <div
         aria-hidden="true"
-        className="hidden lg:block absolute left-1/2 top-4 bottom-4 -translate-x-1/2 w-0.5 bg-gradient-to-b from-[#FD7979]/40 via-slate-800 to-slate-800/20 pointer-events-none"
+        className="hidden lg:block absolute left-1/2 top-4 bottom-4 -translate-x-1/2 w-0.5 bg-gradient-to-b from-[#5A4030]/40 via-slate-800 to-slate-800/20 pointer-events-none"
       />
 
       {/* Left Vertical Line for Mobile */}
       <div
         aria-hidden="true"
-        className="lg:hidden absolute left-4 top-4 bottom-4 w-0.5 bg-gradient-to-b from-[#FD7979]/40 via-slate-800 to-slate-800/20 pointer-events-none"
+        className="lg:hidden absolute left-4 top-4 bottom-4 w-0.5 bg-gradient-to-b from-[#5A4030]/40 via-slate-800 to-slate-800/20 pointer-events-none"
       />
 
       <div className="space-y-12 sm:space-y-16">

@@ -35,27 +35,27 @@ export function HeroContent() {
     >
       {/* 1. Greeting Badge */}
       <motion.div variants={itemVariants} className="inline-flex items-center gap-2">
-        <span className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-mono font-medium bg-[#FFF6F5] border border-[#FDACAC]/35 text-[#FD7979] shadow-sm">
+        <span className="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-mono font-medium bg-[#F7F5F4] border border-[#B18C6A]/20 text-[#5A4030] shadow-sm">
           👋 Hello, I&apos;m
         </span>
       </motion.div>
 
       {/* 2. Main Name & Brand Title */}
       <motion.div variants={itemVariants} className="space-y-2">
-        <h1 className="font-heading text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-[#2B2323] leading-[1.05]">
+        <h1 className="font-heading text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-[#2E2A28] leading-[1.05]">
           {PROFILE.name}
         </h1>
-        <p className="font-heading text-xl sm:text-2xl lg:text-3xl font-semibold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#FD7979] via-[#FDACAC] to-[#FD7979]">
+        <p className="font-heading text-xl sm:text-2xl lg:text-3xl font-semibold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#5A4030] via-[#B18C6A] to-[#5A4030]">
           {PROFILE.title}
         </p>
       </motion.div>
 
       {/* 3. Tagline & Description */}
       <motion.div variants={itemVariants} className="space-y-3">
-        <h2 className="text-base sm:text-lg font-mono font-medium text-[#FD7979]">
+        <h2 className="text-base sm:text-lg font-mono font-medium text-[#5A4030]">
           {PROFILE.tagline}
         </h2>
-        <p className="text-base sm:text-lg text-[#5B4A4A] leading-relaxed max-w-xl font-sans">
+        <p className="text-base sm:text-lg text-[#5F5854] leading-relaxed max-w-xl font-sans">
           Specializing in autonomous multi-agent systems, deep learning architectures, scalable FastAPI backends, and cutting-edge AI research to power next-generation software.
         </p>
       </motion.div>

@@ -32,7 +32,7 @@ export function SocialIcons() {
 
   return (
     <div className="flex flex-col space-y-3">
-      <h4 className="font-heading text-xs font-mono font-semibold tracking-wider text-[#FD7979] uppercase">
+      <h4 className="font-heading text-xs font-mono font-semibold tracking-wider text-[#5A4030] uppercase">
         Connect
       </h4>
       <div className="flex flex-wrap gap-2.5">
@@ -45,7 +45,7 @@ export function SocialIcons() {
               target={item.href.startsWith("http") ? "_blank" : undefined}
               rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
               aria-label={item.name}
-              className="flex items-center gap-2 px-3 py-2 rounded-xl bg-[#FFF6F5] border border-[#FDACAC]/35 text-[#5B4A4A] hover:text-[#FD7979] hover:border-[#FDACAC]/40 hover:scale-105 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FD7979]"
+              className="flex items-center gap-2 px-3 py-2 rounded-xl bg-[#F7F5F4] border border-[#B18C6A]/20 text-[#5F5854] hover:text-[#5A4030] hover:border-[#B18C6A]/65 hover:scale-105 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5A4030]"
             >
               {item.isSvg ? (
                 <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24">

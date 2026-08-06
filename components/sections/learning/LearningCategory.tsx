@@ -22,11 +22,11 @@ export function LearningCategory({ title, skills }: LearningCategoryProps) {
   return (
     <motion.div
       variants={cardVariants}
-      className="p-5 sm:p-6 rounded-2xl bg-[#FFF6F5]/80 backdrop-blur-xl border border-[#FDACAC]/35 shadow-lg space-y-3.5 hover:border-[#FDACAC]/30 transition-all duration-300"
+      className="p-5 sm:p-6 rounded-2xl bg-[#F7F5F4]/80 backdrop-blur-xl border border-[#B18C6A]/20 shadow-lg space-y-3.5 hover:border-[#B18C6A]/30 transition-all duration-300"
     >
       <div className="flex items-center gap-2">
-        <span className="h-1.5 w-1.5 rounded-full bg-[#FD7979]" />
-        <h4 className="font-heading text-sm sm:text-base font-bold text-[#2B2323] tracking-tight">
+        <span className="h-1.5 w-1.5 rounded-full bg-[#5A4030]" />
+        <h4 className="font-heading text-sm sm:text-base font-bold text-[#2E2A28] tracking-tight">
           {title}
         </h4>
       </div>

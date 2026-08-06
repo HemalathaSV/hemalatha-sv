@@ -20,10 +20,10 @@ export function FooterLinks() {
 
   return (
     <div className="flex flex-col space-y-3">
-      <h4 className="font-heading text-xs font-mono font-semibold tracking-wider text-[#FD7979] uppercase">
+      <h4 className="font-heading text-xs font-mono font-semibold tracking-wider text-[#5A4030] uppercase">
         Quick Links
       </h4>
-      <ul className="grid grid-cols-2 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-medium text-[#5B4A4A]">
+      <ul className="grid grid-cols-2 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs font-medium text-[#5F5854]">
         {NAV_ITEMS.map((item) => (
           <li key={item.id}>
             <a
@@ -32,7 +32,7 @@ export function FooterLinks() {
                 e.preventDefault();
                 handleNavigate(item.href);
               }}
-              className="hover:text-[#FD7979] transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FD7979] rounded py-0.5"
+              className="hover:text-[#5A4030] transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5A4030] rounded py-0.5"
             >
               {item.label}
             </a>

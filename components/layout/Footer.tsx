@@ -14,12 +14,12 @@ export function Footer() {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="w-full bg-[#FFCDC9] border-t border-[#FDACAC]/35 pt-16 pb-8 relative z-10 overflow-hidden"
+      className="w-full bg-[#E4E0E1] border-t border-[#B18C6A]/20 pt-16 pb-8 relative z-10 overflow-hidden"
     >
       {/* Ambient Radial Backlight */}
       <div
         aria-hidden="true"
-        className="absolute top-0 right-1/4 w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle_at_center,rgba(253,121,121,0.04),transparent_70%)] blur-3xl pointer-events-none"
+        className="absolute top-0 right-1/4 w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle_at_center,rgba(90,64,48,0.04),transparent_70%)] blur-3xl pointer-events-none"
       />
 
       <Container>
@@ -31,17 +31,17 @@ export function Footer() {
               <a
                 href="#home"
                 aria-label={`${PROFILE.brand} Home`}
-                className="font-heading text-lg font-bold tracking-tight text-[#2B2323] inline-flex items-center gap-2 self-start hover:opacity-90 transition-opacity"
+                className="font-heading text-lg font-bold tracking-tight text-[#2E2A28] inline-flex items-center gap-2 self-start hover:opacity-90 transition-opacity"
               >
                 {PROFILE.name}{" "}
-                <span className="inline-flex items-center px-1.5 py-0.5 rounded text-xs font-mono font-bold bg-[#FD7979]/15 text-[#2B2323] border border-[#FDACAC]/30">
+                <span className="inline-flex items-center px-1.5 py-0.5 rounded text-xs font-mono font-bold bg-[#5A4030]/15 text-[#2E2A28] border border-[#B18C6A]/30">
                   AI
                 </span>
               </a>
-              <p className="text-xs sm:text-sm font-medium text-[#FD7979]">
+              <p className="text-xs sm:text-sm font-medium text-[#5A4030]">
                 {PROFILE.tagline}
               </p>
-              <p className="text-xs text-[#5B4A4A] leading-relaxed max-w-sm pt-1">
+              <p className="text-xs text-[#5F5854] leading-relaxed max-w-sm pt-1">
                 Engineering research-driven AI applications, multi-agent systems, and scalable backend platforms.
               </p>
             </div>
@@ -61,14 +61,14 @@ export function Footer() {
           <div aria-hidden="true" className="w-full h-px bg-slate-900/80" />
 
           {/* Bottom Bar */}
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-[#5B4A4A]/70 text-center sm:text-left">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-[#5F5854]/70 text-center sm:text-left">
             <div className="space-y-1">
               <p>© {new Date().getFullYear()} {PROFILE.name}. All rights reserved.</p>
-              <p className="text-[11px] text-[#5B4A4A]/50">
+              <p className="text-[11px] text-[#5F5854]/50">
                 Designed & Developed by {PROFILE.name}
               </p>
             </div>
-            <p className="text-[11px] text-[#5B4A4A]/50 max-w-xs sm:text-right leading-relaxed">
+            <p className="text-[11px] text-[#5F5854]/50 max-w-xs sm:text-right leading-relaxed">
               Built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.
             </p>
           </div>

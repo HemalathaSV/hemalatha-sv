@@ -27,26 +27,26 @@ export function CTAButtons({ className = "" }: CTAButtonsProps) {
       {/* Primary Button */}
       <a
         href={`mailto:${PROFILE.email}`}
-        className="h-12 sm:h-[52px] px-7 sm:px-8 w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-[#FD7979] text-[#2B2323] font-semibold text-sm hover:bg-[#FD7979]/90 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 shadow-lg shadow-[#FD7979]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FD7979]"
+        className="h-12 sm:h-[52px] px-7 sm:px-8 w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-[#5A4030] text-[#2E2A28] font-semibold text-sm hover:bg-[#5A4030]/90 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 shadow-lg shadow-[#5A4030]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#5A4030]"
       >
         Get In Touch
       </a>
 
       {/* Resume Dropdown Action Button */}
       <div className="relative w-full sm:w-auto" ref={dropdownRef}>
-        <div className="flex items-center w-full sm:w-auto rounded-full bg-transparent border border-[#FDACAC]/30 focus-within:ring-2 focus-within:ring-[#FD7979] focus-within:border-transparent transition-all duration-200">
+        <div className="flex items-center w-full sm:w-auto rounded-full bg-transparent border border-[#B18C6A]/30 focus-within:ring-2 focus-within:ring-[#5A4030] focus-within:border-transparent transition-all duration-200">
           <a
             href={PROFILE.resume}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setIsOpen(false)}
-            className="flex-1 sm:flex-none h-12 sm:h-[52px] pl-7 pr-4 sm:pl-8 sm:pr-5 inline-flex items-center justify-center rounded-l-full text-[#2B2323] font-medium text-sm hover:bg-[#FFF6F5] active:scale-[0.98] transition-all duration-200"
+            className="flex-1 sm:flex-none h-12 sm:h-[52px] pl-7 pr-4 sm:pl-8 sm:pr-5 inline-flex items-center justify-center rounded-l-full text-[#2E2A28] font-medium text-sm hover:bg-[#F7F5F4] active:scale-[0.98] transition-all duration-200"
           >
             Resume
           </a>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="h-12 sm:h-[52px] px-4 border-l border-[#FDACAC]/30 rounded-r-full text-[#5B4A4A] hover:text-[#FDACAC] hover:bg-[#FFF6F5] transition-all duration-200 flex items-center justify-center"
+            className="h-12 sm:h-[52px] px-4 border-l border-[#B18C6A]/30 rounded-r-full text-[#5F5854] hover:text-[#B18C6A] hover:bg-[#F7F5F4] transition-all duration-200 flex items-center justify-center"
             aria-label="More resume options"
           >
             <ChevronDown className={`h-4 w-4 transition-transform duration-250 ${isOpen ? "rotate-180" : ""}`} />
@@ -55,24 +55,24 @@ export function CTAButtons({ className = "" }: CTAButtonsProps) {
 
         {/* Dropdown Menu Overlay */}
         {isOpen && (
-          <div className="absolute right-0 sm:left-0 sm:right-auto mt-2 w-48 rounded-xl bg-[#FFF6F5] border border-[#FDACAC]/35 p-1.5 shadow-xl shadow-black/80 z-20 animate-in fade-in slide-in-from-top-2 duration-200">
+          <div className="absolute right-0 sm:left-0 sm:right-auto mt-2 w-48 rounded-xl bg-[#F7F5F4] border border-[#B18C6A]/20 p-1.5 shadow-xl shadow-black/80 z-20 animate-in fade-in slide-in-from-top-2 duration-200">
             <a
               href={PROFILE.resume}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setIsOpen(false)}
-              className="flex items-center gap-2.5 w-full px-3.5 py-2.5 rounded-lg text-left text-sm font-medium text-[#2B2323] hover:bg-[#2B2323] transition-all duration-200"
+              className="flex items-center gap-2.5 w-full px-3.5 py-2.5 rounded-lg text-left text-sm font-medium text-[#2E2A28] hover:bg-[#2E2A28] transition-all duration-200"
             >
-              <FileText className="h-4 w-4 text-[#FD7979]" />
+              <FileText className="h-4 w-4 text-[#5A4030]" />
               View Resume
             </a>
             <a
               href={PROFILE.resume}
               download="Hemalatha_SV_Resume.pdf"
               onClick={() => setIsOpen(false)}
-              className="flex items-center gap-2.5 w-full px-3.5 py-2.5 rounded-lg text-left text-sm font-medium text-[#2B2323] hover:bg-[#2B2323] transition-all duration-200"
+              className="flex items-center gap-2.5 w-full px-3.5 py-2.5 rounded-lg text-left text-sm font-medium text-[#2E2A28] hover:bg-[#2E2A28] transition-all duration-200"
             >
-              <Download className="h-4 w-4 text-[#FDACAC]" />
+              <Download className="h-4 w-4 text-[#B18C6A]" />
               Download Resume
             </a>
           </div>
